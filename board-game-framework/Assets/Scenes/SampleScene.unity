@@ -294,6 +294,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads38
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 409462540}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1117503239}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1507906523}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1411213591}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -369,6 +394,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads22
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1191080069}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1456837573}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 701497674}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -689,6 +744,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1828116407}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1011815127}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 769470166}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &59814177 stripped
@@ -781,6 +856,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1117503239}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 519614355}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 192947438}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &93129555
@@ -927,6 +1022,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1249618054}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &98876708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 95856213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &101628067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5310877885156310029, guid: f6640d0451219c04d816c51953867bf1,
@@ -1015,6 +1122,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1809604771}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1387724437}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1326457852}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &111077693 stripped
@@ -1180,6 +1307,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 361951255}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1619676478}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 806206582}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &119221203
@@ -1254,6 +1401,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1383342742}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 942513878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &124137885 stripped
@@ -1274,6 +1441,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads17
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 98876708}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1809604771}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1588950570}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 936894849}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1742,6 +1934,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1186066289}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1383342742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &180047145 stripped
@@ -1852,6 +2064,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 859325377}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 609303348}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &192947438 stripped
@@ -2029,6 +2261,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 624648044}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1909490793}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &227984989 stripped
@@ -2055,6 +2307,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads36
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 682540887}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 781131773}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 942754366}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2271,6 +2553,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 282147544}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 557215306}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 619815}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &243280110 stripped
@@ -2363,6 +2665,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1832945385}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1730817196}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1815281469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &256724961 stripped
@@ -2401,6 +2723,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 670062955}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &282147544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 1626372980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &286708121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 910341678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &287477982 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 786738585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &291804363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2413,6 +2771,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads21
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1456837573}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1849789925}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 320466259}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2617,6 +3005,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1072811819}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 997926746}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &307654899 stripped
@@ -3155,6 +3563,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1688737379}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1443692994}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &355455812 stripped
@@ -3235,6 +3663,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1909490793}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1688737379}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &358316508 stripped
@@ -3318,6 +3766,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8984efbca36c56c448be24730a386369, type: 3}
+--- !u!114 &361951255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046081634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &363873036 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
@@ -3411,6 +3871,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d993158dce1114cb82d76d14eb0787, type: 3}
+--- !u!114 &367757856 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 233832254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &371014671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
@@ -3441,6 +3913,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads29
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1294853426}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 942350124}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 400416409}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 555451537}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3586,6 +4088,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 674814962}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 502131797}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &397839495 stripped
@@ -3682,6 +4204,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1294853426}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1162501651}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 587124193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &400246624
@@ -3918,6 +4460,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 619815}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1697423995}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &407141558
@@ -3992,8 +4554,52 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1306180197}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1320378720}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1619676478}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
+--- !u!114 &409462540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 316838127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &410401272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1933526117}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &413582797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4066,6 +4672,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 148900787}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 674814962}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &420235059 stripped
@@ -4255,6 +4881,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads49
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 974040663}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1306180197}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1868717257}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 661134184}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4396,6 +5047,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 505687485}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 478540769}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 620705376}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &461524784
@@ -4410,6 +5081,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads31
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1048445203}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1712900602}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 2022751229}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4642,6 +5343,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1072811819}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1697423995}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &474210629
@@ -4716,6 +5437,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 2084530788}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 2039740476}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &478540768
@@ -4730,6 +5471,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads2
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 505687485}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1564364389}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1073218193}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 866965893}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4811,6 +5577,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads52
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 663877118}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 397839495}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1618679651}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 366331106}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4880,6 +5676,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads12
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 707497527}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 701497674}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 489170209}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4967,6 +5793,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1617218947}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &505687485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 2112478451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &506425308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7892586741345699376, guid: 607a06662f8b4e0439f62d6ef4128318,
@@ -5286,6 +6124,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1688737379}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 363873036}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &522919666 stripped
@@ -5310,6 +6168,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ab5eedb4de542945b78e9d1fcc95b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &540155064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121019231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &540411082 stripped
@@ -5511,6 +6381,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads27
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 409462540}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 282147544}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1411213591}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 463554041}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5656,6 +6551,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1773302054}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1090449732}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &587124193 stripped
@@ -5676,6 +6591,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 325778004}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &601732340 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 513593756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &609303348 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
@@ -5700,6 +6627,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads54
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 879989131}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1000268831}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1077452959}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1424299945}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5829,6 +6781,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1090449732}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 502131797}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &620705375
@@ -5843,6 +6815,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads3
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1568432974}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1254911711}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1073218193}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 505687485}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5942,6 +6944,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads42
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1417734624}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1210016076}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 180047145}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6225,6 +7257,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 409462540}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 519614355}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 557215306}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &655940072 stripped
@@ -6261,6 +7313,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &663877118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 203343722}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &668161159
@@ -6335,6 +7399,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1697423995}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 47621970}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &669697889
@@ -6409,6 +7493,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1773302054}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 363873036}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &670062955
@@ -6483,6 +7587,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 367757856}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 184561223}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 433037330}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1 &670473947
@@ -6758,6 +7882,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 620705376}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1592368509}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &695585873
@@ -6832,6 +7976,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1592368509}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1174894857}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &701497674 stripped
@@ -6918,6 +8082,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1564364389}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 478540769}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1011815127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1 &705507993
@@ -7095,6 +8279,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 2039740476}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 587124193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &723843642
@@ -7254,6 +8458,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads28
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1294853426}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 98876708}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 555451537}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 936894849}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7383,6 +8612,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1809604771}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1326457852}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 539300244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &745942265 stripped
@@ -7568,6 +8817,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 674814962}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1592368509}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &769470165
@@ -7582,6 +8851,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads9
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1828116407}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1585352807}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1244004666}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 358316508}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7729,6 +9028,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1443692994}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 2147293539}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &774438106
@@ -7803,6 +9122,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 663877118}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 624648044}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1057029180}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &779019493
@@ -7887,6 +9226,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1062638043}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1443692994}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &781131773 stripped
@@ -8051,6 +9410,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 607a06662f8b4e0439f62d6ef4128318, type: 3}
+--- !u!114 &786911260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 172462130}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &805969983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5310877885156310029, guid: f6640d0451219c04d816c51953867bf1,
@@ -8165,6 +9536,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 974040663}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1062638043}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1320378720}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &853475129
@@ -8400,6 +9791,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 98876708}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 539300244}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 892375515}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &866965893 stripped
@@ -8489,6 +9900,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d993158dce1114cb82d76d14eb0787, type: 3}
+--- !u!114 &879989131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1749094109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &887685650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5310877885156310029, guid: f6640d0451219c04d816c51953867bf1,
@@ -8583,6 +10006,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 942513878}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 2039740476}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &892375515 stripped
@@ -8669,6 +10112,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1294853426}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 587124193}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 892375515}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &897449015
@@ -8683,6 +10146,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads40
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 361951255}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1064110739}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1148764982}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1173300117}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8812,6 +10305,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 2147293539}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 806206582}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &909148354 stripped
@@ -9036,6 +10549,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1828116407}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 769470166}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1387724437}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &912857505 stripped
@@ -9062,6 +10595,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads20
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 320466259}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 307654899}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 701497674}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9215,6 +10778,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads34
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1434925492}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 2052064388}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 62735864}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9448,6 +11041,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 004f28fac1438cf45a1155e1d69f9795, type: 3}
+--- !u!114 &974040663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322589209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &986551361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5310877885156310029, guid: f6640d0451219c04d816c51953867bf1,
@@ -9472,6 +11077,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads51
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 663877118}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 974040663}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1618679651}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1484716831}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9629,8 +11259,40 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 609303348}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 997926746}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
+--- !u!114 &1000268831 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 360081170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1008902482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6190788528958956404, guid: 8984efbca36c56c448be24730a386369,
@@ -9661,6 +11323,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads1
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 866965893}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 358316508}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1828116407}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1564364389}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9830,6 +11517,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1832945385}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 184561223}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1815281469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &1034112789
@@ -9844,6 +11551,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads30
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 2022751229}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 942350124}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1852013203}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10003,6 +11740,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 410401272}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 433037330}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 269004389}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1057029180 stripped
@@ -10053,6 +11810,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads5
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 410401272}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 745942265}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 657697745}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 945285280}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10194,6 +11981,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads33
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 2052064388}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1369777585}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1808505664}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10351,6 +12168,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 912857505}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 47621970}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &1116780141 stripped
@@ -10359,6 +12196,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1620031542}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117503239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 325778004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1126023943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10515,6 +12364,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads19
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 307654899}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1852013203}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 2109009390}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10684,6 +12563,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 2147293539}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 2084530788}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1162501651 stripped
@@ -10728,6 +12627,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads10
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 372825607}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1913268578}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1585352807}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10869,6 +12798,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1000268831}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1253231223}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 655940072}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &1179128439 stripped
@@ -10899,6 +12848,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1191637003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 343817093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1192710191 stripped
@@ -10943,6 +12904,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads41
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 180047145}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1064110739}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1712900602}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11090,6 +13081,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 47621970}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1090449732}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1231269895 stripped
@@ -11176,6 +13187,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 502131797}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1186066289}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1236687648 stripped
@@ -11214,6 +13245,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads44
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1036161313}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 366331106}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 469121078}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11301,6 +13362,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2037634051}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1279733479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 7892586742393042012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1280946948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5310877885156310029, guid: f6640d0451219c04d816c51953867bf1,
@@ -11319,6 +13392,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads39
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 361951255}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1294853426}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1173300117}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 400416409}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11400,6 +13498,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 478540768}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1294853426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1790186246}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1306180197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1605370128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1319131525 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
@@ -11496,8 +13618,40 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 192947438}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1072811819}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
+--- !u!114 &1322174636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440956469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1322589209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11741,6 +13895,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads37
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1117503239}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1507906523}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 2133839576}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 682540887}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11886,6 +14070,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1117503239}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1836060424}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 192947438}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &1365201983 stripped
@@ -11981,6 +14185,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads15
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1009515146}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1319131525}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1498652584}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12050,6 +14284,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1372101952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 567199343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1381838445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12062,6 +14308,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads48
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1306180197}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 361951255}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 661134184}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1148764982}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12284,6 +14555,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 997926746}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1773302054}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1411213591 stripped
@@ -12376,6 +14667,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 663877118}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 655940072}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 624648044}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1417734624 stripped
@@ -12400,6 +14711,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1424373614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 400246624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1434925492 stripped
@@ -12631,6 +14954,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads14
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1319131525}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1231269895}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1192710191}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12760,6 +15113,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 505687485}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1236687648}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 620705376}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &1498263523
@@ -12933,6 +15306,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 942513878}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1326457852}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &1526125796
@@ -13007,8 +15400,40 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 609303348}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1909490793}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
+--- !u!114 &1529477584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 432420149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1544117912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13021,6 +15446,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads23
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 111077693}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 62735864}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1191080069}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13153,6 +15608,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1115744045}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1564364389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 757809240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1568432974 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
@@ -13247,6 +15714,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 282147544}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1730817196}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 619815}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1585352807 stripped
@@ -13291,6 +15778,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads11
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 489170209}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 372825607}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1254911711}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13432,6 +15949,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 410401272}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 269004389}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1236687648}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &1596310213 stripped
@@ -13446,6 +15983,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 233832254}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1601573645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 639387929}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1605370128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13533,6 +16082,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads8
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1809604771}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1828116407}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1244004666}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1012599037}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13614,6 +16188,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads13
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1192710191}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 707497527}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 657697745}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13743,6 +16347,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 363873036}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1092707507}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1618679651 stripped
@@ -13781,6 +16405,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads16
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 282147544}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1832945385}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 963442753}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1009515146}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13850,6 +16499,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads18
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 786911260}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1809604771}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 2109009390}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1588950570}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1012599037}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14145,6 +16824,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1815281469}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 912857505}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &1661488859 stripped
@@ -14225,6 +16924,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1092707507}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 2084530788}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &1666724384 stripped
@@ -14245,6 +16964,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 172462130}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1682366555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853548984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1688513672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5310877885156310029, guid: f6640d0451219c04d816c51953867bf1,
@@ -14434,6 +17165,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 879989131}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1836060424}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 859325377}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &1730817196 stripped
@@ -14622,6 +17373,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads47
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1117503239}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 879989131}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 182292433}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 2133839576}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14691,6 +17467,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads4
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 410401272}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 505687485}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1568432974}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 945285280}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14748,6 +17549,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d559a59df064b2a4f8e58e853c553f2c, type: 3}
+--- !u!114 &1766473231 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 853475129}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1767933928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14922,6 +17735,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 437827938}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1801693320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 42091912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1804492511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14934,6 +17759,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads26
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 463554041}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 2129799096}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 963442753}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15007,6 +17862,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1809604771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1705407685}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1815281469 stripped
@@ -15093,8 +17960,52 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1322174636}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 361951255}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 806206582}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1162501651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
+--- !u!114 &1828116407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1443242923100125667, guid: 8984efbca36c56c448be24730a386369,
+    type: 3}
+  m_PrefabInstance: {fileID: 1498263523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b551977048840145826cbd346a0fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1832945385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2385909813243185379, guid: 78510ae337dec704fa1e4fcaea05bb4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956158424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45325f8d5c3d30b4b98b88617a8c77aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1833766699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15107,6 +18018,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads45
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 234267317}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1036161313}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 420235059}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15200,6 +18141,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads6
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 367757856}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 410401272}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1070744294}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 745942265}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15494,6 +18460,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads35
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 781131773}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 420235059}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1434925492}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15581,6 +18577,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 256491409}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870594586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 12357819}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1872032018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
@@ -15605,6 +18613,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads53
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1000268831}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 663877118}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1077452959}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 397839495}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15774,6 +18807,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1186066289}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1092707507}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &1933526117
@@ -15869,6 +18922,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads7
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1832945385}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 367757856}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16008,6 +19076,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 540155064}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 269004389}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 148900787}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &1956158424
@@ -16115,6 +19203,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads24
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 2080299435}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 111077693}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1231269895}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16244,6 +19362,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 974040663}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1057029180}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1062638043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &2018128406 stripped
@@ -16346,6 +19484,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 879989131}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1253231223}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 859325377}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &2037634051
@@ -16430,6 +19588,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 287477982}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1174894857}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 1383342742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!114 &2039740476 stripped
@@ -16543,6 +19721,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads46
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 879989131}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1191637003}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 2093363749}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 182292433}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1424299945}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 234267317}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16672,6 +19880,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1682366555}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 2065146713}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 1174894857}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 769470166}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!4 &2059396364 stripped
@@ -16680,6 +19908,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 50094887}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2065146713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 326775965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2066174634
 GameObject:
   m_ObjectHideFlags: 0
@@ -16800,6 +20040,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads43
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 286708121}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 469121078}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1417734624}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1369777585}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16950,6 +20220,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab5eedb4de542945b78e9d1fcc95b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2093363749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 1126023943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2095614329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5310877885156310029, guid: f6640d0451219c04d816c51953867bf1,
@@ -16974,6 +20256,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads50
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1529477584}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 974040663}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 2123134754}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1484716831}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1868717257}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1210016076}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17055,6 +20367,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads25
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1801693320}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1766473231}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 1870594586}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 2129799096}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 942754366}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 2080299435}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17325,6 +20667,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 607a06662f8b4e0439f62d6ef4128318, type: 3}
+--- !u!114 &2123134754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1991957428348444704, guid: 607a06662f8b4e0439f62d6ef4128318,
+    type: 3}
+  m_PrefabInstance: {fileID: 723843642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365bd69ab4939241b0819760d4f19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2123963572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
@@ -17445,6 +20799,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1601573645}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1372101952}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad1
+      value: 
+      objectReference: {fileID: 912857505}
+    - target: {fileID: 6437244846398685340, guid: f6640d0451219c04d816c51953867bf1,
+        type: 3}
+      propertyPath: crossRoad2
+      value: 
+      objectReference: {fileID: 148900787}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6640d0451219c04d816c51953867bf1, type: 3}
 --- !u!1001 &2147051971
@@ -17459,6 +20833,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroads32
       objectReference: {fileID: 0}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex1
+      value: 
+      objectReference: {fileID: 1279733479}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex2
+      value: 
+      objectReference: {fileID: 1424373614}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: hex3
+      value: 
+      objectReference: {fileID: 601732340}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road1
+      value: 
+      objectReference: {fileID: 1808505664}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1048445203}
+    - target: {fileID: 7783082572362164958, guid: d559a59df064b2a4f8e58e853c553f2c,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 1849789925}
     - target: {fileID: 6984662014077755305, guid: d559a59df064b2a4f8e58e853c553f2c,
         type: 3}
       propertyPath: m_LocalPosition.x
