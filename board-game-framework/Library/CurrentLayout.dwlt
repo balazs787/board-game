@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 344}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 111
+  controlID: 53
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 344}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 112
+  controlID: 54
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   - {fileID: 17}
   - {fileID: 11}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,7 +393,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 22b5ffff8efbffff
+      m_ExpandedIDs: 4c3cfcff7c54ffff3255ffff8256ffff8e56ffffec58ffff945affff225bffff8c5bffffc85bfffffe5cffff405dffff4c3d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -453,9 +453,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.07735986, y: -22.745054, z: -3.1718154}
+    m_Target: {x: -0.07130408, y: -3.4307737, z: -0.20413232}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -0.07130408, y: -3.4307737, z: -0.20413232}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -484,13 +484,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.00019707668, y: 0.7545664, z: -0.65623295, w: 0.00022653685}
+    m_Target: {x: -0.27546737, y: 0.70529044, z: -0.54907733, w: -0.3538396}
     speed: 2
-    m_Value: {x: 0.00019707548, y: 0.7545618, z: -0.65622896, w: 0.00022653547}
+    m_Value: {x: -0.27092528, y: 0.70615697, z: -0.5565888, w: -0.34373063}
   m_Size:
-    m_Target: 33.581875
+    m_Target: 10.554161
     speed: 2
-    m_Value: 35.16427
+    m_Value: 11.051477
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -598,10 +598,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 953
-    y: 100
-    width: 446
-    height: 599
+    x: 1300
+    y: 73
+    width: 618
+    height: 612
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
@@ -641,20 +641,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Models
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Models
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\egyetem\onlab\project\board-game\board-game-framework
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b82b0000
-    m_LastClickedID: 11192
-    m_ExpandedIDs: 000000005e29000000ca9a3b
+    m_SelectedIDs: 623a0000
+    m_LastClickedID: 14946
+    m_ExpandedIDs: 000000001837000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -682,7 +682,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e290000
+    m_ExpandedIDs: 0000000018370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
