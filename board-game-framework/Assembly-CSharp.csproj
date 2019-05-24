@@ -67,9 +67,11 @@
     <Compile Include="Assets\Scripts\CatanWaterHexagon.cs" />
     <Compile Include="Assets\Scripts\Crossroads.cs" />
     <Compile Include="Assets\Scripts\Field.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\HexagonField.cs" />
-    <Compile Include="Assets\Scripts\legacy\HexagonEnum.cs" />
-    <Compile Include="Assets\Scripts\legacy\SquareEnum.cs" />
+    <Compile Include="Assets\Scripts\Hexmap.cs" />
+    <Compile Include="Assets\Scripts\IGameController.cs" />
+    <Compile Include="Assets\Scripts\ITurnBasedGameController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Resource.cs" />
     <Compile Include="Assets\Scripts\Road.cs" />

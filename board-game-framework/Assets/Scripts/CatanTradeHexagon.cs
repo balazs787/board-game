@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class CatanTradeHexagon : CatanWaterHexagon
 {
+    Resource resource;
     
 }

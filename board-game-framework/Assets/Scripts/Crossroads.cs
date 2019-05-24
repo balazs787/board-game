@@ -14,7 +14,7 @@ public class Crossroads : MonoBehaviour
     public HexagonField hex2;
     public HexagonField hex3;
 
-    bool occupied = false;
+    private bool occupied = false;
     Player player = null;
 
     bool city = false;
@@ -44,17 +44,28 @@ public class Crossroads : MonoBehaviour
 
     public bool canBuild(Crossroads cr)
     {
-        if (!road1.getOppositeCrossroad(cr).getOccupied())
-        {
-            if (!road2.getOppositeCrossroad(cr).getOccupied())
+        if ((!road1.getOppositeCrossroad(cr).getOccupied()) &&
+            (!road2.getOppositeCrossroad(cr).getOccupied()) &&
+            (!road3.getOppositeCrossroad(cr).getOccupied()))
             {
-                if (!road3.getOppositeCrossroad(cr).getOccupied())
-                {
-                    return true;
-                }
+                return true;
+            }
+        return false;
+    }
+
+    public void crossroadsGiveResources(Resource resource)
+    {
+        if (occupied)
+        {
+            if (city)
+            {
+                player.givePlayerResources(resource, 2);
+            }
+            else
+            {
+                player.givePlayerResources(resource, 1);
             }
         }
-        return false;
     }
 
     public bool getOccupied()
@@ -72,19 +83,6 @@ public class Crossroads : MonoBehaviour
         return city;
     }
 
-    public void crossroadsGiveResources(Resource resource)
-    {
-        if (occupied)
-        {
-            if (city)
-            {
-                player.givePlayerResources(resource, 2);
-            }
-            else
-            {
-                player.givePlayerResources(resource, 1);
-            }
-        }
-    }
+    
 
 }
