@@ -19,6 +19,6 @@ public class Player : MonoBehaviour
 
     public void givePlayerResources(Resource resource, int amount)
     {
-
+        
     }
 }

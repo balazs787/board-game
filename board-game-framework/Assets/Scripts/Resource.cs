@@ -8,5 +8,6 @@ public enum Resource
     wool,
     ore,
     grain,
-    lumber
+    lumber,
+    none
 }
