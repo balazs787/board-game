@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 394}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 394}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 344}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 30
+  controlID: 53
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 86420000
       m_LastClickedID: 0
       m_ExpandedIDs: 8efbffff
       m_RenameOverlay:
@@ -486,11 +486,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.07837695, y: 0.87168604, z: -0.46046728, w: -0.14838853}
     speed: 2
-    m_Value: {x: -0.07768504, y: 0.8718951, z: -0.4605777, w: -0.14707872}
+    m_Value: {x: -0.07837695, y: 0.87168604, z: -0.46046728, w: -0.14838853}
   m_Size:
-    m_Target: 5.973642
+    m_Target: 8.95127
     speed: 2
-    m_Value: 5.6736417
+    m_Value: 8.95127
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -641,20 +641,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\egyetem\onlab\project\board-game\board-game-framework
+  m_LastProjectPath: D:\egyetem\szakdoga\board-game\board-game-framework
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b6310000
-    m_LastClickedID: 12726
-    m_ExpandedIDs: 000000008a29000000ca9a3b
+    m_SelectedIDs: 4a340000
+    m_LastClickedID: 13386
+    m_ExpandedIDs: 000000008e29000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -682,7 +682,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008a290000
+    m_ExpandedIDs: 000000008e290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,7 +734,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 55}
+    m_ScrollPosition: {x: 0, y: 95.5}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &19
