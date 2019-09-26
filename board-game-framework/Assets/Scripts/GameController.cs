@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     void Start()
     {
         activePlayerId = 0;
+        Turn(players[activePlayerId]);
     }
 
     public string GetPlayerName()
@@ -25,7 +26,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         return players[activePlayerId];
     }
 
-    public void nextPlayer()
+    public void NextPlayer()
     {
         if (activePlayerId + 1 == players.Length) {
             activePlayerId = 0;
@@ -34,10 +35,10 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         {
             activePlayerId++;
         }
-        turn(players[activePlayerId]);
+        Turn(players[activePlayerId]);
     }
 
-    public void turn(Player player)
+    public void Turn(Player player)
     {
         if (!gameEnded)
         {

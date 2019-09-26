@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface ITurnBasedGameController : IGameController
 {
-    void turn(Player player);
-    void nextPlayer();
+    void Turn(Player player);
+    void NextPlayer();
     int diceRoll();
 }

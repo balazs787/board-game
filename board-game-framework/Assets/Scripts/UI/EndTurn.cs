@@ -10,7 +10,7 @@ public class EndTurn : MonoBehaviour
 
     public void EndTurnButton()
     {
-        gameController.nextPlayer();
+        gameController.NextPlayer();
         playerTurnText.text = gameController.GetPlayerName()+"'s Turn";
     }
 }
