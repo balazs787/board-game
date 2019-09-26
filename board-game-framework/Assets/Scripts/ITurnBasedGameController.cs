@@ -5,5 +5,6 @@ using UnityEngine;
 public interface ITurnBasedGameController : IGameController
 {
     void turn(Player player);
+    void nextPlayer();
     int diceRoll();
 }

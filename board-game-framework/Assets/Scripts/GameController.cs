@@ -5,19 +5,36 @@ using UnityEngine;
 public class GameController : MonoBehaviour, ITurnBasedGameController
 {
     bool gameEnded = false;
-    Player[] players;
+    public Player[] players;
     public Hexmap hexmap;
-    
+    public int activePlayerId;
+    public InterfacePanel interfacePanel;
 
-    public void nextPlayer(Player player)
+    void Start()
     {
-        for (int i = 0; i < players.Length; i++)
-        {
-            if (players[i] == player)
-            {
-                turn(players[i++]);
-            }
+        activePlayerId = 0;
+    }
+
+    public string GetPlayerName()
+    {
+        return players[activePlayerId].playerName;
+    }
+
+    public Player GetPlayer()
+    {
+        return players[activePlayerId];
+    }
+
+    public void nextPlayer()
+    {
+        if (activePlayerId + 1 == players.Length) {
+            activePlayerId = 0;
         }
+        else
+        {
+            activePlayerId++;
+        }
+        turn(players[activePlayerId]);
     }
 
     public void turn(Player player)
@@ -28,7 +45,8 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
             hexmap.distributeResources(dr);
 
-            nextPlayer(player);
+            interfacePanel.resourcePanel.UpdateResources(players[activePlayerId].resources);
+            interfacePanel.UpdateVictoryPoints(players[activePlayerId].victoryPoints);
         }
     }
 
@@ -46,6 +64,6 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
     public void gameEnd()
     {
-        gameEnded = false;
+        gameEnded = true;
     }
 }
