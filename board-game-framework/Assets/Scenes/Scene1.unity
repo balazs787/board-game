@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryPoints: 0
-  color: {r: 1, g: 0, b: 0, a: 0}
+  color: {r: 1, g: 0, b: 0, a: 1}
   playerName: Player2
 --- !u!4 &242689895
 Transform:
@@ -7387,7 +7387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryPoints: 0
-  color: {r: 0, g: 0, b: 1, a: 0}
+  color: {r: 0, g: 0, b: 1, a: 1}
   playerName: Player1
 --- !u!4 &1489108924
 Transform:
