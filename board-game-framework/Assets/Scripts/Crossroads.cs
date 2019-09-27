@@ -15,15 +15,16 @@ public class Crossroads : MonoBehaviour
     public HexagonField hex3;
 
     private bool occupied = false;
-    Player player = null;
+    public Player player = null;
 
     bool city = false;
 
-    public void buildSettlement(Player player)
+    public void BuildSettlement(Player player)
     {
+        Debug.Log("build");
         if (!occupied)
         {
-            if (canBuild(this))
+            if (CanBuild(this))
             {
                 occupied = true;
                 this.player = player;
@@ -31,7 +32,7 @@ public class Crossroads : MonoBehaviour
         }
     }
 
-    public void upgradeSettlement(Player player)
+    public void UpgradeSettlement(Player player)
     {
         if (this.player == player)
         {
@@ -42,18 +43,18 @@ public class Crossroads : MonoBehaviour
         }
     }
 
-    public bool canBuild(Crossroads cr)
+    public bool CanBuild(Crossroads cr)
     {
-        if ((!road1.getOppositeCrossroad(cr).getOccupied()) &&
-            (!road2.getOppositeCrossroad(cr).getOccupied()) &&
-            (!road3.getOppositeCrossroad(cr).getOccupied()))
+        if ((!road1.GetOppositeCrossroad(cr).GetOccupied()) &&
+            (!road2.GetOppositeCrossroad(cr).GetOccupied()) &&
+            (!road3.GetOppositeCrossroad(cr).GetOccupied()))
             {
                 return true;
             }
         return false;
     }
 
-    public void crossroadsGiveResources(Resource resource)
+    public void CrossroadsGiveResources(Resource resource)
     {
         if (occupied)
         {
@@ -68,17 +69,17 @@ public class Crossroads : MonoBehaviour
         }
     }
 
-    public bool getOccupied()
+    public bool GetOccupied()
     {
         return occupied;
     }
 
-    public Player getPlayer()
+    public Player GetPlayer()
     {
         return player;
     }
 
-    public bool getCity()
+    public bool GetCity()
     {
         return city;
     }

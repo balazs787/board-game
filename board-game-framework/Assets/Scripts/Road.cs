@@ -16,7 +16,7 @@ public class Road : MonoBehaviour
     Player player = null;
 
 
-    public Crossroads getOppositeCrossroad(Crossroads crossroad)
+    public Crossroads GetOppositeCrossroad(Crossroads crossroad)
     {
         if (crossroad == crossRoad1)
             return crossRoad2;
@@ -24,7 +24,7 @@ public class Road : MonoBehaviour
             return crossRoad1;
     }
 
-    public void buildRoad(Player player)
+    public void BuildRoad(Player player)
     {
         if (!occupied)
         {

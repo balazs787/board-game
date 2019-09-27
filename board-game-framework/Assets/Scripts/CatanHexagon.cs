@@ -75,12 +75,12 @@ public class CatanHexagon : HexagonField
     {
         if (!robber)
         {
-            vertexes.top.crossroadsGiveResources(resource);
-            vertexes.topRight.crossroadsGiveResources(resource);
-            vertexes.bottomRight.crossroadsGiveResources(resource);
-            vertexes.bottom.crossroadsGiveResources(resource);
-            vertexes.bottomLeft.crossroadsGiveResources(resource);
-            vertexes.topLeft.crossroadsGiveResources(resource);
+            vertexes.top.CrossroadsGiveResources(resource);
+            vertexes.topRight.CrossroadsGiveResources(resource);
+            vertexes.bottomRight.CrossroadsGiveResources(resource);
+            vertexes.bottom.CrossroadsGiveResources(resource);
+            vertexes.bottomLeft.CrossroadsGiveResources(resource);
+            vertexes.topLeft.CrossroadsGiveResources(resource);
         }
     }
 

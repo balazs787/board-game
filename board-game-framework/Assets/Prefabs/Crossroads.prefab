@@ -51,6 +51,7 @@ MonoBehaviour:
   hex1: {fileID: 0}
   hex2: {fileID: 0}
   hex3: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &1502853422435267942
 PrefabInstance:
   m_ObjectHideFlags: 0
