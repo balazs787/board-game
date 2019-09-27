@@ -24,22 +24,22 @@ public class Build : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100f))
             {
-                Debug.Log(hit.transform?.gameObject.name);
-                Debug.Log(hit.transform?.gameObject.tag+" == "+buildTag);
                 if (hit.transform?.gameObject.tag == buildTag)
                 {
                     switch (buildTag)
                     {
                         case "Crossroads":
-                            hit.transform.gameObject.GetComponent<Crossroads>().BuildSettlement(gameController.GetPlayer());
-                            Debug.Log(gameController.GetPlayerName());
+                            hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(gameController.GetPlayer());
+                            building = false;
                             break;
                         case "Road":
                             hit.transform.gameObject.GetComponent<Road>().BuildRoad(gameController.GetPlayer());
+                            building = false;
                             break;
                         default:
                             break;
                     }
+                    
                 }
             }
         }

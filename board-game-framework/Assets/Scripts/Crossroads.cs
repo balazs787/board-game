@@ -5,6 +5,8 @@ using UnityEngine;
 public class Crossroads : MonoBehaviour
 {
     public GameObject crossroads;
+    public GameObject settlement;
+    public GameObject town;
 
     public Road road1;
     public Road road2;
@@ -16,19 +18,16 @@ public class Crossroads : MonoBehaviour
 
     private bool occupied = false;
     public Player player = null;
-
     bool city = false;
 
     public void BuildSettlement(Player player)
     {
-        Debug.Log("build");
-        if (!occupied)
+        if (!occupied && CanBuild(this))
         {
-            if (CanBuild(this))
-            {
-                occupied = true;
-                this.player = player;
-            }
+            occupied = true;
+            this.player = player;
+            GameObject s = Instantiate(settlement, transform);
+            s.GetComponent<Settlement>().Setup(player.GetId());
         }
     }
 
@@ -45,10 +44,10 @@ public class Crossroads : MonoBehaviour
 
     public bool CanBuild(Crossroads cr)
     {
-        if ((!road1.GetOppositeCrossroad(cr).GetOccupied()) &&
-            (!road2.GetOppositeCrossroad(cr).GetOccupied()) &&
-            (!road3.GetOppositeCrossroad(cr).GetOccupied()))
-            {
+        if ((road1 == null || !road1.GetOppositeCrossroad(cr).GetOccupied()) && 
+            (road2 == null || !road2.GetOppositeCrossroad(cr).GetOccupied()) && 
+            (road3 == null || !road3.GetOppositeCrossroad(cr).GetOccupied()))
+        {
                 return true;
             }
         return false;

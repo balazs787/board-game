@@ -9,6 +9,7 @@ public partial class Player : MonoBehaviour
     public int victoryPoints;
     public Color color;
     public string playerName;
+    public int id;
 
     public void givePlayerResources(Resource resource, int amount)
     {
@@ -41,5 +42,10 @@ public partial class Player : MonoBehaviour
 
         Enum.TryParse(getType, out Resource resourceGet);
         givePlayerResources(resourceGet, getAmount);
+    }
+
+    public int GetId()
+    {
+        return id;
     }
 }

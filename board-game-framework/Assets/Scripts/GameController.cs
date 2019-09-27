@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         if (!gameEnded)
         {
             int dr = diceRoll();
+            
 
             hexmap.distributeResources(dr);
 
@@ -53,8 +54,8 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
     public int diceRoll()
     {
-        int first = Random.Range(1, 6);
-        int second = Random.Range(1, 6);
+        int first = Random.Range(1, 7);
+        int second = Random.Range(1, 7);
         return first + second;
     } 
 
