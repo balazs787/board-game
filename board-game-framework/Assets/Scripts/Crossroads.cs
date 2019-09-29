@@ -27,6 +27,7 @@ public class Crossroads : MonoBehaviour
             this.player = player;
             GameObject s = Instantiate(settlementPrefab, transform);
             s.GetComponent<BuildSettlement>().Setup(player.GetId());
+            player.AddVictoryPoint();
             return true;
         }
         return false;

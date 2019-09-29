@@ -6,5 +6,5 @@ public interface ITurnBasedGameController : IGameController
 {
     void Turn(Player player);
     void NextPlayer();
-    int diceRoll();
+    int DiceRoll();
 }

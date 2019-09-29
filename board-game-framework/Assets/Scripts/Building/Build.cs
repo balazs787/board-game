@@ -27,18 +27,21 @@ public class Build : MonoBehaviour
                 Debug.Log(hit.transform?.gameObject.name);
                 if (hit.transform?.gameObject.tag == buildTag)
                 {
+                    Player currentPlayer = gameController.GetPlayer();
+
                     switch (buildTag)
                     {
                         case "Crossroads":
-                            building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(gameController.GetPlayer());
+                            building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
                             break;
                         case "Road":
-                            building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(gameController.GetPlayer());
+                            building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
                             break;
                         default:
                             break;
                     }
-                    
+
+                    gameController.interfacePanel.UpdateVictoryPoints(currentPlayer);
                 }
             }
         }

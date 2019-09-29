@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     void Start()
     {
         activePlayerId = 0;
-        Turn(players[activePlayerId]);
+        Turn(GetPlayer());
     }
 
     public string GetPlayerName()
@@ -39,37 +39,43 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         {
             activePlayerId++;
         }
-        Turn(players[activePlayerId]);
+        Turn(GetPlayer());
     }
 
     public void Turn(Player player)
     {
         if (!gameEnded)
         {
-            int dr = diceRoll();
+            int dr = DiceRoll();
             
 
             hexmap.distributeResources(dr);
 
-            interfacePanel.resourcePanel.UpdateResources(players[activePlayerId].resources);
-            interfacePanel.UpdateVictoryPoints(players[activePlayerId].victoryPoints);
+            interfacePanel.resourcePanel.UpdateResources(GetPlayer().resources);
+            interfacePanel.UpdateVictoryPoints(GetPlayer());
         }
     }
 
-    public int diceRoll()
+    public int DiceRoll()
     {
         int first = Random.Range(1, 7);
         int second = Random.Range(1, 7);
         return first + second;
     } 
 
-    public void gameStart()
+    public void GameEnd()
+    {
+        gameEnded = true;
+    }
+
+    public void GameStart()
     {
         
     }
 
-    public void gameEnd()
+    public void CheckVictory()
     {
-        gameEnded = true;
+        if (GetPlayer().GetVictoryPoints() == 10)
+            GameEnd();
     }
 }

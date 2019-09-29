@@ -5,8 +5,8 @@ using UnityEngine;
 public interface IGameController
 {
 
-    void gameStart();
+    void GameStart();
 
-    void gameEnd();
+    void GameEnd();
 
 }

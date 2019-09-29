@@ -8,8 +8,8 @@ public class InterfacePanel : MonoBehaviour
     public ResourcePanel resourcePanel;
     public TextMeshProUGUI victoryPointsText;
 
-    public void UpdateVictoryPoints(int victoryPoints)
+    public void UpdateVictoryPoints(Player player)
     {
-        victoryPointsText.text = victoryPoints.ToString();
+        victoryPointsText.text = player.GetVictoryPoints().ToString();
     }
 }

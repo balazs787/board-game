@@ -44,6 +44,15 @@ public partial class Player : MonoBehaviour
         givePlayerResources(resourceGet, getAmount);
     }
 
+    public void AddVictoryPoint()
+    {
+        victoryPoints++;
+    }
+
+    public int GetVictoryPoints()
+    {
+        return victoryPoints;
+    }
     public int GetId()
     {
         return id;
