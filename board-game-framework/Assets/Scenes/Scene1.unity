@@ -6324,6 +6324,7 @@ MonoBehaviour:
   hexmap: {fileID: 1649707572}
   activePlayerId: 0
   interfacePanel: {fileID: 1589944212}
+  build: {fileID: 1313385307}
 --- !u!4 &1313385306
 Transform:
   m_ObjectHideFlags: 0
@@ -10110,6 +10111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hexmap
       objectReference: {fileID: 0}
+    - target: {fileID: 9023720769691245917, guid: 4ab7813edaa10c6479aedf03ce69f34a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9023720769691245916, guid: 4ab7813edaa10c6479aedf03ce69f34a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11764,6 +11770,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023720769539081668, guid: 4ab7813edaa10c6479aedf03ce69f34a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023720769539081668, guid: 4ab7813edaa10c6479aedf03ce69f34a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023720769539081668, guid: 4ab7813edaa10c6479aedf03ce69f34a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023720768527190452, guid: 4ab7813edaa10c6479aedf03ce69f34a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 876852793191293614, guid: 4ab7813edaa10c6479aedf03ce69f34a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Road
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab7813edaa10c6479aedf03ce69f34a, type: 3}

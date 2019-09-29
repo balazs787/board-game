@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Crossroads : MonoBehaviour
 {
-    public GameObject crossroads;
-    public GameObject settlement;
-    public GameObject town;
+    public GameObject settlementPrefab;
+    public GameObject townPrefab;
 
     public Road road1;
     public Road road2;
@@ -20,15 +19,17 @@ public class Crossroads : MonoBehaviour
     public Player player = null;
     bool city = false;
 
-    public void BuildSettlement(Player player)
+    public bool BuildSettlement(Player player)
     {
         if (!occupied && CanBuild(this))
         {
             occupied = true;
             this.player = player;
-            GameObject s = Instantiate(settlement, transform);
-            s.GetComponent<Settlement>().Setup(player.GetId());
+            GameObject s = Instantiate(settlementPrefab, transform);
+            s.GetComponent<BuildSettlement>().Setup(player.GetId());
+            return true;
         }
+        return false;
     }
 
     public void UpgradeSettlement(Player player)

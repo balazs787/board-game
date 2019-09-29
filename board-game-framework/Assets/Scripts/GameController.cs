@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     public Hexmap hexmap;
     public int activePlayerId;
     public InterfacePanel interfacePanel;
+    public Build build;
 
     void Start()
     {
@@ -28,6 +29,9 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
     public void NextPlayer()
     {
+        if (build.GetBuilding())
+            return;
+
         if (activePlayerId + 1 == players.Length) {
             activePlayerId = 0;
         }

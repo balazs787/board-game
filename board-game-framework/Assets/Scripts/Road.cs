@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Road : MonoBehaviour
 {
-    public GameObject road;
+    public GameObject roadPrefab;
 
     public Crossroads crossRoad1;
     public Crossroads crossRoad2;
@@ -13,7 +13,7 @@ public class Road : MonoBehaviour
     public HexagonField hex2;
 
     bool occupied = false;
-    Player player = null;
+    public Player player = null;
 
 
     public Crossroads GetOppositeCrossroad(Crossroads crossroad)
@@ -24,13 +24,17 @@ public class Road : MonoBehaviour
             return crossRoad1;
     }
 
-    public void BuildRoad(Player player)
+    public bool BuildRoad(Player player)
     {
         if (!occupied)
         {
             occupied = true;
             this.player = player;
+            GameObject r = Instantiate(roadPrefab, transform);
+            r.GetComponent<BuildRoad>().Setup(player.GetId());
+            return true;
         }
+        return false;
     }
 
 }

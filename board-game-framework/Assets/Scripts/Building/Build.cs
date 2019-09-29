@@ -24,17 +24,16 @@ public class Build : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100f))
             {
+                Debug.Log(hit.transform?.gameObject.name);
                 if (hit.transform?.gameObject.tag == buildTag)
                 {
                     switch (buildTag)
                     {
                         case "Crossroads":
-                            hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(gameController.GetPlayer());
-                            building = false;
+                            building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(gameController.GetPlayer());
                             break;
                         case "Road":
-                            hit.transform.gameObject.GetComponent<Road>().BuildRoad(gameController.GetPlayer());
-                            building = false;
+                            building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(gameController.GetPlayer());
                             break;
                         default:
                             break;
@@ -49,5 +48,10 @@ public class Build : MonoBehaviour
     {
         building = true;
         buildTag = tag;
+    }
+
+    public bool GetBuilding()
+    {
+        return building;
     }
 }

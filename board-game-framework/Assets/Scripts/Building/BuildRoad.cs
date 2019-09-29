@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class BuildRoad : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public MeshRenderer road;
 
-    // Update is called once per frame
-    void Update()
+    public Material[] materials;
+
+
+    public void Setup(int playerId)
     {
-        
+        road.material = materials[playerId];
     }
 }
