@@ -24,31 +24,36 @@ public class Build : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100f))
             {
-                Debug.Log(hit.transform?.gameObject.name);
-                if (hit.transform?.gameObject.tag == buildTag)
+                //Debug.Log(hit.transform?.gameObject.name);
+                Player currentPlayer = gameController.GetPlayer();
+
+                if (buildTag == "Settlement" && hit.transform?.gameObject.tag == "Crossroads")
                 {
-                    Player currentPlayer = gameController.GetPlayer();
+                    building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
+                }else
 
-                    switch (buildTag)
-                    {
-                        case "Crossroads":
-                            building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
-                            break;
-                        case "Road":
-                            building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
-                            break;
-                        default:
-                            break;
-                    }
+                if(buildTag == "Town" && (hit.transform?.gameObject.tag == "Crossroads" || hit.transform?.gameObject.tag == "Settlement"))
+                {
+                    building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
+                }else
 
-                    gameController.interfacePanel.UpdateVictoryPoints(currentPlayer);
+                if (buildTag == "Road" && hit.transform?.gameObject.tag == "Road")
+                {
+                    building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
                 }
+
+
+                gameController.interfacePanel.UpdateVictoryPoints(currentPlayer);
+                gameController.interfacePanel.resourcePanel.UpdateResources(currentPlayer.resources);
             }
         }
     }
 
     public void BuildThis(string tag)
     {
+        if (building)
+            return;
+
         building = true;
         buildTag = tag;
     }

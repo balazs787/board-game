@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1324238466665239128}
   m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
   m_LocalPosition: {x: 0.875, y: 0.3, z: 0.5}
-  m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
+  m_LocalScale: {x: 0.25, y: 0.15, z: 0.25}
   m_Children:
   - {fileID: 1324238467650404642}
   - {fileID: 1324238466825540653}
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 1324238466825540652}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: Settlement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1324238467650404645}
   m_Layer: 0
   m_Name: Base1
-  m_TagString: Untagged
+  m_TagString: Settlement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

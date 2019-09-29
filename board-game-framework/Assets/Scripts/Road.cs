@@ -26,7 +26,7 @@ public class Road : MonoBehaviour
 
     public bool BuildRoad(Player player)
     {
-        if (!occupied)
+        if (!occupied && player.DeductResources(1, 1, 0, 0, 0))
         {
             occupied = true;
             this.player = player;

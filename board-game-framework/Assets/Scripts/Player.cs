@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public partial class Player : MonoBehaviour
@@ -11,7 +9,7 @@ public partial class Player : MonoBehaviour
     public string playerName;
     public int id;
 
-    public void givePlayerResources(Resource resource, int amount)
+    public void GivePlayerResources(Resource resource, int amount)
     {
         switch (resource)
         {
@@ -38,10 +36,29 @@ public partial class Player : MonoBehaviour
     public void Trade(string giveType, int giveAmount, string getType, int getAmount)
     {
         Enum.TryParse(giveType, out Resource resourceGive);
-        givePlayerResources(resourceGive, -giveAmount);
+        GivePlayerResources(resourceGive, -giveAmount);
 
         Enum.TryParse(getType, out Resource resourceGet);
-        givePlayerResources(resourceGet, getAmount);
+        GivePlayerResources(resourceGet, getAmount);
+    }
+
+    public bool DeductResources(int l, int b, int g, int w, int o)
+    {
+        if((resources.lumber - l >= 0) &&
+           (resources.brick - b >= 0) &&
+           (resources.grain - g >= 0) &&
+           (resources.wool - w >= 0) &&
+           (resources.ore - o >= 0))
+        {
+            resources.lumber -= l;
+            resources.brick -= b;
+            resources.grain -= g;
+            resources.wool -= w;
+            resources.ore -= o;
+
+            return true;
+        }
+        return false;
     }
 
     public void AddVictoryPoint()

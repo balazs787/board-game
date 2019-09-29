@@ -17,31 +17,36 @@ public class Crossroads : MonoBehaviour
 
     private bool occupied = false;
     public Player player = null;
+    public GameObject currentBuilding;
     bool city = false;
 
     public bool BuildSettlement(Player player)
     {
-        if (!occupied && CanBuild(this))
+        if (!occupied && CanBuild(this) && player.DeductResources(1, 1, 1, 1, 0))
         {
             occupied = true;
             this.player = player;
             GameObject s = Instantiate(settlementPrefab, transform);
             s.GetComponent<BuildSettlement>().Setup(player.GetId());
+            currentBuilding = s;
             player.AddVictoryPoint();
             return true;
         }
         return false;
     }
 
-    public void UpgradeSettlement(Player player)
+    public bool UpgradeSettlement(Player player)
     {
-        if (this.player == player)
+        if (this.player == player && !city && player.DeductResources(0, 0, 2, 0, 3))
         {
-            if (!city)
-            {
-                city = true;
-            }
+            Destroy(currentBuilding);
+            GameObject t = Instantiate(townPrefab, transform);
+            t.GetComponent<BuildTown>().Setup(player.GetId());
+            player.AddVictoryPoint();
+            city = true;
+            return true;
         }
+        return false;
     }
 
     public bool CanBuild(Crossroads cr)
@@ -61,11 +66,11 @@ public class Crossroads : MonoBehaviour
         {
             if (city)
             {
-                player.givePlayerResources(resource, 2);
+                player.GivePlayerResources(resource, 2);
             }
             else
             {
-                player.givePlayerResources(resource, 1);
+                player.GivePlayerResources(resource, 1);
             }
         }
     }
