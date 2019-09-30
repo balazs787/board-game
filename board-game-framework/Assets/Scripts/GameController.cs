@@ -16,6 +16,14 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         activePlayerId = 0;
         Turn(GetPlayer());
     }
+    void Update()
+    {
+        if (GetPlayer().NeedRefresh())
+        {
+            interfacePanel.resourcePanel.UpdateResources(GetPlayer().resources);
+            interfacePanel.UpdateVictoryPoints(GetPlayer());
+        }
+    }
 
     public string GetPlayerName()
     {
@@ -48,11 +56,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         {
             int dr = DiceRoll();
             
-
             hexmap.distributeResources(dr);
-
-            interfacePanel.resourcePanel.UpdateResources(GetPlayer().resources);
-            interfacePanel.UpdateVictoryPoints(GetPlayer());
         }
     }
 

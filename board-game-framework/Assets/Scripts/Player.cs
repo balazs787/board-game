@@ -9,6 +9,18 @@ public partial class Player : MonoBehaviour
     public string playerName;
     public int id;
 
+    private bool needRefresh;
+
+    private void Start()
+    {
+        //TODO: delete this
+        GivePlayerResources(Resource.brick, 10);
+        GivePlayerResources(Resource.lumber, 10);
+        GivePlayerResources(Resource.wool, 10);
+        GivePlayerResources(Resource.grain, 10);
+        GivePlayerResources(Resource.ore, 10);
+    }
+
     public void GivePlayerResources(Resource resource, int amount)
     {
         switch (resource)
@@ -31,6 +43,7 @@ public partial class Player : MonoBehaviour
             default:
                 break;
         }
+        needRefresh = true;
     }
 
     public void Trade(string giveType, int giveAmount, string getType, int getAmount)
@@ -40,6 +53,8 @@ public partial class Player : MonoBehaviour
 
         Enum.TryParse(getType, out Resource resourceGet);
         GivePlayerResources(resourceGet, getAmount);
+
+        needRefresh = true;
     }
 
     public bool DeductResources(int l, int b, int g, int w, int o)
@@ -56,6 +71,7 @@ public partial class Player : MonoBehaviour
             resources.wool -= w;
             resources.ore -= o;
 
+            needRefresh = true;
             return true;
         }
         return false;
@@ -64,6 +80,7 @@ public partial class Player : MonoBehaviour
     public void AddVictoryPoint()
     {
         victoryPoints++;
+        needRefresh = true;
     }
 
     public int GetVictoryPoints()
@@ -73,5 +90,18 @@ public partial class Player : MonoBehaviour
     public int GetId()
     {
         return id;
+    }
+
+    public bool NeedRefresh()
+    {
+        if (needRefresh)
+        {
+            needRefresh = false;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
