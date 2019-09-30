@@ -57,6 +57,8 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
             int dr = DiceRoll();
             
             hexmap.distributeResources(dr);
+
+            interfacePanel.UpdateVictoryPoints(GetPlayer());
         }
     }
 
