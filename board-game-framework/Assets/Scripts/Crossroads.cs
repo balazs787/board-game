@@ -22,7 +22,7 @@ public class Crossroads : MonoBehaviour
 
     public bool BuildSettlement(Player player)
     {
-        if (!occupied && CanBuild(this) && player.DeductResources(1, 1, 1, 1, 0))
+        if (CanBuild(this, player))
         {
             occupied = true;
             this.player = player;
@@ -30,6 +30,7 @@ public class Crossroads : MonoBehaviour
             s.GetComponent<BuildSettlement>().Setup(player.GetId());
             currentBuilding = s;
             player.AddVictoryPoint();
+            player.settlements++;
             return true;
         }
         return false;
@@ -49,15 +50,15 @@ public class Crossroads : MonoBehaviour
         return false;
     }
 
-    public bool CanBuild(Crossroads cr)
+    public bool CanBuild(Crossroads cr, Player player)
     {
-        if ((road1 == null || !road1.GetOppositeCrossroad(cr).GetOccupied()) && 
-            (road2 == null || !road2.GetOppositeCrossroad(cr).GetOccupied()) && 
-            (road3 == null || !road3.GetOppositeCrossroad(cr).GetOccupied()))
-        {
-                return true;
-            }
-        return false;
+        bool neighbouringCrossroadsFree = ((road1 == null || !road1.GetOppositeCrossroad(cr).GetOccupied()) &&
+            (road2 == null || !road2.GetOppositeCrossroad(cr).GetOccupied()) &&
+            (road3 == null || !road3.GetOppositeCrossroad(cr).GetOccupied()));
+
+        return (!occupied && neighbouringCrossroadsFree &&
+                (player.FreeBuild() ||
+                (HaveConnectedRoad(player) && player.DeductResources(1, 1, 1, 1, 0))));
     }
 
     public void CrossroadsGiveResources(Resource resource)
@@ -91,5 +92,8 @@ public class Crossroads : MonoBehaviour
     }
 
     
-
+    public bool HaveConnectedRoad(Player player)
+    {
+        return (road1?.player == player || road2?.player == player || road3?.player == player);
+    }
 }

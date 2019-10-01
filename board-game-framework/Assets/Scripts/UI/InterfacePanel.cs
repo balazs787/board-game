@@ -7,6 +7,7 @@ public class InterfacePanel : MonoBehaviour
 {
     public ResourcePanel resourcePanel;
     public TextMeshProUGUI victoryPointsText;
+    public EndTurn endTurn;
 
     public void UpdateVictoryPoints(Player player)
     {

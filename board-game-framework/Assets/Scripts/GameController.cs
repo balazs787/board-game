@@ -5,11 +5,14 @@ using UnityEngine;
 public class GameController : MonoBehaviour, ITurnBasedGameController
 {
     bool gameEnded = false;
+    public bool freeBuildPhase = true;
+    public bool swap = false;
     public Player[] players;
     public Hexmap hexmap;
     public int activePlayerId;
     public InterfacePanel interfacePanel;
     public Build build;
+    
 
     void Start()
     {
@@ -20,9 +23,14 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     {
         if (GetPlayer().NeedRefresh())
         {
-            interfacePanel.resourcePanel.UpdateResources(GetPlayer().resources);
-            interfacePanel.UpdateVictoryPoints(GetPlayer());
+            Refresh();
         }
+    }
+
+    public void Refresh()
+    {
+        interfacePanel.resourcePanel.UpdateResources(GetPlayer().resources);
+        interfacePanel.UpdateVictoryPoints(GetPlayer());
     }
 
     public string GetPlayerName()
@@ -40,25 +48,79 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         if (build.GetBuilding())
             return;
 
-        if (activePlayerId + 1 == players.Length) {
-            activePlayerId = 0;
+        if (freeBuildPhase)
+        {
+            if (!swap)
+            {
+                if(activePlayerId + 1 == players.Length)
+                {
+                    swap = true;
+                }
+                else
+                {
+                    activePlayerId++;
+                }
+            }
+            else
+            {
+                if (activePlayerId == 0)
+                {
+                    freeBuildPhase = false;
+                }
+                else
+                {
+                    activePlayerId--;
+                }
+            }
         }
         else
         {
-            activePlayerId++;
+            StopCoroutine(Building());
+            if (activePlayerId + 1 == players.Length)
+            {
+                activePlayerId = 0;
+            }
+            else
+            {
+                activePlayerId++;
+            }
         }
+        
         Turn(GetPlayer());
+    }
+
+    IEnumerator Building()
+    {
+        build.BuildThis("Settlement");
+
+        while (build.GetBuilding())
+        {
+            yield return null;
+        }
+
+        build.BuildThis("Road");
+
+        while (build.GetBuilding())
+        {
+            yield return null;
+        }
+
+        interfacePanel.endTurn.EndTurnButton();
     }
 
     public void Turn(Player player)
     {
-        if (!gameEnded)
+        if (freeBuildPhase)
+        {
+            StartCoroutine(Building());
+        }
+        else if (!gameEnded)
         {
             int dr = DiceRoll();
             
             hexmap.distributeResources(dr);
 
-            interfacePanel.UpdateVictoryPoints(GetPlayer());
+            Refresh();
         }
     }
 

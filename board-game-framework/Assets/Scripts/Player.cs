@@ -8,6 +8,11 @@ public partial class Player : MonoBehaviour
     public Color color;
     public string playerName;
     public int id;
+    public int freeBuilds = 4;
+    public int roads = 0;
+    public int settlements = 0;
+    public int knights = 0;
+
 
     private bool needRefresh;
 
@@ -103,5 +108,16 @@ public partial class Player : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public bool FreeBuild()
+    {
+        if (freeBuilds <= 0)
+        {
+            return false;
+        }
+
+        freeBuilds--;
+        return true;
     }
 }

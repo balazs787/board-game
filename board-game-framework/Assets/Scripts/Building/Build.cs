@@ -5,7 +5,6 @@ using UnityEngine;
 public class Build : MonoBehaviour
 {
     public GameController gameController;
-    public GameObject cancelButton;
     bool building = false;
     string buildTag;
     // Start is called before the first frame update
@@ -43,9 +42,7 @@ public class Build : MonoBehaviour
                     building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
                 }
 
-                CancelBuilding();
-                gameController.interfacePanel.UpdateVictoryPoints(currentPlayer);
-                gameController.interfacePanel.resourcePanel.UpdateResources(currentPlayer.resources);
+                gameController.Refresh();
             }
         }
     }
@@ -57,13 +54,6 @@ public class Build : MonoBehaviour
 
         building = true;
         buildTag = tag;
-        cancelButton.SetActive(true);
-    }
-
-    public void CancelBuilding()
-    {
-        cancelButton.SetActive(false);
-        building = false;
     }
 
     public bool GetBuilding()
