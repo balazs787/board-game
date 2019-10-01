@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildRoad : MonoBehaviour
+public class SetupRoad : MonoBehaviour
 {
     public MeshRenderer road;
 

@@ -26,7 +26,7 @@ public partial class Player : MonoBehaviour
         GivePlayerResources(Resource.ore, 10);
     }
 
-    public void GivePlayerResources(Resource resource, int amount)
+    public void GivePlayerResources(Resource? resource, int amount)
     {
         switch (resource)
         {
@@ -62,24 +62,34 @@ public partial class Player : MonoBehaviour
         needRefresh = true;
     }
 
-    public bool DeductResources(int l, int b, int g, int w, int o)
+    public bool CanAfford(int l, int b, int g, int w, int o)
     {
-        if((resources.lumber - l >= 0) &&
+        if ((resources.lumber - l >= 0) &&
            (resources.brick - b >= 0) &&
            (resources.grain - g >= 0) &&
            (resources.wool - w >= 0) &&
            (resources.ore - o >= 0))
         {
-            resources.lumber -= l;
-            resources.brick -= b;
-            resources.grain -= g;
-            resources.wool -= w;
-            resources.ore -= o;
-
-            needRefresh = true;
             return true;
         }
         return false;
+    }
+
+    public void DeductResources(int l, int b, int g, int w, int o)
+    {
+        if (freeBuilds > 0)
+        {
+            freeBuilds--;
+            return;
+        }
+
+        resources.lumber -= l;
+        resources.brick -= b;
+        resources.grain -= g;
+        resources.wool -= w;
+        resources.ore -= o;
+
+        needRefresh = true;
     }
 
     public void AddVictoryPoint()
@@ -110,14 +120,8 @@ public partial class Player : MonoBehaviour
         }
     }
 
-    public bool FreeBuild()
+    public bool CanFreeBuild()
     {
-        if (freeBuilds <= 0)
-        {
-            return false;
-        }
-
-        freeBuilds--;
-        return true;
+        return freeBuilds >= 0;
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildSettlement : MonoBehaviour
+public class SetupSettlement : MonoBehaviour
 {
     public MeshRenderer base1;
     public MeshRenderer roof;

@@ -23,15 +23,11 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     {
         if (GetPlayer().NeedRefresh())
         {
-            Refresh();
+            interfacePanel.Refresh(GetPlayer());
         }
     }
 
-    public void Refresh()
-    {
-        interfacePanel.resourcePanel.UpdateResources(GetPlayer().resources);
-        interfacePanel.UpdateVictoryPoints(GetPlayer());
-    }
+    
 
     public string GetPlayerName()
     {
@@ -85,7 +81,8 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
                 activePlayerId++;
             }
         }
-        
+
+        interfacePanel.Refresh(GetPlayer());
         Turn(GetPlayer());
     }
 
@@ -120,7 +117,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
             
             hexmap.distributeResources(dr);
 
-            Refresh();
+            interfacePanel.Refresh(GetPlayer());
         }
     }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildTown : MonoBehaviour
+public class SetupTown : MonoBehaviour
 {
     public MeshRenderer base1;
     public MeshRenderer base2;

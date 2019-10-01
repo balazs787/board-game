@@ -28,10 +28,11 @@ public class Road : MonoBehaviour
     {
         if (CanBuild(player))
         {
+            player.DeductResources(1, 1, 0, 0, 0);
             occupied = true;
             this.player = player;
             GameObject r = Instantiate(roadPrefab, transform);
-            r.GetComponent<BuildRoad>().Setup(player.GetId());
+            r.GetComponent<SetupRoad>().Setup(player.GetId());
             player.roads++;
             return true;
         }
@@ -41,8 +42,8 @@ public class Road : MonoBehaviour
     public bool CanBuild(Player player)
     {
         return (!occupied &&
-                (player.FreeBuild() ||
-                (player.DeductResources(1, 1, 0, 0, 0) &&
+                (player.CanFreeBuild() ||
+                (player.CanAfford(1, 1, 0, 0, 0) &&
                 (crossRoad1.HaveConnectedRoad(player) || crossRoad2.HaveConnectedRoad(player)))));
     }
 
