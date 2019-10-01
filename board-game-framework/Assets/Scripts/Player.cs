@@ -122,6 +122,6 @@ public partial class Player : MonoBehaviour
 
     public bool CanFreeBuild()
     {
-        return freeBuilds >= 0;
+        return freeBuilds > 0;
     }
 }
