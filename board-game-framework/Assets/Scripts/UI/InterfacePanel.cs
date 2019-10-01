@@ -9,8 +9,9 @@ public class InterfacePanel : MonoBehaviour
     public TextMeshProUGUI victoryPointsText;
     public EndTurn endTurn;
 
-    public void UpdateVictoryPoints(Player player)
+    public void Refresh(Player player)
     {
+        resourcePanel.UpdateResources(player.resources);
         victoryPointsText.text = player.GetVictoryPoints().ToString();
     }
 }

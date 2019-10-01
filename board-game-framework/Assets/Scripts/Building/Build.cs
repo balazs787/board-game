@@ -42,7 +42,7 @@ public class Build : MonoBehaviour
                     building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
                 }
 
-                gameController.Refresh();
+                gameController.interfacePanel.Refresh(currentPlayer);
             }
         }
     }

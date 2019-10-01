@@ -24,12 +24,19 @@ public class Crossroads : MonoBehaviour
     {
         if (CanBuild(this, player))
         {
+            player.DeductResources(1, 1, 1, 1, 0);
             occupied = true;
             this.player = player;
             GameObject s = Instantiate(settlementPrefab, transform);
-            s.GetComponent<BuildSettlement>().Setup(player.GetId());
+            s.GetComponent<SetupSettlement>().Setup(player.GetId());
             currentBuilding = s;
             player.AddVictoryPoint();
+            if (player.settlements == 0)
+            {
+                player.GivePlayerResources(hex1.gameObject.GetComponent<CatanHexagon>()?.resource, 1);
+                player.GivePlayerResources(hex2.gameObject.GetComponent<CatanHexagon>()?.resource, 1);
+                player.GivePlayerResources(hex3.gameObject.GetComponent<CatanHexagon>()?.resource, 1);
+            }
             player.settlements++;
             return true;
         }
@@ -38,11 +45,12 @@ public class Crossroads : MonoBehaviour
 
     public bool UpgradeSettlement(Player player)
     {
-        if (this.player == player && !city && player.DeductResources(0, 0, 2, 0, 3))
+        if (this.player == player && !city && player.CanAfford(0, 0, 2, 0, 3))
         {
             Destroy(currentBuilding);
+            player.DeductResources(0, 0, 2, 0, 3);
             GameObject t = Instantiate(townPrefab, transform);
-            t.GetComponent<BuildTown>().Setup(player.GetId());
+            t.GetComponent<SetupTown>().Setup(player.GetId());
             player.AddVictoryPoint();
             city = true;
             return true;
@@ -57,8 +65,8 @@ public class Crossroads : MonoBehaviour
             (road3 == null || !road3.GetOppositeCrossroad(cr).GetOccupied()));
 
         return (!occupied && neighbouringCrossroadsFree &&
-                (player.FreeBuild() ||
-                (HaveConnectedRoad(player) && player.DeductResources(1, 1, 1, 1, 0))));
+                (player.CanFreeBuild() ||
+                (HaveConnectedRoad(player) && player.CanAfford(1, 1, 1, 1, 0))));
     }
 
     public void CrossroadsGiveResources(Resource resource)
