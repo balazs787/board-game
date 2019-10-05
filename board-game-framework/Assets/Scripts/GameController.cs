@@ -105,6 +105,11 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         interfacePanel.endTurn.EndTurnButton();
     }
 
+    //IEnumerator RobberPlacement()
+    //{
+    //    while(GetPlayer().Placing())
+    //}
+
     public void Turn(Player player)
     {
         if (freeBuildPhase)
@@ -114,8 +119,20 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         else if (!gameEnded)
         {
             int dr = DiceRoll();
+
+            if (dr == 7)
+            {
+                foreach (var p in players)
+                {
+                    p.SevenRoll();
+                }
+                GetPlayer().PlaceRobber();
+            }
+            else
+            {
+                hexmap.distributeResources(dr);
+            }
             
-            hexmap.distributeResources(dr);
 
             interfacePanel.Refresh(GetPlayer());
         }

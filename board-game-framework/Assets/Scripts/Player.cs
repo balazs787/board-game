@@ -13,8 +13,8 @@ public partial class Player : MonoBehaviour
     public int settlements = 0;
     public int knights = 0;
 
-
-    private bool needRefresh;
+    private bool _placingRobber;
+    private bool _needRefresh;
 
     private void Start()
     {
@@ -48,7 +48,7 @@ public partial class Player : MonoBehaviour
             default:
                 break;
         }
-        needRefresh = true;
+        _needRefresh = true;
     }
 
     public void Trade(string giveType, int giveAmount, string getType, int getAmount)
@@ -59,7 +59,26 @@ public partial class Player : MonoBehaviour
         Enum.TryParse(getType, out Resource resourceGet);
         GivePlayerResources(resourceGet, getAmount);
 
-        needRefresh = true;
+        _needRefresh = true;
+    }
+
+    public void SevenRoll()
+    {
+        var currentResources = resources.lumber + resources.brick + resources.wool + resources.grain + resources.ore;
+        if (currentResources > 7)
+        {
+            DropResources(currentResources / 2);
+        }
+    }
+
+    public void DropResources(int amount)
+    {
+
+    }
+
+    public void PlaceRobber()
+    {
+        _placingRobber = true;
     }
 
     public bool CanAfford(int l, int b, int g, int w, int o)
@@ -89,13 +108,13 @@ public partial class Player : MonoBehaviour
         resources.wool -= w;
         resources.ore -= o;
 
-        needRefresh = true;
+        _needRefresh = true;
     }
 
     public void AddVictoryPoint()
     {
         victoryPoints++;
-        needRefresh = true;
+        _needRefresh = true;
     }
 
     public int GetVictoryPoints()
@@ -109,9 +128,9 @@ public partial class Player : MonoBehaviour
 
     public bool NeedRefresh()
     {
-        if (needRefresh)
+        if (_needRefresh)
         {
-            needRefresh = false;
+            _needRefresh = false;
             return true;
         }
         else

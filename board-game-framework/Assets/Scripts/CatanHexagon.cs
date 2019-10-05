@@ -8,6 +8,7 @@ public class CatanHexagon : HexagonField
     public Resource resource;
     public bool robber;
     public GameObject numberText;
+    public GameObject robberGameObject;
 
     void Start()
     {
@@ -69,6 +70,12 @@ public class CatanHexagon : HexagonField
     public int getNumber()
     {
         return number;
+    }
+
+    public void PlaceRobberHere()
+    {
+        robber = true;
+        robberGameObject.transform.position = this.transform.position;
     }
 
     public void hexGiveResources()
