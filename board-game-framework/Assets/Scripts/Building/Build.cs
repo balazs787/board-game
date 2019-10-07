@@ -6,7 +6,7 @@ public class Build : MonoBehaviour
 {
     public GameController gameController;
     public GameObject cancelBuildingButton;
-    bool building = false;
+    private bool _building = false;
     string buildTag;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class Build : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (building && Input.GetMouseButtonDown(0))
+        if (_building && Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -30,20 +30,20 @@ public class Build : MonoBehaviour
 
                 if (buildTag == "Settlement" && hit.transform?.gameObject.tag == "Crossroads")
                 {
-                    building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
+                    _building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
                 }else
 
                 if(buildTag == "Town" && (hit.transform?.gameObject.tag == "Crossroads" || hit.transform?.gameObject.tag == "Settlement"))
                 {
-                    building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
+                    _building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
                 }else
 
                 if (buildTag == "Road" && hit.transform?.gameObject.tag == "Road")
                 {
-                    building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
+                    _building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
                 }
 
-                cancelBuildingButton.SetActive(building && !gameController.freeBuildPhase);
+                cancelBuildingButton.SetActive(_building && !gameController.freeBuildPhase);
                 gameController.interfacePanel.Refresh(currentPlayer);
             }
         }
@@ -51,10 +51,10 @@ public class Build : MonoBehaviour
 
     public void BuildThis(string tag)
     {
-        if (building)
+        if (_building)
             return;
 
-        building = true;
+        _building = true;
         buildTag = tag;
 
         if (!gameController.freeBuildPhase)
@@ -63,12 +63,12 @@ public class Build : MonoBehaviour
 
     public bool GetBuilding()
     {
-        return building;
+        return _building;
     }
 
     public void CancelBuilding()
     {
-        building = false;
+        _building = false;
         cancelBuildingButton.SetActive(false);
     }
 }

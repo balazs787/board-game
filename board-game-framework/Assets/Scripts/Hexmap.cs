@@ -12,7 +12,7 @@ public class Hexmap : MonoBehaviour
         {
             if (hex.getNumber() == diceRoll)
             {
-                hex.activate();
+                hex.Activate();
             }
         }
     }

@@ -28,7 +28,7 @@ public class SquareField : Field
     public int number;
 
     override
-    public void activate()
+    public void Activate()
     {
 
     }

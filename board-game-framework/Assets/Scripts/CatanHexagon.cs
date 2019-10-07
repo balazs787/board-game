@@ -6,9 +6,9 @@ public class CatanHexagon : HexagonField
 {
     public int number;
     public Resource resource;
-    public bool robber;
+    public bool beingRobbed;
     public GameObject numberText;
-    public GameObject robberGameObject;
+    public Robber robber;
 
     void Start()
     {
@@ -62,9 +62,9 @@ public class CatanHexagon : HexagonField
 
 
     override
-    public void activate()
+    public void Activate()
     {
-        hexGiveResources();
+        HexGiveResources();
     }
 
     public int getNumber()
@@ -72,15 +72,32 @@ public class CatanHexagon : HexagonField
         return number;
     }
 
-    public void PlaceRobberHere()
+    public bool PlaceRobberHere(Player player)
     {
-        robber = true;
-        robberGameObject.transform.position = this.transform.position;
+        if (beingRobbed)
+        {
+            return false;
+        }
+
+        beingRobbed = true;
+        robber.gameObject.transform.position = gameObject.transform.position;
+        robber.CanSteal(EnemyTowns(player));
+        return true;
     }
 
-    public void hexGiveResources()
+    public bool EnemyTowns(Player player)
     {
-        if (!robber)
+        return (vertexes.top.GetPlayer() != player && vertexes.top.GetPlayer() != null) ||
+                (vertexes.topRight.GetPlayer() != player && vertexes.topRight.GetPlayer() != null) ||
+                (vertexes.bottomRight.GetPlayer() != player && vertexes.bottomRight.GetPlayer() != null) ||
+                (vertexes.bottom.GetPlayer() != player && vertexes.bottom.GetPlayer() != null) ||
+                (vertexes.bottomLeft.GetPlayer() != player && vertexes.bottomLeft.GetPlayer() != null) ||
+                (vertexes.topLeft.GetPlayer() != player && vertexes.topLeft.GetPlayer() != null);
+    }
+
+    public void HexGiveResources()
+    {
+        if (!beingRobbed)
         {
             vertexes.top.CrossroadsGiveResources(resource);
             vertexes.topRight.CrossroadsGiveResources(resource);
@@ -90,5 +107,4 @@ public class CatanHexagon : HexagonField
             vertexes.topLeft.CrossroadsGiveResources(resource);
         }
     }
-
 }

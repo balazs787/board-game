@@ -16,7 +16,7 @@ public class Crossroads : MonoBehaviour
     public HexagonField hex3;
 
     private bool occupied = false;
-    public Player player = null;
+    private Player _player = null;
     public GameObject currentBuilding;
     bool city = false;
 
@@ -26,7 +26,7 @@ public class Crossroads : MonoBehaviour
         {
             player.DeductResources(1, 1, 1, 1, 0);
             occupied = true;
-            this.player = player;
+            _player = player;
             GameObject s = Instantiate(settlementPrefab, transform);
             s.GetComponent<SetupSettlement>().Setup(player.GetId());
             currentBuilding = s;
@@ -45,7 +45,7 @@ public class Crossroads : MonoBehaviour
 
     public bool UpgradeSettlement(Player player)
     {
-        if (this.player == player && !city && player.CanAfford(0, 0, 2, 0, 3))
+        if (_player == player && !city && player.CanAfford(0, 0, 2, 0, 3))
         {
             Destroy(currentBuilding);
             player.DeductResources(0, 0, 2, 0, 3);
@@ -75,13 +75,24 @@ public class Crossroads : MonoBehaviour
         {
             if (city)
             {
-                player.GivePlayerResources(resource, 2);
+                _player.GivePlayerResources(resource, 2);
             }
             else
             {
-                player.GivePlayerResources(resource, 1);
+                _player.GivePlayerResources(resource, 1);
             }
         }
+    }
+
+    public bool StealResource(Player player)
+    {
+        if(_player==null || _player == player)
+        {
+            return false;
+        }
+
+        _player.GivePlayerRandomResource(player);
+        return true;
     }
 
     public bool GetOccupied()
@@ -91,7 +102,7 @@ public class Crossroads : MonoBehaviour
 
     public Player GetPlayer()
     {
-        return player;
+        return _player;
     }
 
     public bool GetCity()

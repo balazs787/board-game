@@ -6,12 +6,13 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 {
     bool gameEnded = false;
     public bool freeBuildPhase = true;
-    public bool swap = false;
+    public bool swap;
     public Player[] players;
     public Hexmap hexmap;
     public int activePlayerId;
     public InterfacePanel interfacePanel;
     public Build build;
+    public Robber robber;
     
 
     void Start()
@@ -41,7 +42,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
     public void NextPlayer()
     {
-        if (build.GetBuilding())
+        if (build.GetBuilding() || robber.GetPlacingRobber() || robber.GetStealing())
             return;
 
         if (freeBuildPhase)
@@ -105,10 +106,24 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         interfacePanel.endTurn.EndTurnButton();
     }
 
-    //IEnumerator RobberPlacement()
-    //{
-    //    while(GetPlayer().Placing())
-    //}
+    IEnumerator RobberPlacement()
+    {
+        robber.PlaceRobber();
+
+        while (robber.GetPlacingRobber())
+        {
+            yield return null;
+        }
+
+        robber.Steal();
+
+        while (robber.GetStealing())
+        {
+            yield return null;
+        }
+
+        interfacePanel.Refresh(GetPlayer());
+    }
 
     public void Turn(Player player)
     {
@@ -120,13 +135,15 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         {
             int dr = DiceRoll();
 
+            Debug.Log(dr);
+
             if (dr == 7)
             {
                 foreach (var p in players)
                 {
                     p.SevenRoll();
                 }
-                GetPlayer().PlaceRobber();
+                StartCoroutine(RobberPlacement());
             }
             else
             {

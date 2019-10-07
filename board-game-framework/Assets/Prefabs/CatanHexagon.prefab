@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1991957428348444704}
   m_Layer: 0
   m_Name: CatanHexagon
-  m_TagString: Untagged
+  m_TagString: CatanHex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,10 +61,9 @@ MonoBehaviour:
     topLeft: {fileID: 0}
   number: 0
   resource: 0
-  robber: 0
+  beingRobbed: 0
   numberText: {fileID: 3511499334836321576}
-  robberGameObject: {fileID: 7992279955229045475, guid: b11a29b7a7cfb8b49930084464381541,
-    type: 3}
+  robber: {fileID: 1619927836093157232, guid: b11a29b7a7cfb8b49930084464381541, type: 3}
 --- !u!1001 &3445657198175401117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,6 +71,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7892586741345699376}
     m_Modifications:
+    - target: {fileID: 4148192595003383067, guid: 351512f118ff1d94e9cd4a21ac792979,
+        type: 3}
+      propertyPath: m_Name
+      value: NumberPlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148192595003383067, guid: 351512f118ff1d94e9cd4a21ac792979,
+        type: 3}
+      propertyPath: m_TagString
+      value: CatanHex
+      objectReference: {fileID: 0}
     - target: {fileID: 4148192595003383047, guid: 351512f118ff1d94e9cd4a21ac792979,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -126,11 +135,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4148192595003383067, guid: 351512f118ff1d94e9cd4a21ac792979,
-        type: 3}
-      propertyPath: m_Name
-      value: NumberPlate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 351512f118ff1d94e9cd4a21ac792979, type: 3}

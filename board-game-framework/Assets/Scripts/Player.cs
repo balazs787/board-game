@@ -13,7 +13,6 @@ public partial class Player : MonoBehaviour
     public int settlements = 0;
     public int knights = 0;
 
-    private bool _placingRobber;
     private bool _needRefresh;
 
     private void Start()
@@ -76,11 +75,6 @@ public partial class Player : MonoBehaviour
 
     }
 
-    public void PlaceRobber()
-    {
-        _placingRobber = true;
-    }
-
     public bool CanAfford(int l, int b, int g, int w, int o)
     {
         if ((resources.lumber - l >= 0) &&
@@ -109,6 +103,34 @@ public partial class Player : MonoBehaviour
         resources.ore -= o;
 
         _needRefresh = true;
+    }
+
+    public void GivePlayerRandomResource(Player player)
+    {
+        if (resources.lumber + resources.brick + resources.wool + resources.grain + resources.ore == 0)
+        {
+            return;
+        }
+
+        int[] rs = new int[5];
+        var index = UnityEngine.Random.Range(0, 5);
+        Debug.Log(index);
+        rs[index] = 1;
+
+        if (CanAfford(rs[0], rs[1], rs[2], rs[3], rs[4]))
+        {
+            DeductResources(rs[0], rs[1], rs[2], rs[3], rs[4]);
+
+            GivePlayerResources(Resource.lumber, rs[0]);
+            GivePlayerResources(Resource.brick, rs[1]);
+            GivePlayerResources(Resource.wool, rs[2]);
+            GivePlayerResources(Resource.grain, rs[3]);
+            GivePlayerResources(Resource.ore, rs[4]);
+        }
+        else
+        {
+            GivePlayerRandomResource(player);
+        }
     }
 
     public void AddVictoryPoint()
