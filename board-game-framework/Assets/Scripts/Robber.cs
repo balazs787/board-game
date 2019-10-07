@@ -8,11 +8,11 @@ public class Robber : MonoBehaviour
     private bool _stealing;
     private bool _canSteal;
     public GameController gameController;
-    public HexagonField sandHex;
+    public CatanHexagon currentHex;
 
     private void Start()
     {
-        gameObject.transform.position = sandHex.transform.position;
+        gameObject.transform.position = currentHex.transform.position;
     }
     void Update()
     {
@@ -30,7 +30,9 @@ public class Robber : MonoBehaviour
                 if ((hit.transform?.gameObject.tag == "CatanHex"))
                 {
                     _canSteal = true;
-                    _placingRobber = !hit.transform.gameObject.GetComponentInParent<CatanHexagon>().PlaceRobberHere(currentPlayer);
+                    currentHex.beingRobbed = false;
+                    currentHex = hit.transform.gameObject.GetComponentInParent<CatanHexagon>();
+                    _placingRobber = !currentHex.PlaceRobberHere(currentPlayer);
                 }
             }
         }

@@ -114,18 +114,17 @@ public partial class Player : MonoBehaviour
 
         int[] rs = new int[5];
         var index = UnityEngine.Random.Range(0, 5);
-        Debug.Log(index);
         rs[index] = 1;
 
         if (CanAfford(rs[0], rs[1], rs[2], rs[3], rs[4]))
         {
             DeductResources(rs[0], rs[1], rs[2], rs[3], rs[4]);
 
-            GivePlayerResources(Resource.lumber, rs[0]);
-            GivePlayerResources(Resource.brick, rs[1]);
-            GivePlayerResources(Resource.wool, rs[2]);
-            GivePlayerResources(Resource.grain, rs[3]);
-            GivePlayerResources(Resource.ore, rs[4]);
+            player.GivePlayerResources(Resource.lumber, rs[0]);
+            player.GivePlayerResources(Resource.brick, rs[1]);
+            player.GivePlayerResources(Resource.wool, rs[2]);
+            player.GivePlayerResources(Resource.grain, rs[3]);
+            player.GivePlayerResources(Resource.ore, rs[4]);
         }
         else
         {
