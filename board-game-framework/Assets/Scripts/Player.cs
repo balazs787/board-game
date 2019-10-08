@@ -4,7 +4,7 @@ using UnityEngine;
 
 public partial class Player : MonoBehaviour
 {
-    public Resources resources = new Resources();
+    //public Resources resources = new Resources();
     public int victoryPoints;
     public Color color;
     public string playerName;
@@ -13,18 +13,18 @@ public partial class Player : MonoBehaviour
     public int roads = 0;
     public int settlements = 0;
     public int knights = 0;
-    public Dictionary<Resource, int> rs;
+    public Dictionary<Resource, int> Resources;
 
     private bool _needRefresh;
 
     private void Awake()
     {
-        rs = new Dictionary<Resource, int>() {
-            { Resource.lumber, resources.lumber },
-            { Resource.brick, resources.brick },
-            { Resource.grain, resources.grain },
-            { Resource.wool, resources.wool },
-            { Resource.ore, resources.ore },
+        Resources = new Dictionary<Resource, int>() {
+            { Resource.lumber, 0 },
+            { Resource.brick, 0 },
+            { Resource.grain, 0 },
+            { Resource.wool, 0 },
+            { Resource.ore, 0 },
             { Resource.none, 0 } };
     }
     private void Start()
@@ -45,8 +45,7 @@ public partial class Player : MonoBehaviour
 
     public void GivePlayerResources(Resource resource, int amount)
     {
-
-        rs[resource]+= amount;
+        Resources[resource]+= amount;
         _needRefresh = true;
     }
 
@@ -63,7 +62,7 @@ public partial class Player : MonoBehaviour
 
     public int SevenRoll()
     {
-        var currentResources = resources.lumber + resources.brick + resources.wool + resources.grain + resources.ore;
+        var currentResources = Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore];
         if (currentResources > 7)
         {
             return currentResources / 2;
@@ -78,11 +77,11 @@ public partial class Player : MonoBehaviour
 
     public bool CanAfford(int l, int b, int g, int w, int o)
     {
-        if ((resources.lumber - l >= 0) &&
-           (resources.brick - b >= 0) &&
-           (resources.grain - g >= 0) &&
-           (resources.wool - w >= 0) &&
-           (resources.ore - o >= 0))
+        if ((Resources[Resource.lumber] - l >= 0) &&
+           (Resources[Resource.brick] - b >= 0) &&
+           (Resources[Resource.grain] - g >= 0) &&
+           (Resources[Resource.wool] - w >= 0) &&
+           (Resources[Resource.ore] - o >= 0))
         {
             return true;
         }
@@ -91,7 +90,7 @@ public partial class Player : MonoBehaviour
 
     public bool CanAfford(Resource resource, int amount)
     {
-        return rs[resource] >= amount;
+        return Resources[resource] >= amount;
     }
 
     public void DeductResources(int l, int b, int g, int w, int o)
@@ -102,11 +101,11 @@ public partial class Player : MonoBehaviour
             return;
         }
 
-        resources.lumber -= l;
-        resources.brick -= b;
-        resources.grain -= g;
-        resources.wool -= w;
-        resources.ore -= o;
+        Resources[Resource.lumber] -= l;
+        Resources[Resource.brick] -= b;
+        Resources[Resource.grain] -= g;
+        Resources[Resource.wool] -= w;
+        Resources[Resource.ore] -= o;
 
         _needRefresh = true;
     }
@@ -118,7 +117,7 @@ public partial class Player : MonoBehaviour
 
     public void GivePlayerRandomResource(Player player)
     {
-        if (resources.lumber + resources.brick + resources.wool + resources.grain + resources.ore == 0)
+        if (Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore] == 0)
         {
             return;
         }

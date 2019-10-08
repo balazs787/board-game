@@ -27,6 +27,6 @@ public class TradeWindow : MonoBehaviour
         //TODO: trade
         gameController.GetPlayer().Trade(giveTypeText.text, Int32.Parse(giveAmountText.text), getTypeText.text,Int32.Parse(getAmountText.text));
         gameObject.SetActive(false);
-        gameController.interfacePanel.resourcePanel.UpdateResources(gameController.GetPlayer().resources);
+        gameController.interfacePanel.resourcePanel.UpdateResources(gameController.GetPlayer().Resources);
     }
 }

@@ -12,7 +12,7 @@ public class InterfacePanel : MonoBehaviour
 
     public void Refresh(Player player)
     {
-        resourcePanel.UpdateResources(player.resources);
+        resourcePanel.UpdateResources(player.Resources);
         victoryPointsText.text = player.GetVictoryPoints().ToString();
     }
 
