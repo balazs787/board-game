@@ -33,9 +33,9 @@ public class Crossroads : MonoBehaviour
             player.AddVictoryPoint();
             if (player.settlements == 0)
             {
-                player.GivePlayerResources(hex1.gameObject.GetComponent<CatanHexagon>()?.resource, 1);
-                player.GivePlayerResources(hex2.gameObject.GetComponent<CatanHexagon>()?.resource, 1);
-                player.GivePlayerResources(hex3.gameObject.GetComponent<CatanHexagon>()?.resource, 1);
+                player.GivePlayerResources(hex1.gameObject.GetComponent<CatanHexagon>().resource, 1);
+                player.GivePlayerResources(hex2.gameObject.GetComponent<CatanHexagon>().resource, 1);
+                player.GivePlayerResources(hex3.gameObject.GetComponent<CatanHexagon>().resource, 1);
             }
             player.settlements++;
             return true;
@@ -113,6 +113,6 @@ public class Crossroads : MonoBehaviour
     
     public bool HaveConnectedRoad(Player player)
     {
-        return (road1?.player == player || road2?.player == player || road3?.player == player);
+        return road1?.player == player || road2?.player == player || road3?.player == player;
     }
 }

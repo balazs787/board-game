@@ -141,7 +141,11 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
             {
                 foreach (var p in players)
                 {
-                    p.SevenRoll();
+                    int amount = p.SevenRoll();
+                    if (amount > 0)
+                    {
+                        interfacePanel.DropResources(GetPlayer(), amount);
+                    }
                 }
                 StartCoroutine(RobberPlacement());
             }

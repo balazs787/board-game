@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public partial class Player : MonoBehaviour
@@ -12,41 +13,40 @@ public partial class Player : MonoBehaviour
     public int roads = 0;
     public int settlements = 0;
     public int knights = 0;
+    public Dictionary<Resource, int> rs;
 
     private bool _needRefresh;
 
+    private void Awake()
+    {
+        rs = new Dictionary<Resource, int>() {
+            { Resource.lumber, resources.lumber },
+            { Resource.brick, resources.brick },
+            { Resource.grain, resources.grain },
+            { Resource.wool, resources.wool },
+            { Resource.ore, resources.ore },
+            { Resource.none, 0 } };
+    }
     private void Start()
     {
+        
+
+
         //TODO: delete this
         GivePlayerResources(Resource.brick, 10);
         GivePlayerResources(Resource.lumber, 10);
         GivePlayerResources(Resource.wool, 10);
         GivePlayerResources(Resource.grain, 10);
-        GivePlayerResources(Resource.ore, 10);
+        GivePlayerResources(Resource.ore, 10); 
     }
 
-    public void GivePlayerResources(Resource? resource, int amount)
+    
+
+
+    public void GivePlayerResources(Resource resource, int amount)
     {
-        switch (resource)
-        {
-            case Resource.lumber:
-                resources.lumber += amount;
-                break;
-            case Resource.brick:
-                resources.brick += amount;
-                break;
-            case Resource.grain:
-                resources.grain += amount;
-                break;
-            case Resource.wool:
-                resources.wool += amount;
-                break;
-            case Resource.ore:
-                resources.ore += amount;
-                break;
-            default:
-                break;
-        }
+
+        rs[resource]+= amount;
         _needRefresh = true;
     }
 
@@ -61,18 +61,19 @@ public partial class Player : MonoBehaviour
         _needRefresh = true;
     }
 
-    public void SevenRoll()
+    public int SevenRoll()
     {
         var currentResources = resources.lumber + resources.brick + resources.wool + resources.grain + resources.ore;
         if (currentResources > 7)
         {
-            DropResources(currentResources / 2);
+            return currentResources / 2;
         }
+        return 0;
     }
 
     public void DropResources(int amount)
     {
-
+        
     }
 
     public bool CanAfford(int l, int b, int g, int w, int o)
@@ -86,6 +87,11 @@ public partial class Player : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public bool CanAfford(Resource resource, int amount)
+    {
+        return rs[resource] >= amount;
     }
 
     public void DeductResources(int l, int b, int g, int w, int o)
@@ -105,6 +111,11 @@ public partial class Player : MonoBehaviour
         _needRefresh = true;
     }
 
+    public void DeductOneResource(Resource resource)
+    {
+        GivePlayerResources(resource, -1);
+    }
+
     public void GivePlayerRandomResource(Player player)
     {
         if (resources.lumber + resources.brick + resources.wool + resources.grain + resources.ore == 0)
@@ -112,24 +123,14 @@ public partial class Player : MonoBehaviour
             return;
         }
 
-        int[] rs = new int[5];
-        var index = UnityEngine.Random.Range(0, 5);
-        rs[index] = 1;
-
-        if (CanAfford(rs[0], rs[1], rs[2], rs[3], rs[4]))
+        int randomInt = UnityEngine.Random.Range(0, 5);
+        while(!CanAfford((Resource)randomInt, 1))
         {
-            DeductResources(rs[0], rs[1], rs[2], rs[3], rs[4]);
+            randomInt = UnityEngine.Random.Range(0, 5);
+        }
 
-            player.GivePlayerResources(Resource.lumber, rs[0]);
-            player.GivePlayerResources(Resource.brick, rs[1]);
-            player.GivePlayerResources(Resource.wool, rs[2]);
-            player.GivePlayerResources(Resource.grain, rs[3]);
-            player.GivePlayerResources(Resource.ore, rs[4]);
-        }
-        else
-        {
-            GivePlayerRandomResource(player);
-        }
+        DeductOneResource((Resource)randomInt);
+        player.GivePlayerResources((Resource)randomInt, 1);
     }
 
     public void AddVictoryPoint()

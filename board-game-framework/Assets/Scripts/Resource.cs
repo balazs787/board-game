@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum Resource
 {
-    brick,
-    wool,
-    ore,
-    grain,
-    lumber,
-    none
+    none=0,
+    lumber=1,
+    brick=2,
+    grain=3,
+    wool=4,
+    ore=5,
 }
