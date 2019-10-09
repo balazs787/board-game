@@ -42,9 +42,8 @@ public class Road : MonoBehaviour
     public bool CanBuild(Player player)
     {
         return (!occupied &&
-                (player.CanFreeBuild() ||
-                (player.CanAfford(1, 1, 0, 0, 0) &&
-                (crossRoad1.HaveConnectedRoad(player) || crossRoad2.HaveConnectedRoad(player)))));
+                (player.CanFreeBuild() || player.CanAfford(1, 1, 0, 0, 0)) &&
+                (crossRoad1.HaveConnectedRoad(player) || crossRoad2.HaveConnectedRoad(player) || crossRoad1.GetPlayer()==player || crossRoad2.GetPlayer()==player));
     }
 
 }

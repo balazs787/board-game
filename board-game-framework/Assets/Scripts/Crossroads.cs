@@ -33,9 +33,18 @@ public class Crossroads : MonoBehaviour
             player.AddVictoryPoint();
             if (player.settlements == 0)
             {
-                player.GivePlayerResources(hex1.gameObject.GetComponent<CatanHexagon>().resource, 1);
-                player.GivePlayerResources(hex2.gameObject.GetComponent<CatanHexagon>().resource, 1);
-                player.GivePlayerResources(hex3.gameObject.GetComponent<CatanHexagon>().resource, 1);
+                var chx1 = hex1.gameObject.GetComponent<CatanHexagon>();
+                var chx2 = hex2.gameObject.GetComponent<CatanHexagon>();
+                var chx3 = hex3.gameObject.GetComponent<CatanHexagon>();
+
+                if (chx1 != null)
+                    player.GivePlayerResources(chx1.resource, 1);
+
+                if (chx2 != null)
+                    player.GivePlayerResources(chx2.resource, 1);
+
+                if (chx3 != null)
+                    player.GivePlayerResources(chx3.resource, 1);
             }
             player.settlements++;
             return true;

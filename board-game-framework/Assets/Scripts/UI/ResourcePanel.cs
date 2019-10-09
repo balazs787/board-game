@@ -14,9 +14,9 @@ public class ResourcePanel : MonoBehaviour
     public void UpdateResources(Dictionary<Resource,int> resources)
     {
         lumberText.text = resources[Resource.lumber].ToString();
-        //brickText.text = resources.brick.ToString();
-        //grainText.text = resources.grain.ToString();
-        //woolText.text = resources.wool.ToString();
-        //oreText.text = resources.ore.ToString();
+        brickText.text = resources[Resource.brick].ToString();
+        grainText.text = resources[Resource.grain].ToString();
+        woolText.text = resources[Resource.wool].ToString();
+        oreText.text = resources[Resource.ore].ToString();
     }
 }
