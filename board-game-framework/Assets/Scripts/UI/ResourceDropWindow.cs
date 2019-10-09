@@ -8,6 +8,7 @@ public class ResourceDropWindow : MonoBehaviour
 {
     public TextMeshProUGUI playerNameText;
     public TextMeshProUGUI amountText;
+    public ResourcePanel resourcePanel;
 
     private int _amount;
     private Player _player;
@@ -33,14 +34,20 @@ public class ResourceDropWindow : MonoBehaviour
     public void Drop(string resourceString)
     {
         Enum.TryParse(resourceString, out Resource resourceEnum);
-        _player.GivePlayerResources(resourceEnum, -1);
-        _amount--;
+        var success = _player.DeductOneResource(resourceEnum);
+        if(success)
+            _amount--;
         Refresh();
     }
 
-
     public void Refresh()
     {
+        resourcePanel.UpdateResources(_player.Resources);
         amountText.text = $"Pick {_amount} resources to drop";
+    }
+
+    public int GetAmount()
+    {
+        return _amount;
     }
 }

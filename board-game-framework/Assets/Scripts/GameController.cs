@@ -125,45 +125,53 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         interfacePanel.Refresh(GetPlayer());
     }
 
+    IEnumerator DropResources(Player player)
+    {
+        int amount = player.SevenRoll();
+        if (amount > 0)
+        {
+            interfacePanel.DropResources(player, amount);
+        }
+
+        while (!interfacePanel.PlayerFinished())
+        {
+            yield return null;
+        }
+    }
+
     public void Turn(Player player)
     {
         if (freeBuildPhase)
         {
             StartCoroutine(Building());
         }
-        else if (!gameEnded)
+        else
         {
-            int dr = DiceRoll();
-
-            Debug.Log(dr);
-
-            if (dr == 7)
-            {
-                foreach (var p in players)
-                {
-                    int amount = p.SevenRoll();
-                    if (amount > 0)
-                    {
-                        interfacePanel.DropResources(GetPlayer(), amount);
-                    }
-                }
-                StartCoroutine(RobberPlacement());
-            }
-            else
-            {
-                hexmap.distributeResources(dr);
-            }
-            
-
-            interfacePanel.Refresh(GetPlayer());
+            interfacePanel.NewTurn();
         }
     }
 
-    public int DiceRoll()
+    public void DiceRoll()
     {
-        int first = Random.Range(1, 7);
-        int second = Random.Range(1, 7);
-        return first + second;
+        
+        int dr = interfacePanel.Roll();
+
+        if (dr == 7)
+        {
+            foreach (var p in players)
+            {
+                StartCoroutine(DropResources(p));
+            }
+            interfacePanel.Refresh(GetPlayer());
+            StartCoroutine(RobberPlacement());
+        }
+        else
+        {
+            hexmap.DistributeResources(dr);
+        }
+
+
+        interfacePanel.Refresh(GetPlayer());
     } 
 
     public void GameEnd()

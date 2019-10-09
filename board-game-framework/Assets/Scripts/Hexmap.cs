@@ -6,7 +6,7 @@ public class Hexmap : MonoBehaviour
 {
     public List<CatanHexagon> hexagons;
 
-    public void distributeResources(int diceRoll)
+    public void DistributeResources(int diceRoll)
     {
         foreach (var hex in hexagons)
         {

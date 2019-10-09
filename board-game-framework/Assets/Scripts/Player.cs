@@ -110,9 +110,15 @@ public partial class Player : MonoBehaviour
         _needRefresh = true;
     }
 
-    public void DeductOneResource(Resource resource)
+    public bool DeductOneResource(Resource resource)
     {
-        GivePlayerResources(resource, -1);
+        if (CanAfford(resource, 1))
+        {
+            GivePlayerResources(resource, -1);
+            return true;
+        }
+
+        return false;
     }
 
     public void GivePlayerRandomResource(Player player)
