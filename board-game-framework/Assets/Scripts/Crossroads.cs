@@ -46,6 +46,20 @@ public class Crossroads : MonoBehaviour
                 if (chx3 != null)
                     player.GivePlayerResources(chx3.resource, 1);
             }
+
+            var cthx1 = hex1.gameObject.GetComponent<CatanTradeHexagon>();
+            var cthx2 = hex2.gameObject.GetComponent<CatanTradeHexagon>();
+            var cthx3 = hex3.gameObject.GetComponent<CatanTradeHexagon>();
+
+            if (cthx1 != null)
+                cthx1.AddTradeableToPlayer(player);
+
+            if (cthx2 != null)
+                cthx2.AddTradeableToPlayer(player);
+
+            if (cthx3 != null)
+                cthx3.AddTradeableToPlayer(player);
+
             player.settlements++;
             return true;
         }

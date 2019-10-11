@@ -14,6 +14,8 @@ public partial class Player : MonoBehaviour
     public int settlements = 0;
     public int knights = 0;
     public Dictionary<Resource, int> Resources;
+    public Dictionary<Resource, bool> Tradeables;
+    public bool cheapTrade;
 
     private bool _needRefresh;
 
@@ -25,7 +27,18 @@ public partial class Player : MonoBehaviour
             { Resource.grain, 0 },
             { Resource.wool, 0 },
             { Resource.ore, 0 },
-            { Resource.none, 0 } };
+            { Resource.none, 0 }
+        };
+
+        Tradeables = new Dictionary<Resource, bool>()
+        {
+            { Resource.lumber, false },
+            { Resource.brick, false },
+            { Resource.grain, false },
+            { Resource.wool, false },
+            { Resource.ore, false },
+            { Resource.none, false }
+        };
     }
     private void Start()
     {
@@ -136,6 +149,15 @@ public partial class Player : MonoBehaviour
 
         DeductOneResource((Resource)randomInt);
         player.GivePlayerResources((Resource)randomInt, 1);
+    }
+
+    public void AddTradeable(Resource resource=0)
+    {
+        if (resource == 0)
+            cheapTrade = true;
+
+        Tradeables.Remove(resource);
+        Tradeables.Add(resource, true);
     }
 
     public void AddVictoryPoint()
