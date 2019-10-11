@@ -9,6 +9,8 @@ public class Robber : MonoBehaviour
     private bool _canSteal;
     public GameController gameController;
     public CatanHexagon currentHex;
+    public GameObject placingRobberWindow;
+    public GameObject stealingResourceWindow;
 
     private void Start()
     {
@@ -16,6 +18,9 @@ public class Robber : MonoBehaviour
     }
     void Update()
     {
+        placingRobberWindow.SetActive(_placingRobber);
+        stealingResourceWindow.SetActive(_stealing);
+
         if (_placingRobber && Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;

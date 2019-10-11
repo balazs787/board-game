@@ -21,4 +21,9 @@ public class EndTurn : MonoBehaviour
         playerTurnText.text = gameController.GetPlayerName()+"'s Turn";
         playerTurnText.color = gameController.GetPlayer().color;
     }
+
+    public void Hide(bool hide)
+    {
+        gameObject.SetActive(!hide);
+    }
 }

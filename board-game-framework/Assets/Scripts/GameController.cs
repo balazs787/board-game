@@ -125,24 +125,34 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         interfacePanel.Refresh(GetPlayer());
     }
 
-    IEnumerator DropResources(Player player)
+    IEnumerator DropResources()
     {
-        int amount = player.SevenRoll();
-        if (amount > 0)
+        interfacePanel.endTurn.Hide(true);
+        foreach (var p in players)
         {
-            interfacePanel.DropResources(player, amount);
+            int amount = p.SevenRoll();
+            if (amount > 0)
+            {
+                interfacePanel.DropResources(p, amount);
+            }
+
+            while (!interfacePanel.PlayerFinished())
+            {
+                yield return null;
+            }
         }
 
-        while (!interfacePanel.PlayerFinished())
-        {
-            yield return null;
-        }
+        interfacePanel.endTurn.Hide(false);
+        interfacePanel.Refresh(GetPlayer());
+        StartCoroutine(RobberPlacement());
+
     }
 
     public void Turn(Player player)
     {
         if (freeBuildPhase)
         {
+            interfacePanel.Hide(true);
             StartCoroutine(Building());
         }
         else
@@ -158,20 +168,16 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
         if (dr == 7)
         {
-            foreach (var p in players)
-            {
-                StartCoroutine(DropResources(p));
-            }
-            interfacePanel.Refresh(GetPlayer());
-            StartCoroutine(RobberPlacement());
+            StartCoroutine(DropResources());
         }
         else
         {
             hexmap.DistributeResources(dr);
+            interfacePanel.Refresh(GetPlayer());
         }
 
 
-        interfacePanel.Refresh(GetPlayer());
+        
     } 
 
     public void GameEnd()
