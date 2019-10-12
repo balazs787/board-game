@@ -151,11 +151,8 @@ public partial class Player : MonoBehaviour
         player.GivePlayerResources((Resource)randomInt, 1);
     }
 
-    public void AddTradeable(Resource resource=0)
+    public void AddTradeable(Resource resource)
     {
-        if (resource == 0)
-            cheapTrade = true;
-
         Tradeables.Remove(resource);
         Tradeables.Add(resource, true);
     }

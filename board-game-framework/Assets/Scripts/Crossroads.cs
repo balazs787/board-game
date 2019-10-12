@@ -33,9 +33,9 @@ public class Crossroads : MonoBehaviour
             player.AddVictoryPoint();
             if (player.settlements == 0)
             {
-                var chx1 = hex1.gameObject.GetComponent<CatanHexagon>();
-                var chx2 = hex2.gameObject.GetComponent<CatanHexagon>();
-                var chx3 = hex3.gameObject.GetComponent<CatanHexagon>();
+                var chx1 = hex1?.gameObject.GetComponent<CatanHexagon>() ?? null;
+                var chx2 = hex2?.gameObject.GetComponent<CatanHexagon>() ?? null;
+                var chx3 = hex3?.gameObject.GetComponent<CatanHexagon>() ?? null;
 
                 if (chx1 != null)
                     player.GivePlayerResources(chx1.resource, 1);
@@ -47,18 +47,18 @@ public class Crossroads : MonoBehaviour
                     player.GivePlayerResources(chx3.resource, 1);
             }
 
-            var cthx1 = hex1.gameObject.GetComponent<CatanTradeHexagon>();
-            var cthx2 = hex2.gameObject.GetComponent<CatanTradeHexagon>();
-            var cthx3 = hex3.gameObject.GetComponent<CatanTradeHexagon>();
+            var cthx1 = hex1?.gameObject.GetComponent<CatanWaterHexagon>() ?? null;
+            var cthx2 = hex2?.gameObject.GetComponent<CatanWaterHexagon>() ?? null;
+            var cthx3 = hex3?.gameObject.GetComponent<CatanWaterHexagon>() ?? null;
 
             if (cthx1 != null)
-                cthx1.AddTradeableToPlayer(player);
+                cthx1.AddTradeableToPlayer(this, player);
 
             if (cthx2 != null)
-                cthx2.AddTradeableToPlayer(player);
+                cthx2.AddTradeableToPlayer(this, player);
 
             if (cthx3 != null)
-                cthx3.AddTradeableToPlayer(player);
+                cthx3.AddTradeableToPlayer(this, player);
 
             player.settlements++;
             return true;
