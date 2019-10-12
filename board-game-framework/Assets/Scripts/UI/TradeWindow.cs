@@ -29,12 +29,16 @@ public class TradeWindow : MonoBehaviour
 
     public void OnGiveTypeChanged()
     {
-         Enum.TryParse(giveTypeText.text, out _giveType);
+        Enum.TryParse(giveTypeText.text, out _giveType);
+        getAmountText.text = "0";
+        giveAmountText.text = "0";
     }
 
     public void OnGetTypeChanged()
     {
-        Enum.TryParse(giveTypeText.text, out _getType);
+        Enum.TryParse(getTypeText.text, out _getType);
+        getAmountText.text = "0";
+        giveAmountText.text = "0";
     }
 
     public void AcceptTrade()
