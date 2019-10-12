@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     }
 
     IEnumerator Building()
-    {
+    { 
         build.BuildThis("Settlement");
 
         while (build.GetBuilding())
@@ -109,6 +109,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     IEnumerator RobberPlacement()
     {
         robber.PlaceRobber();
+        interfacePanel.notificationWindow.Rob(GetPlayer());
 
         while (robber.GetPlacingRobber())
         {
@@ -116,6 +117,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         }
 
         robber.Steal();
+        interfacePanel.notificationWindow.Steal(GetPlayer());
 
         while (robber.GetStealing())
         {
@@ -123,6 +125,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         }
 
         interfacePanel.Refresh(GetPlayer());
+        interfacePanel.notificationWindow.Hide(true);
     }
 
     IEnumerator DropResources()
@@ -152,12 +155,14 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     {
         if (freeBuildPhase)
         {
+            interfacePanel.notificationWindow.FreeBuild(GetPlayer());
             interfacePanel.Hide(true);
             StartCoroutine(Building());
         }
         else
         {
             interfacePanel.NewTurn();
+            interfacePanel.notificationWindow.Hide(true);
         }
     }
 

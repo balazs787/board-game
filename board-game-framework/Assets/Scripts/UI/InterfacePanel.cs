@@ -10,7 +10,7 @@ public class InterfacePanel : MonoBehaviour
     public EndTurn endTurn;
     public ResourceDropWindow resourceDropWindow;
     public RollButton rollButton;
-    public GameObject freeBuildingWindow;
+    public NotificationWindow notificationWindow;
 
     public void Refresh(Player player)
     {
@@ -36,7 +36,6 @@ public class InterfacePanel : MonoBehaviour
     {
         gameObject.SetActive(!hide);
         endTurn.Hide(hide);
-        freeBuildingWindow.SetActive(hide);
     }
 
     public void NewTurn()
