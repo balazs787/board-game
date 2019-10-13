@@ -11,9 +11,17 @@ public class InterfacePanel : MonoBehaviour
     public ResourceDropWindow resourceDropWindow;
     public RollButton rollButton;
     public NotificationWindow notificationWindow;
+    public BuildRoadButton buildRoadButton;
+    public BuildSettlementButton buildSettlementButton;
+    public BuildTownButton buildTownButton;
+    public BuyDevelopmentButton buyDevelopmentButton;
 
     public void Refresh(Player player)
     {
+        buildRoadButton.Refresh(player);
+        buildSettlementButton.Refresh(player);
+        buildTownButton.Refresh(player);
+        buyDevelopmentButton.Refresh(player);
         resourcePanel.UpdateResources(player.Resources);
         victoryPointsText.text = player.GetVictoryPoints().ToString();
     }

@@ -12,10 +12,11 @@ public partial class Player : MonoBehaviour
     public int freeBuilds = 4;
     public int roads = 0;
     public int settlements = 0;
+    public int towns = 0;
     public int knights = 0;
+    public List<ICard> cards = new List<ICard>();
     public Dictionary<Resource, int> Resources;
     public Dictionary<Resource, bool> Tradeables;
-    public bool cheapTrade;
 
     private bool _needRefresh;
 
@@ -83,10 +84,6 @@ public partial class Player : MonoBehaviour
         return 0;
     }
 
-    public void DropResources(int amount)
-    {
-        
-    }
 
     public bool CanAfford(int l, int b, int g, int w, int o)
     {

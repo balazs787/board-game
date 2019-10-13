@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuyDevelopmentButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Refresh(Player player)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (player.CanAfford(0, 0, 1, 1, 1))
+        {
+            gameObject.GetComponent<Image>().color = Color.white;
+            gameObject.GetComponentInChildren<Button>().interactable = true;
+        }
+        else
+        {
+            gameObject.GetComponent<Image>().color = Color.gray;
+            gameObject.GetComponentInChildren<Button>().interactable = false;
+        }
     }
 }
