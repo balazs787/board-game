@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         }
         else
         {
+            GetPlayer().MakeCardsPlayable();
             StopCoroutine(Building());
             if (activePlayerId + 1 == players.Length)
             {

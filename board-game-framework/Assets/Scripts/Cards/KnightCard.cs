@@ -5,12 +5,7 @@ using UnityEngine;
 public class KnightCard : MonoBehaviour, ICard
 {
     private bool _playable;
-    public void Buy(Player player)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void Play()
+    public void Play(Player player)
     {
         throw new System.NotImplementedException();
     }
@@ -18,6 +13,11 @@ public class KnightCard : MonoBehaviour, ICard
     public void Playable()
     {
         _playable = true;
+    }
+
+    public bool GetPlayable()
+    {
+        return _playable;
     }
 
     public GameObject GetGameObject()

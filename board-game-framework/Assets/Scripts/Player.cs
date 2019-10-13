@@ -154,6 +154,14 @@ public partial class Player : MonoBehaviour
         player.GivePlayerResources((Resource)randomInt, 1);
     }
 
+    public void MakeCardsPlayable()
+    {
+        foreach (var c in cards)
+        {
+            c.Playable();
+        }
+    }
+
     public void AddTradeable(Resource resource)
     {
         Tradeables.Remove(resource);

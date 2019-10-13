@@ -4,11 +4,11 @@ using UnityEngine;
 
 public interface ICard
 {
-    void Buy(Player player);
-
     void Playable();
 
-    void Play();
+    bool GetPlayable();
+
+    void Play(Player player);
 
     GameObject GetGameObject();
 }
