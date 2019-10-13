@@ -15,6 +15,8 @@ public class InterfacePanel : MonoBehaviour
     public BuildSettlementButton buildSettlementButton;
     public BuildTownButton buildTownButton;
     public BuyDevelopmentButton buyDevelopmentButton;
+    public PlayCardButton playCardButton;
+    public PlayCardsWindow playCardsWindow;
 
     public void Refresh(Player player)
     {
@@ -22,8 +24,10 @@ public class InterfacePanel : MonoBehaviour
         buildSettlementButton.Refresh(player);
         buildTownButton.Refresh(player);
         buyDevelopmentButton.Refresh(player);
+        playCardButton.Refresh(player);
         resourcePanel.UpdateResources(player.Resources);
         victoryPointsText.text = player.GetVictoryPoints().ToString();
+        playCardsWindow.Refresh(player);
     }
 
     public void DropResources(Player player, int amount)
@@ -56,5 +60,10 @@ public class InterfacePanel : MonoBehaviour
     public bool PlayerFinished()
     {
         return resourceDropWindow.GetAmount() == 0;
+    }
+
+    public void OutOfCards()
+    {
+        buyDevelopmentButton.outOfCards = true;
     }
 }

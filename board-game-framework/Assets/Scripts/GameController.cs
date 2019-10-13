@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     public InterfacePanel interfacePanel;
     public Build build;
     public Robber robber;
+    public Deck deck;
     
 
     void Start()
@@ -167,8 +168,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     }
 
     public void DiceRoll()
-    {
-        
+    {   
         int dr = interfacePanel.Roll();
 
         if (dr == 7)
@@ -180,10 +180,14 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
             hexmap.DistributeResources(dr);
             interfacePanel.Refresh(GetPlayer());
         }
+    }
 
-
-        
-    } 
+    public void PickCard()
+    {
+        GetPlayer().BuyCard(deck);
+        if (deck.cards.Count == 0)
+            interfacePanel.OutOfCards();
+    }
 
     public void GameEnd()
     {

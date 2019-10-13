@@ -19,4 +19,9 @@ public class RoadBuildingCard : MonoBehaviour, ICard
     {
         _playable = true;
     }
+
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
 }

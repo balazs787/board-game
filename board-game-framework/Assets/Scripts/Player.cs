@@ -74,6 +74,12 @@ public partial class Player : MonoBehaviour
         _needRefresh = true;
     }
 
+    public void BuyCard(Deck deck)
+    {
+        DeductResources(0, 0, 1, 1, 1);
+        cards.Add(deck.GetCard());
+    }
+
     public int SevenRoll()
     {
         var currentResources = Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore];
