@@ -18,6 +18,7 @@ public class InterfacePanel : MonoBehaviour
     public PlayCardButton playCardButton;
     public PlayCardsWindow playCardsWindow;
     public YearOfPlentyWindow yearOfPlentyWindow;
+    public MonopolyWindow monopolyWindow;
 
     public void Refresh(Player player)
     {
@@ -71,5 +72,10 @@ public class InterfacePanel : MonoBehaviour
     public void OpenYearOfPlentyWindow(Player player)
     {
         StartCoroutine(yearOfPlentyWindow.Activate(player));
+    }
+    
+    public void OpenMonopolyWindow(GameController gameController)
+    {
+        StartCoroutine(monopolyWindow.Activate(gameController));
     }
 }

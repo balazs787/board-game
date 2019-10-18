@@ -8,7 +8,7 @@ public class MonopolyCard : MonoBehaviour, ICard
 
     public void Play(GameController gameController)
     {
-        throw new System.NotImplementedException();
+        gameController.interfacePanel.OpenMonopolyWindow(gameController);
     }
 
     public void Playable()
