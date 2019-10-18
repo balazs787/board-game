@@ -14,6 +14,8 @@ public partial class Player : MonoBehaviour
     public int settlements = 0;
     public int towns = 0;
     public int knights = 0;
+    public bool largestArmy;
+    public bool longestRoad;
     public List<ICard> cards = new List<ICard>();
     public Dictionary<Resource, int> Resources;
     public Dictionary<Resource, bool> Tradeables;
@@ -199,5 +201,24 @@ public partial class Player : MonoBehaviour
     public bool CanFreeBuild()
     {
         return freeBuilds > 0;
+    }
+
+    public void SetLargestArmy(bool value)
+    {
+        if (!value)
+        {
+            victoryPoints-=2;
+        }
+        else
+        {
+            victoryPoints+=2;
+        }
+        largestArmy = value;
+        _needRefresh = true;
+    }
+
+    public bool GetLargestArmy()
+    {
+        return largestArmy;
     }
 }

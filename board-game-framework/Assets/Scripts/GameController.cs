@@ -206,4 +206,28 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         if (GetPlayer().GetVictoryPoints() == 10)
             GameEnd();
     }
+
+    public void AddKnight()
+    {
+        Player player = GetPlayer();
+        Player largestArmy=null;
+        player.knights++;
+        if (player.knights >= 3) {
+            foreach (var p in players)
+            {
+                if (p.GetLargestArmy())
+                {
+                    largestArmy = p;
+                }
+            }
+            if (largestArmy == null)
+            {
+                player.SetLargestArmy(true);
+            }else if (player.knights > largestArmy.knights)
+            {
+                largestArmy.SetLargestArmy(false);
+                player.SetLargestArmy(true);
+            }
+        }
+    }
 }
