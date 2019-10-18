@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
             }
             else
             {
+                StopAllCoroutines();
                 if (activePlayerId == 0)
                 {
                     freeBuildPhase = false;

@@ -5,10 +5,11 @@ using UnityEngine;
 public class YearOfPlentyCard : MonoBehaviour, ICard
 {
     private bool _playable;
+    public YearOfPlentyWindow yearOfPlentyWindow;
 
     public void Play(GameController gameController)
     {
-        throw new System.NotImplementedException();
+        gameController.interfacePanel.OpenYearOfPlentyWindow(gameController.GetPlayer());
     }
 
     public void Playable()

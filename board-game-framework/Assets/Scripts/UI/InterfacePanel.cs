@@ -17,6 +17,7 @@ public class InterfacePanel : MonoBehaviour
     public BuyDevelopmentButton buyDevelopmentButton;
     public PlayCardButton playCardButton;
     public PlayCardsWindow playCardsWindow;
+    public YearOfPlentyWindow yearOfPlentyWindow;
 
     public void Refresh(Player player)
     {
@@ -40,7 +41,7 @@ public class InterfacePanel : MonoBehaviour
         int first = Random.Range(1, 7);
         int second = Random.Range(1, 7);
         rollButton.DiceRolled(first + second);
-        endTurn.Hide(false);          
+        endTurn.Hide(false);
         return first + second;
     }
 
@@ -65,5 +66,10 @@ public class InterfacePanel : MonoBehaviour
     public void OutOfCards()
     {
         buyDevelopmentButton.outOfCards = true;
+    }
+
+    public void OpenYearOfPlentyWindow(Player player)
+    {
+        StartCoroutine(yearOfPlentyWindow.Activate(player));
     }
 }
