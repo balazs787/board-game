@@ -6,7 +6,7 @@ public class RoadBuildingCard : MonoBehaviour, ICard
 {
     private bool _playable;
 
-    public void Play(Player player)
+    public void Play(GameController gameController)
     {
         throw new System.NotImplementedException();
     }

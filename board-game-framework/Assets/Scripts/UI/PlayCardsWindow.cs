@@ -76,6 +76,10 @@ public class PlayCardsWindow : MonoBehaviour
 
     public void PlayButton()
     {
-        currentCards[currentIndex].Play(gameController.GetPlayer());
+        var card = currentCards[currentIndex];
+        card.Play(gameController);
+        gameController.GetPlayer().cards.Remove(card);
+        Refresh(gameController.GetPlayer());
+        Destroy(card.GetGameObject());
     }
 }

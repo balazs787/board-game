@@ -8,7 +8,7 @@ public interface ICard
 
     bool GetPlayable();
 
-    void Play(Player player);
+    void Play(GameController gameController);
 
     GameObject GetGameObject();
 }

@@ -89,7 +89,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         Turn(GetPlayer());
     }
 
-    IEnumerator Building()
+    public IEnumerator Building()
     { 
         build.BuildThis("Settlement");
 
@@ -108,7 +108,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         interfacePanel.endTurn.EndTurnButton();
     }
 
-    IEnumerator RobberPlacement()
+    public IEnumerator RobberPlacement()
     {
         robber.PlaceRobber();
         interfacePanel.notificationWindow.Rob(GetPlayer());
@@ -130,7 +130,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         interfacePanel.notificationWindow.Hide(true);
     }
 
-    IEnumerator DropResources()
+    public IEnumerator DropResources()
     {
         interfacePanel.endTurn.Hide(true);
         foreach (var p in players)

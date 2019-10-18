@@ -6,9 +6,9 @@ public class VictoryPointCard : MonoBehaviour, ICard
 {
     private bool _playable = true;
 
-    public void Play(Player player)
+    public void Play(GameController gameController)
     {
-        player.AddVictoryPoint();
+        gameController.GetPlayer().AddVictoryPoint();
     }
 
     public void Playable()
