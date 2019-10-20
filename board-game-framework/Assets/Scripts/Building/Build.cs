@@ -41,6 +41,10 @@ public class Build : MonoBehaviour
                 if (buildTag == "Road" && hit.transform?.gameObject.tag == "Road")
                 {
                     _building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
+                    if (!_building)
+                    { 
+                        gameController.RoadBuilt?.Invoke();
+                    }
                 }
 
                 cancelBuildingButton.SetActive(_building && !gameController.freeBuildPhase);

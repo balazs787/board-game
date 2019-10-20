@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,13 +15,19 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     public Build build;
     public Robber robber;
     public Deck deck;
-    
+
+    public Action RoadBuilt;
+    public Action KnightPlayed;
 
     void Start()
     {
+        RoadBuilt += AwardLongestRoad;
+        KnightPlayed += AwardLargestArmy;
+
         activePlayerId = 0;
         Turn(GetPlayer());
     }
+
     void Update()
     {
         if (GetPlayer().NeedRefresh())
@@ -29,7 +36,6 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         }
     }
 
-    
 
     public string GetPlayerName()
     {
@@ -45,6 +51,8 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     {
         if (build.GetBuilding() || robber.GetPlacingRobber() || robber.GetStealing())
             return;
+
+        Debug.Log(GetPlayer().name+": "+hexmap.CheckRoadCount(GetPlayer()));
 
         if (freeBuildPhase)
         {
@@ -207,26 +215,53 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
             GameEnd();
     }
 
-    public void AddKnight()
+    public void AwardLargestArmy()
     {
-        Player player = GetPlayer();
-        Player largestArmy=null;
-        player.knights++;
-        if (player.knights >= 3) {
+        Player currentPlayer = GetPlayer();
+        Player currentAwardHolder=null;
+        currentPlayer.knights++;
+        if (currentPlayer.GetKnights() >= 3) {
             foreach (var p in players)
             {
                 if (p.GetLargestArmy())
                 {
-                    largestArmy = p;
+                    currentAwardHolder = p;
                 }
             }
-            if (largestArmy == null)
+            if (currentAwardHolder == null)
             {
-                player.SetLargestArmy(true);
-            }else if (player.knights > largestArmy.knights)
+                currentPlayer.SetLargestArmy(true);
+            }
+            else if (currentPlayer.GetKnights() > currentAwardHolder.GetKnights())
             {
-                largestArmy.SetLargestArmy(false);
-                player.SetLargestArmy(true);
+                currentAwardHolder.SetLargestArmy(false);
+                currentPlayer.SetLargestArmy(true);
+            }
+        }
+    }
+
+    public void AwardLongestRoad()
+    {
+        Player currentPlayer = GetPlayer();
+        Player currentAwardHolder = null;
+        currentPlayer.longestRoadCount = hexmap.CheckRoadCount(GetPlayer());
+        if (currentPlayer.GetLongestRoadCount() >= 3)
+        {
+            foreach (var p in players)
+            {
+                if (p.GetLongestRoad())
+                {
+                    currentAwardHolder = p;
+                }
+            }
+            if (currentAwardHolder == null)
+            {
+                currentPlayer.SetLongestRoad(true);
+            }
+            else if (currentPlayer.GetLongestRoadCount() > currentAwardHolder.GetLongestRoadCount())
+            {
+                currentAwardHolder.SetLongestRoad(false);
+                currentPlayer.SetLongestRoad(true);
             }
         }
     }

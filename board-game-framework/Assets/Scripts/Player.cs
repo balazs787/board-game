@@ -15,6 +15,7 @@ public partial class Player : MonoBehaviour
     public int towns = 0;
     public int knights = 0;
     public bool largestArmy;
+    public int longestRoadCount;
     public bool longestRoad;
     public List<ICard> cards = new List<ICard>();
     public Dictionary<Resource, int> Resources;
@@ -220,5 +221,34 @@ public partial class Player : MonoBehaviour
     public bool GetLargestArmy()
     {
         return largestArmy;
+    }
+
+    public int GetKnights()
+    {
+        return knights;
+    }
+
+    public bool GetLongestRoad()
+    {
+        return longestRoad;
+    }
+
+    public int GetLongestRoadCount()
+    {
+        return longestRoadCount;
+    }
+
+    public void SetLongestRoad(bool value)
+    {
+        if (!value)
+        {
+            victoryPoints -= 2;
+        }
+        else
+        {
+            victoryPoints += 2;
+        }
+        longestRoad = value;
+        _needRefresh = true;
     }
 }
