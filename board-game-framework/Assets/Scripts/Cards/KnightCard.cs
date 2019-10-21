@@ -7,7 +7,6 @@ public class KnightCard : MonoBehaviour, ICard
     private bool _playable;
     public void Play(GameController gameController)
     {
-        StartCoroutine(gameController.RobberPlacement());
         gameController.KnightPlayedAction?.Invoke();
     }
 

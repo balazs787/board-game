@@ -21,18 +21,41 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     public Action SettlementBuiltAction;
     public Action TownBuiltAction;
     public Action KnightPlayedAction;
+    public Action<int> DropResourcesAction;
+    public Action PlaceRobberAction;
+    public Action StealResourcesAction;
+    public Action ResourcesStolenAction;
 
     void Start()
     {
+        interfacePanel.DropResourcesAction += DropResources;
+        DropResourcesAction += playerIndex => DropResources(playerIndex);
         RoadBuiltAction += AwardLongestRoad;
         RoadBuiltAction += RoadBuilt;
         SettlementBuiltAction += SettlementBuilt;
         KnightPlayedAction += AwardLargestArmy;
+        KnightPlayedAction += () => 
+        {
+            PlaceRobberAction?.Invoke();
+        };
+        PlaceRobberAction += () =>
+        {
+            robber.PlaceRobber();
+            interfacePanel.notificationWindow.Rob(GetPlayer());
+        };
+        StealResourcesAction += () =>
+        {
+            robber.Steal();
+            interfacePanel.notificationWindow.Steal(GetPlayer());
+        };
+        ResourcesStolenAction += () =>
+        {
+            interfacePanel.Refresh(GetPlayer());
+            interfacePanel.notificationWindow.Hide(true);
+        };
 
         activePlayerId = 0;
         Turn(GetPlayer());
-
-
     }
 
     private void RoadBuilt()
@@ -56,6 +79,25 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
             build.BuildThis("Road");
         }
     }
+
+    public void DropResources(int playerIndex=0)
+    {
+        if (playerIndex >= players.Length)
+        {
+            interfacePanel.endTurn.Hide(false);
+            interfacePanel.Refresh(GetPlayer());
+            PlaceRobberAction?.Invoke();
+            return;
+        }
+
+        interfacePanel.endTurn.Hide(true);
+        int amount = players[playerIndex].SevenRoll();
+        if (amount > 0)
+        {
+            interfacePanel.DropResources(players[playerIndex], playerIndex, amount);
+        }
+    }
+
 
     void Update()
     {
@@ -124,50 +166,9 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         Turn(GetPlayer());
     }
 
-    public IEnumerator RobberPlacement()
-    {
-        robber.PlaceRobber();
-        interfacePanel.notificationWindow.Rob(GetPlayer());
+   
 
-        while (robber.GetPlacingRobber())
-        {
-            yield return null;
-        }
-
-        robber.Steal();
-        interfacePanel.notificationWindow.Steal(GetPlayer());
-
-        while (robber.GetStealing())
-        {
-            yield return null;
-        }
-
-        interfacePanel.Refresh(GetPlayer());
-        interfacePanel.notificationWindow.Hide(true);
-    }
-
-    public IEnumerator DropResources()
-    {
-        interfacePanel.endTurn.Hide(true);
-        foreach (var p in players)
-        {
-            int amount = p.SevenRoll();
-            if (amount > 0)
-            {
-                interfacePanel.DropResources(p, amount);
-            }
-
-            while (!interfacePanel.PlayerFinished())
-            {
-                yield return null;
-            }
-        }
-
-        interfacePanel.endTurn.Hide(false);
-        interfacePanel.Refresh(GetPlayer());
-        StartCoroutine(RobberPlacement());
-
-    }
+    
 
     public void Turn(Player player)
     {
@@ -190,7 +191,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
         if (dr == 7)
         {
-            StartCoroutine(DropResources());
+            DropResourcesAction?.Invoke(0);
         }
         else
         {

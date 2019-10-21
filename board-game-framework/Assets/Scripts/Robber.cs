@@ -33,6 +33,10 @@ public class Robber : MonoBehaviour
                     currentHex.beingRobbed = false;
                     currentHex = hit.transform.gameObject.GetComponentInParent<CatanHexagon>();
                     _placingRobber = !currentHex.PlaceRobberHere(currentPlayer);
+                    if (!_placingRobber)
+                    {
+                        gameController.StealResourcesAction?.Invoke();
+                    }
                 }
             }
         }
@@ -51,6 +55,10 @@ public class Robber : MonoBehaviour
                 if (hit.transform?.gameObject.tag == "Crossroads" || hit.transform?.gameObject.tag == "Settlement")
                 {
                     _stealing = !hit.transform.gameObject.GetComponentInParent<Crossroads>().StealResource(currentPlayer);
+                    if (!_stealing)
+                    {
+                        gameController.ResourcesStolenAction?.Invoke();
+                    }
                 }
             }
         }
