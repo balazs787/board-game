@@ -8,7 +8,8 @@ public class RoadBuildingCard : MonoBehaviour, ICard
 
     public void Play(GameController gameController)
     {
-        throw new System.NotImplementedException();
+        gameController.freeRoads = 2;
+        gameController.RoadBuiltAction?.Invoke();
     }
 
     public void Playable()

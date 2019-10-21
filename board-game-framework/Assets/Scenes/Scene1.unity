@@ -2277,6 +2277,7 @@ MonoBehaviour:
   towns: 0
   knights: 0
   largestArmy: 0
+  longestRoadCount: 0
   longestRoad: 0
 --- !u!4 &242689895
 Transform:
@@ -10930,7 +10931,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -13555,6 +13556,7 @@ MonoBehaviour:
   towns: 0
   knights: 0
   largestArmy: 0
+  longestRoadCount: 0
   longestRoad: 0
 --- !u!4 &1489108924
 Transform:
@@ -18190,7 +18192,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -19082,6 +19084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hexmap
       objectReference: {fileID: 0}
+    - target: {fileID: 1859550763102310151, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1313385305}
     - target: {fileID: 1859550764828569589, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19137,10 +19144,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1859550763102310151, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
-        type: 3}
-      propertyPath: gameController
-      value: 
-      objectReference: {fileID: 1313385305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89, type: 3}

@@ -15,17 +15,46 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     public Build build;
     public Robber robber;
     public Deck deck;
+    public int freeRoads;
 
-    public Action RoadBuilt;
-    public Action KnightPlayed;
+    public Action RoadBuiltAction;
+    public Action SettlementBuiltAction;
+    public Action TownBuiltAction;
+    public Action KnightPlayedAction;
 
     void Start()
     {
-        RoadBuilt += AwardLongestRoad;
-        KnightPlayed += AwardLargestArmy;
+        RoadBuiltAction += AwardLongestRoad;
+        RoadBuiltAction += RoadBuilt;
+        SettlementBuiltAction += SettlementBuilt;
+        KnightPlayedAction += AwardLargestArmy;
 
         activePlayerId = 0;
         Turn(GetPlayer());
+
+
+    }
+
+    private void RoadBuilt()
+    {
+        if (freeRoads>0)
+        {
+            freeRoads--;
+            build.BuildThis("Road");
+        }
+
+        if (freeBuildPhase)
+        {
+            NextPlayer();
+        }
+    }
+
+    private void SettlementBuilt()
+    {
+        if (freeBuildPhase)
+        {
+            build.BuildThis("Road");
+        }
     }
 
     void Update()
@@ -51,8 +80,6 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
     {
         if (build.GetBuilding() || robber.GetPlacingRobber() || robber.GetStealing())
             return;
-
-        Debug.Log(GetPlayer().name+": "+hexmap.CheckRoadCount(GetPlayer()));
 
         if (freeBuildPhase)
         {
@@ -83,7 +110,6 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         else
         {
             GetPlayer().MakeCardsPlayable();
-            StopCoroutine(Building());
             if (activePlayerId + 1 == players.Length)
             {
                 activePlayerId = 0;
@@ -96,25 +122,6 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
         interfacePanel.Refresh(GetPlayer());
         Turn(GetPlayer());
-    }
-
-    public IEnumerator Building()
-    { 
-        build.BuildThis("Settlement");
-
-        while (build.GetBuilding())
-        {
-            yield return null;
-        }
-
-        build.BuildThis("Road");
-
-        while (build.GetBuilding())
-        {
-            yield return null;
-        }
-
-        interfacePanel.endTurn.EndTurnButton();
     }
 
     public IEnumerator RobberPlacement()
@@ -168,7 +175,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         {
             interfacePanel.notificationWindow.FreeBuild(GetPlayer());
             interfacePanel.Hide(true);
-            StartCoroutine(Building());
+            build.BuildThis("Settlement");
         }
         else
         {

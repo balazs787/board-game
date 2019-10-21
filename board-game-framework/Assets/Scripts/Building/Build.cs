@@ -1,9 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Build : MonoBehaviour
 {
+    public delegate void Built();
+    public event Built builtReady;
     public GameController gameController;
     public GameObject cancelBuildingButton;
     private bool _building = false;
@@ -31,19 +36,29 @@ public class Build : MonoBehaviour
                 if (buildTag == "Settlement" && hit.transform?.gameObject.tag == "Crossroads")
                 {
                     _building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
-                }else
+                    if (!_building)
+                    {
+                        gameController.SettlementBuiltAction?.Invoke();
+                    }
+                }
+                else
 
                 if(buildTag == "Town" && (hit.transform?.gameObject.tag == "Crossroads" || hit.transform?.gameObject.tag == "Settlement"))
                 {
                     _building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
-                }else
+                    if (!_building)
+                    {
+                        gameController.TownBuiltAction?.Invoke();
+                    }
+                }
+                else
 
                 if (buildTag == "Road" && hit.transform?.gameObject.tag == "Road")
                 {
                     _building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
                     if (!_building)
                     { 
-                        gameController.RoadBuilt?.Invoke();
+                        gameController.RoadBuiltAction?.Invoke();
                     }
                 }
 
