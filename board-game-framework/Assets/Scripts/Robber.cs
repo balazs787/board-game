@@ -84,6 +84,11 @@ public class Robber : MonoBehaviour
         return _stealing;
     }
 
+    public bool GetCanSteal()
+    {
+        return _canSteal;
+    }
+
     public bool GetPlacingRobber()
     {
         return _placingRobber;

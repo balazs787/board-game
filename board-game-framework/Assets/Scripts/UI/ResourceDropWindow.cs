@@ -12,32 +12,49 @@ public class ResourceDropWindow : MonoBehaviour
 
     private int _amount;
     private Player _player;
+    private int _playerIndex;
 
-    public IEnumerator Activate(Player player, int amount)
+    public Action<int> NextPlayerResourceDropAction;
+
+    private void Start()
+    {
+        NextPlayerResourceDropAction += (_) => 
+        {
+            if (_amount != 0)
+            {
+                return;
+            }
+
+            gameObject.SetActive(false);
+            _player = null;
+            _playerIndex = 0;
+        };
+    }
+
+    public void Activate(Player player,int playerIndex, int amount)
     {
         _player = player;
+        _playerIndex = playerIndex;
         _amount = amount;
         gameObject.SetActive(true);
         playerNameText.text = player.playerName;
         playerNameText.color = player.color;
         Refresh();
-
-        while (_amount!=0)
-        {
-            yield return null;
-        }
-
-        gameObject.SetActive(false);
-        _player = null;
     }
 
     public void Drop(string resourceString)
     {
         Enum.TryParse(resourceString, out Resource resourceEnum);
         var success = _player.DeductOneResource(resourceEnum);
-        if(success)
+        if (success)
+        {
             _amount--;
-        Refresh();
+            Refresh();
+            if (_amount == 0)
+            {
+                NextPlayerResourceDropAction?.Invoke(++_playerIndex);
+            }
+        } 
     }
 
     public void Refresh()

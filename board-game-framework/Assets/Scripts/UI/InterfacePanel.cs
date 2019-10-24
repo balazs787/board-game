@@ -32,11 +32,6 @@ public class InterfacePanel : MonoBehaviour
         playCardsWindow.Refresh(player);
     }
 
-    public void DropResources(Player player, int amount)
-    {
-        StartCoroutine(resourceDropWindow.Activate(player, amount));
-    }
-
     public int Roll()
     {
         int first = Random.Range(1, 7);

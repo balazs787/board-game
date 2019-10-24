@@ -28,8 +28,11 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
     void Start()
     {
-        interfacePanel.DropResourcesAction += DropResources;
         DropResourcesAction += playerIndex => DropResources(playerIndex);
+        interfacePanel.resourceDropWindow.NextPlayerResourceDropAction += (playerIndex) =>
+        {
+            DropResourcesAction?.Invoke(playerIndex);
+        };
         RoadBuiltAction += AwardLongestRoad;
         RoadBuiltAction += RoadBuilt;
         SettlementBuiltAction += SettlementBuilt;
@@ -45,8 +48,15 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         };
         StealResourcesAction += () =>
         {
-            robber.Steal();
-            interfacePanel.notificationWindow.Steal(GetPlayer());
+            if (robber.GetCanSteal())
+            {
+                robber.Steal();
+                interfacePanel.notificationWindow.Steal(GetPlayer());
+            }
+            else
+            {
+                ResourcesStolenAction?.Invoke();
+            }
         };
         ResourcesStolenAction += () =>
         {
@@ -94,7 +104,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
         int amount = players[playerIndex].SevenRoll();
         if (amount > 0)
         {
-            interfacePanel.DropResources(players[playerIndex], playerIndex, amount);
+            interfacePanel.resourceDropWindow.Activate(players[playerIndex], playerIndex, amount);
         }
     }
 
