@@ -8,15 +8,12 @@ public class BuyDevelopmentButton : MonoBehaviour
     public bool outOfCards;
     public void Refresh(Player player)
     {
-        if (player.CanAfford(0, 0, 1, 1, 1) && !outOfCards)
-        {
-            gameObject.GetComponent<Image>().color = Color.white;
-            gameObject.GetComponentInChildren<Button>().interactable = true;
-        }
-        else
-        {
-            gameObject.GetComponent<Image>().color = Color.gray;
-            gameObject.GetComponentInChildren<Button>().interactable = false;
-        }
+        SetInteractable(player.CanAfford(0, 0, 1, 1, 1) && !outOfCards);
+    }
+
+    public void SetInteractable(bool interactable)
+    {
+        gameObject.GetComponent<Image>().color = interactable? Color.white : Color.gray;
+        gameObject.GetComponentInChildren<Button>().interactable = interactable ? true : false;
     }
 }

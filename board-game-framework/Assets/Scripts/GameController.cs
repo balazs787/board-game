@@ -219,6 +219,7 @@ public class GameController : MonoBehaviour, ITurnBasedGameController
 
     public void GameEnd()
     {
+        interfacePanel.GameEnded(GetPlayer());
         gameEnded = true;
     }
 

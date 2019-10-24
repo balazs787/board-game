@@ -7,15 +7,12 @@ public class PlayCardButton : MonoBehaviour
 {
     public void Refresh(Player player)
     {
-        if (player.cards.Count>0)
-        {
-            gameObject.GetComponent<Image>().color = Color.white;
-            gameObject.GetComponentInChildren<Button>().interactable = true;
-        }
-        else
-        {
-            gameObject.GetComponent<Image>().color = Color.gray;
-            gameObject.GetComponentInChildren<Button>().interactable = false;
-        }
+        SetInteractable(player.cards.Count > 0);
+    }
+
+    public void SetInteractable(bool interactable)
+    {
+        gameObject.GetComponent<Image>().color = interactable ? Color.white : Color.gray;
+        gameObject.GetComponentInChildren<Button>().interactable = interactable ? true : false;
     }
 }

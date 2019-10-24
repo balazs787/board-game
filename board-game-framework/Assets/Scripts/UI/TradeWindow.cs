@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class TradeWindow : MonoBehaviour
 {
     public GameController gameController;
+    public GameObject tradeButton;
     public TextMeshProUGUI giveAmountText;
     public TextMeshProUGUI getAmountText;
     public TextMeshProUGUI giveTypeText;
@@ -20,6 +21,12 @@ public class TradeWindow : MonoBehaviour
         gameObject.SetActive(true);
         OnGetTypeChanged();
         OnGiveTypeChanged();
+    }
+
+    public void SetInteractable(bool interactable)
+    {
+        tradeButton.GetComponent<Image>().color = interactable ? Color.white : Color.gray;
+        tradeButton.GetComponentInChildren<Button>().interactable = interactable ? true : false;
     }
 
     public void CloseWindow()
@@ -43,7 +50,6 @@ public class TradeWindow : MonoBehaviour
 
     public void AcceptTrade()
     {
-        //TODO: trade
         gameController.GetPlayer().Trade(giveTypeText.text, Int32.Parse(giveAmountText.text), getTypeText.text,Int32.Parse(getAmountText.text));
         gameObject.SetActive(false);
         gameController.interfacePanel.Refresh(gameController.GetPlayer());

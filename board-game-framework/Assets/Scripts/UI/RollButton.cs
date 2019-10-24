@@ -8,6 +8,7 @@ public class RollButton : MonoBehaviour
 {
     public GameObject dices;
     public GameObject rollText;
+    public bool diceRolled;
 
     public void Start()
     {
@@ -16,6 +17,7 @@ public class RollButton : MonoBehaviour
 
     public void Rollable()
     {
+        diceRolled = false;
         gameObject.GetComponent<Button>().interactable = true;
         gameObject.SetActive(true);
         dices.SetActive(true);
@@ -24,6 +26,7 @@ public class RollButton : MonoBehaviour
 
     public void DiceRolled(int roll)
     {
+        diceRolled = true;
         gameObject.GetComponent<Button>().interactable = false;
         dices.SetActive(false);
         rollText.SetActive(true);

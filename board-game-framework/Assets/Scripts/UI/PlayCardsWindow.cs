@@ -71,8 +71,8 @@ public class PlayCardsWindow : MonoBehaviour
             playButton.GetComponent<Image>().color = Color.gray;
             playButton.GetComponent<Button>().interactable = false;
         }
-        
     }
+
 
     public void PlayButton()
     {
