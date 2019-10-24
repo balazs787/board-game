@@ -28,7 +28,6 @@ public class PlayCardsWindow : MonoBehaviour
 
     public void Close()
     {
-        currentCards[currentIndex].GetGameObject().SetActive(false);
         gameObject.SetActive(false);
     }
 
@@ -79,6 +78,7 @@ public class PlayCardsWindow : MonoBehaviour
         var card = currentCards[currentIndex];
         card.Play(gameController);
         gameController.GetPlayer().cards.Remove(card);
+        currentIndex = 0;
         Refresh(gameController.GetPlayer());
         Destroy(card.GetGameObject());
     }

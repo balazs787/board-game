@@ -494,6 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dices: {fileID: 424220994}
   rollText: {fileID: 188575923}
+  diceRolled: 0
 --- !u!1 &67721363
 GameObject:
   m_ObjectHideFlags: 0
@@ -13549,7 +13550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f9956cbecacc74aaf5ebda287a8d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryPoints: 7
+  victoryPoints: 0
   color: {r: 0, g: 0, b: 1, a: 1}
   playerName: Player1
   id: 0
