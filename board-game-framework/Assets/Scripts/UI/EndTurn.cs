@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EndTurn : MonoBehaviour
 {
-    public GameController gameController;
+    public CatanGameController gameController;
     public TextMeshProUGUI playerTurnText;
 
     void Start()

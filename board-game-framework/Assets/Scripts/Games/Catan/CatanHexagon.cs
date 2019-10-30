@@ -72,7 +72,7 @@ public class CatanHexagon : HexagonField
         return number;
     }
 
-    public bool PlaceRobberHere(Player player)
+    public bool PlaceRobberHere(CatanPlayer player)
     {
         if (beingRobbed)
         {
@@ -85,7 +85,7 @@ public class CatanHexagon : HexagonField
         return true;
     }
 
-    public bool EnemyTowns(Player player)
+    public bool EnemyTowns(CatanPlayer player)
     {
         return (vertexes.top.GetPlayer() != player && vertexes.top.GetPlayer() != null) ||
                 (vertexes.topRight.GetPlayer() != player && vertexes.topRight.GetPlayer() != null) ||

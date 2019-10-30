@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BuildTownButton : MonoBehaviour
 {
-    public void Refresh(Player player)
+    public void Refresh(CatanPlayer player)
     {
         SetInteractable(player.CanAfford(0, 0, 2, 0, 3) && player.towns < 4);
     }

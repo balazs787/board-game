@@ -5,7 +5,7 @@ using UnityEngine;
 public class KnightCard : MonoBehaviour, ICard
 {
     private bool _playable;
-    public void Play(GameController gameController)
+    public void Play(CatanGameController gameController)
     {
         gameController.KnightPlayedAction?.Invoke();
     }

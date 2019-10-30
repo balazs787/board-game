@@ -10,21 +10,21 @@ public class NotificationWindow : MonoBehaviour
     {
         _textMesh = gameObject.GetComponentInChildren<TextMeshProUGUI>();
     }
-    public void Rob(Player player)
+    public void Rob(CatanPlayer player)
     {
         gameObject.SetActive(true);
         _textMesh.text = "Place robber";
         _textMesh.color = player.color;
     }
 
-    public void Steal(Player player)
+    public void Steal(CatanPlayer player)
     {
         gameObject.SetActive(true);
         _textMesh.text = "Pick opposing settlement to steal from";
         _textMesh.color = player.color;
     }
 
-    public void FreeBuild(Player player)
+    public void FreeBuild(CatanPlayer player)
     {
         gameObject.SetActive(true);
         _textMesh.text = "Place free settlement and road";

@@ -19,7 +19,7 @@ public class Hexmap : MonoBehaviour
         }
     }
 
-    public int CheckRoadCount(Player player)
+    public int CheckRoadCount(CatanPlayer player)
     {
         int maxCount=0;
         List<Road> longestRoad;
@@ -44,7 +44,7 @@ public class Hexmap : MonoBehaviour
         return maxCount;
     }
 
-    public int RoadCount(Player player, List<Road> longestRoad, int count, int maxCount, Crossroads lastCrossroads)
+    public int RoadCount(CatanPlayer player, List<Road> longestRoad, int count, int maxCount, Crossroads lastCrossroads)
     {
         int currentCount = count;
         List<Road> newLongestRoad = longestRoad;

@@ -7,7 +7,7 @@ public class YearOfPlentyCard : MonoBehaviour, ICard
     private bool _playable;
     public YearOfPlentyWindow yearOfPlentyWindow;
 
-    public void Play(GameController gameController)
+    public void Play(CatanGameController gameController)
     {
         gameController.interfacePanel.OpenYearOfPlentyWindow(gameController.GetPlayer());
     }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7892586741345699376}
   - component: {fileID: 1991957428348444704}
+  - component: {fileID: 2863391836396837369}
   m_Layer: 0
   m_Name: CatanHexagon
   m_TagString: CatanHex
@@ -64,6 +65,19 @@ MonoBehaviour:
   beingRobbed: 0
   numberText: {fileID: 3511499334836321576}
   robber: {fileID: 1619927836093157232, guid: b11a29b7a7cfb8b49930084464381541, type: 3}
+--- !u!65 &2863391836396837369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892586741345699383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 0.1, z: 1.2}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!1001 &3445657198175401117
 PrefabInstance:
   m_ObjectHideFlags: 0

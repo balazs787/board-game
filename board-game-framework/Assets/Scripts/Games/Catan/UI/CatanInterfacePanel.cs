@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class InterfacePanel : MonoBehaviour
+public class CatanInterfacePanel : MonoBehaviour
 {
     public ResourcePanel resourcePanel;
     public TextMeshProUGUI victoryPointsText;
@@ -22,7 +22,7 @@ public class InterfacePanel : MonoBehaviour
     public VictoryWindow victoryWindow;
     public TradeWindow tradeWindow;
 
-    public void Refresh(Player player)
+    public void Refresh(CatanPlayer player)
     {
         if (rollButton.diceRolled)
         {
@@ -34,7 +34,7 @@ public class InterfacePanel : MonoBehaviour
         playCardButton.Refresh(player);
         resourcePanel.UpdateResources(player.Resources);
         victoryPointsText.text = player.GetVictoryPoints().ToString();
-        playCardsWindow.Refresh(player);  
+        playCardsWindow.Refresh(player);
     }
 
     public void SetInteractable(bool interactable)
@@ -64,6 +64,7 @@ public class InterfacePanel : MonoBehaviour
 
     public void NewTurn()
     {
+        playCardsWindow.Close();
         Hide(false);
         SetInteractable(false);
         endTurn.Hide(true);
@@ -75,17 +76,17 @@ public class InterfacePanel : MonoBehaviour
         buyDevelopmentButton.outOfCards = true;
     }
 
-    public void OpenYearOfPlentyWindow(Player player)
+    public void OpenYearOfPlentyWindow(CatanPlayer player)
     {
-        StartCoroutine(yearOfPlentyWindow.Activate(player));
-    }
-    
-    public void OpenMonopolyWindow(GameController gameController)
-    {
-        StartCoroutine(monopolyWindow.Activate(gameController));
+        yearOfPlentyWindow.Activate(player);
     }
 
-    public void GameEnded(Player player)
+    public void OpenMonopolyWindow(CatanGameController gameController)
+    {
+        monopolyWindow.Activate(gameController);
+    }
+
+    public void GameEnded(CatanPlayer player)
     {
         victoryWindow.Open(player);
         Hide(true);

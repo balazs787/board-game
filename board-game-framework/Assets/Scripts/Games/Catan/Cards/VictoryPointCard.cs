@@ -6,7 +6,7 @@ public class VictoryPointCard : MonoBehaviour, ICard
 {
     private bool _playable = true;
 
-    public void Play(GameController gameController)
+    public void Play(CatanGameController gameController)
     {
         gameController.GetPlayer().AddVictoryPoint();
     }

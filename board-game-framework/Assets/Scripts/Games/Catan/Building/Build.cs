@@ -7,65 +7,58 @@ using UnityEngine;
 
 public class Build : MonoBehaviour
 {
-    public delegate void Built();
-    public event Built builtReady;
-    public GameController gameController;
+    public CatanGameController gameController;
+    public ClickedItem clickedItem;
     public GameObject cancelBuildingButton;
     private bool _building = false;
     string buildTag;
     // Start is called before the first frame update
     void Start()
     {
+        clickedItem.SendClickedItem += gameObj => TryBuild(gameObj);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void TryBuild(GameObject gameObj)
     {
-        if (_building && Input.GetMouseButtonDown(0))
+        if (!_building)
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            return;
+        }
 
-            
+        CatanPlayer currentPlayer = (CatanPlayer)gameController.GetPlayer();
 
-            if (Physics.Raycast(ray, out hit, 100f))
+        if (buildTag == "Settlement" && gameObj.tag == "Crossroads")
+        {
+            _building = !gameObj.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
+            if (!_building)
             {
-                //Debug.Log(hit.transform?.gameObject.name);
-                Player currentPlayer = gameController.GetPlayer();
-
-                if (buildTag == "Settlement" && hit.transform?.gameObject.tag == "Crossroads")
-                {
-                    _building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
-                    if (!_building)
-                    {
-                        gameController.SettlementBuiltAction?.Invoke();
-                    }
-                }
-                else
-
-                if(buildTag == "Town" && (hit.transform?.gameObject.tag == "Crossroads" || hit.transform?.gameObject.tag == "Settlement"))
-                {
-                    _building = !hit.transform.gameObject.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
-                    if (!_building)
-                    {
-                        gameController.TownBuiltAction?.Invoke();
-                    }
-                }
-                else
-
-                if (buildTag == "Road" && hit.transform?.gameObject.tag == "Road")
-                {
-                    _building = !hit.transform.gameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
-                    if (!_building)
-                    { 
-                        gameController.RoadBuiltAction?.Invoke();
-                    }
-                }
-
-                cancelBuildingButton.SetActive(_building && !gameController.freeBuildPhase);
-                gameController.interfacePanel.Refresh(currentPlayer);
+                gameController.SettlementBuiltAction?.Invoke();
             }
         }
+        else
+
+        if (buildTag == "Town" && (gameObj.tag == "Crossroads" || gameObj.tag == "Settlement"))
+        {
+            _building = !gameObj.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
+            if (!_building)
+            {
+                gameController.TownBuiltAction?.Invoke();
+            }
+        }
+        else
+
+        if (buildTag == "Road" && gameObj.tag == "Road")
+        {
+            _building = !gameObj.GetComponentInParent<Road>().BuildRoad(currentPlayer);
+            if (!_building)
+            {
+                gameController.RoadBuiltAction?.Invoke();
+            }
+        }
+
+        cancelBuildingButton.SetActive(_building && !gameController.freeBuildPhase);
+        gameController.interfacePanel.Refresh(currentPlayer);
     }
 
     public void BuildThis(string tag)

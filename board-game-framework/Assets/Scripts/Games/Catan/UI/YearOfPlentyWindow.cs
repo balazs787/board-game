@@ -11,9 +11,19 @@ public class YearOfPlentyWindow : MonoBehaviour
     public TextMeshProUGUI amountText;
 
     private int _amount;
-    private Player _player;
+    private CatanPlayer _player;
+    Action CloseWindowAction;
 
-    public IEnumerator Activate(Player player)
+    private void Start()
+    {
+        CloseWindowAction += () =>
+        {
+            gameObject.SetActive(false);
+            _player = null;
+        };
+    }
+
+    public void Activate(CatanPlayer player)
     {
         _player = player;
         _amount = 2;
@@ -21,14 +31,6 @@ public class YearOfPlentyWindow : MonoBehaviour
         playerNameText.text = player.playerName;
         playerNameText.color = player.color;
         Refresh();
-
-        while (_amount != 0)
-        {
-            yield return null;
-        }
-
-        gameObject.SetActive(false);
-        _player = null;
     }
 
     public void AddResource(string resourceString)
@@ -36,6 +38,11 @@ public class YearOfPlentyWindow : MonoBehaviour
         Enum.TryParse(resourceString, out Resource resourceEnum);
         _player.GivePlayerResources(resourceEnum, 1);
         _amount--;
+        if (_amount == 0)
+        {
+            CloseWindowAction?.Invoke();
+            return;
+        }
         Refresh();
     }
 

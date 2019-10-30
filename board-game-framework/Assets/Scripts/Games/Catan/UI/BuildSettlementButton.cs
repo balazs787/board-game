@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BuildSettlementButton : MonoBehaviour
 {
-    public void Refresh(Player player)
+    public void Refresh(CatanPlayer player)
     {
         SetInteractable(player.CanAfford(1, 1, 1, 1, 0) && player.settlements < 5);
     }

@@ -11,14 +11,14 @@ public class ResourceDropWindow : MonoBehaviour
     public ResourcePanel resourcePanel;
 
     private int _amount;
-    private Player _player;
+    private CatanPlayer _player;
     private int _playerIndex;
 
     public Action<int> NextPlayerResourceDropAction;
 
     private void Start()
     {
-        NextPlayerResourceDropAction += (_) => 
+        NextPlayerResourceDropAction += (_) =>
         {
             if (_amount != 0)
             {
@@ -31,7 +31,7 @@ public class ResourceDropWindow : MonoBehaviour
         };
     }
 
-    public void Activate(Player player,int playerIndex, int amount)
+    public void Activate(CatanPlayer player, int playerIndex, int amount)
     {
         _player = player;
         _playerIndex = playerIndex;
@@ -54,7 +54,7 @@ public class ResourceDropWindow : MonoBehaviour
             {
                 NextPlayerResourceDropAction?.Invoke(++_playerIndex);
             }
-        } 
+        }
     }
 
     public void Refresh()

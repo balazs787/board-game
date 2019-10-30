@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BuyDevelopmentButton : MonoBehaviour
 {
     public bool outOfCards;
-    public void Refresh(Player player)
+    public void Refresh(CatanPlayer player)
     {
         SetInteractable(player.CanAfford(0, 0, 1, 1, 1) && !outOfCards);
     }

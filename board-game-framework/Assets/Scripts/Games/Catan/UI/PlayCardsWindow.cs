@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class PlayCardsWindow : MonoBehaviour
 {
-    public GameController gameController;
+    public CatanGameController gameController;
     public TextMeshProUGUI cardNumberText;
     public GameObject playButton;
     public List<ICard> currentCards = new List<ICard>();
     public int currentIndex=0;
 
-    public void Refresh(Player player)
+    public void Refresh(CatanPlayer player)
     {
         currentCards = player.cards;
         UpdateCardNumberText();

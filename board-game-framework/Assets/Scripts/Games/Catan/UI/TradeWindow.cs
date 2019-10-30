@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TradeWindow : MonoBehaviour
 {
-    public GameController gameController;
+    public CatanGameController gameController;
     public GameObject tradeButton;
     public TextMeshProUGUI giveAmountText;
     public TextMeshProUGUI getAmountText;

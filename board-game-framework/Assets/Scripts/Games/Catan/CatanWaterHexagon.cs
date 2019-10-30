@@ -19,7 +19,7 @@ public class CatanWaterHexagon : HexagonField
             connections[i].SetActive(connectionsActive[i]);
         }
     }
-    public void AddTradeableToPlayer(Crossroads crossroads, Player player)
+    public void AddTradeableToPlayer(Crossroads crossroads, CatanPlayer player)
     {
         if (!trading)
             return;

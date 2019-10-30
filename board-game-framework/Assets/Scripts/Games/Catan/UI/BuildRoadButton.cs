@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BuildRoadButton : MonoBehaviour
 {
-    public void Refresh(Player player)
+    public void Refresh(CatanPlayer player)
     {
         SetInteractable(player.CanAfford(1, 1, 0, 0, 0) && player.roads < 15);
     }

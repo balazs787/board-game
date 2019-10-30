@@ -13,7 +13,7 @@ public class Road : MonoBehaviour
     public HexagonField hex2;
 
     bool occupied = false;
-    public Player player = null;
+    public CatanPlayer player = null;
 
 
     public Crossroads GetOppositeCrossroad(Crossroads crossroad)
@@ -24,7 +24,7 @@ public class Road : MonoBehaviour
             return crossRoad1;
     }
 
-    public bool BuildRoad(Player player)
+    public bool BuildRoad(CatanPlayer player)
     {
         if (CanBuild(player))
         {
@@ -39,7 +39,7 @@ public class Road : MonoBehaviour
         return false;
     }
 
-    public bool CanBuild(Player player)
+    public bool CanBuild(CatanPlayer player)
     {
         return (!occupied &&
                 (player.CanFreeBuild() || player.CanAfford(1, 1, 0, 0, 0)) &&

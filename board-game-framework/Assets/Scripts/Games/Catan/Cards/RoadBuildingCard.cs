@@ -6,7 +6,7 @@ public class RoadBuildingCard : MonoBehaviour, ICard
 {
     private bool _playable;
 
-    public void Play(GameController gameController)
+    public void Play(CatanGameController gameController)
     {
         gameController.freeRoads = 2;
         gameController.RoadBuiltAction?.Invoke();

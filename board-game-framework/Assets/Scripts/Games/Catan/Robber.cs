@@ -7,59 +7,50 @@ public class Robber : MonoBehaviour
     private bool _placingRobber;
     private bool _stealing;
     private bool _canSteal;
-    public GameController gameController;
+    public CatanGameController gameController;
+    public ClickedItem clickedItem;
     public CatanHexagon currentHex;
 
     private void Start()
     {
+        clickedItem.SendClickedItem += clickedGameObject => TryPlaceRobber(clickedGameObject);
+        clickedItem.SendClickedItem += clickedGameObject => TrySteal(clickedGameObject);
         gameObject.transform.position = currentHex.transform.position;
     }
-    void Update()
+
+    public void TryPlaceRobber(GameObject clickedGameObject)
     {
-        if (_placingRobber && Input.GetMouseButtonDown(0))
+        if (!_placingRobber)
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-
-
-            if (Physics.Raycast(ray, out hit, 100f))
-            {
-                Player currentPlayer = gameController.GetPlayer();
-
-                if ((hit.transform?.gameObject.tag == "CatanHex"))
-                {
-                    _canSteal = true;
-                    currentHex.beingRobbed = false;
-                    currentHex = hit.transform.gameObject.GetComponentInParent<CatanHexagon>();
-                    _placingRobber = !currentHex.PlaceRobberHere(currentPlayer);
-                    if (!_placingRobber)
-                    {
-                        gameController.StealResourcesAction?.Invoke();
-                    }
-                }
-            }
+            return;
         }
 
-        if(_stealing && Input.GetMouseButtonDown(0))
+        if ((clickedGameObject.tag == "CatanHex"))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-
-
-            if (Physics.Raycast(ray, out hit, 100f))
+            _canSteal = true;
+            currentHex.beingRobbed = false;
+            currentHex = clickedGameObject.GetComponentInParent<CatanHexagon>();
+            _placingRobber = !currentHex.PlaceRobberHere((CatanPlayer)gameController.GetPlayer());
+            if (!_placingRobber)
             {
-                Player currentPlayer = gameController.GetPlayer();
+                gameController.StealResourcesAction?.Invoke();
+            }
+        }
+    }
 
-                if (hit.transform?.gameObject.tag == "Crossroads" || hit.transform?.gameObject.tag == "Settlement")
-                {
-                    _stealing = !hit.transform.gameObject.GetComponentInParent<Crossroads>().StealResource(currentPlayer);
-                    if (!_stealing)
-                    {
-                        gameController.ResourcesStolenAction?.Invoke();
-                    }
-                }
+    public void TrySteal(GameObject clickedGameObject)
+    {
+        if (!_stealing)
+        {
+            return;
+        }
+
+        if (clickedGameObject.tag == "Crossroads" || clickedGameObject.tag == "Settlement")
+        {
+            _stealing = !clickedGameObject.GetComponentInParent<Crossroads>().StealResource((CatanPlayer)gameController.GetPlayer());
+            if (!_stealing)
+            {
+                gameController.ResourcesStolenAction?.Invoke();
             }
         }
     }

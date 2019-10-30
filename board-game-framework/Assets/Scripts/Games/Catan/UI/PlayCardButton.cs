@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayCardButton : MonoBehaviour
 {
-    public void Refresh(Player player)
+    public void Refresh(CatanPlayer player)
     {
         SetInteractable(player.cards.Count > 0);
     }

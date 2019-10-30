@@ -16,11 +16,11 @@ public class Crossroads : MonoBehaviour
     public HexagonField hex3;
 
     private bool occupied = false;
-    private Player _player = null;
+    private CatanPlayer _player = null;
     public GameObject currentBuilding;
     bool town = false;
 
-    public bool BuildSettlement(Player player)
+    public bool BuildSettlement(CatanPlayer player)
     {
         if (CanBuild(this, player))
         {
@@ -66,7 +66,7 @@ public class Crossroads : MonoBehaviour
         return false;
     }
 
-    public bool UpgradeSettlement(Player player)
+    public bool UpgradeSettlement(CatanPlayer player)
     {
         if (_player == player && !town && player.CanAfford(0, 0, 2, 0, 3))
         {
@@ -83,7 +83,7 @@ public class Crossroads : MonoBehaviour
         return false;
     }
 
-    public bool CanBuild(Crossroads cr, Player player)
+    public bool CanBuild(Crossroads cr, CatanPlayer player)
     {
         bool neighbouringCrossroadsFree = ((road1 == null || !road1.GetOppositeCrossroad(cr).GetOccupied()) &&
             (road2 == null || !road2.GetOppositeCrossroad(cr).GetOccupied()) &&
@@ -109,7 +109,7 @@ public class Crossroads : MonoBehaviour
         }
     }
 
-    public bool StealResource(Player player)
+    public bool StealResource(CatanPlayer player)
     {
         if(_player==null || _player == player)
         {
@@ -125,7 +125,7 @@ public class Crossroads : MonoBehaviour
         return occupied;
     }
 
-    public Player GetPlayer()
+    public CatanPlayer GetPlayer()
     {
         return _player;
     }
@@ -136,7 +136,7 @@ public class Crossroads : MonoBehaviour
     }
 
     
-    public bool HaveConnectedRoad(Player player)
+    public bool HaveConnectedRoad(CatanPlayer player)
     {
         return road1?.player == player || road2?.player == player || road3?.player == player;
     }
