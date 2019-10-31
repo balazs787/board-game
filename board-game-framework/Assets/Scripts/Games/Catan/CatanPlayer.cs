@@ -40,20 +40,6 @@ public partial class CatanPlayer : Player
             { Resource.none, false }
         };
     }
-    private void Start()
-    {
-
-
-
-        //TODO: delete this
-        GivePlayerResources(Resource.brick, 10);
-        GivePlayerResources(Resource.lumber, 10);
-        GivePlayerResources(Resource.wool, 10);
-        GivePlayerResources(Resource.grain, 10);
-        GivePlayerResources(Resource.ore, 10);
-    }
-
-
 
 
     public void GivePlayerResources(Resource resource, int amount)
