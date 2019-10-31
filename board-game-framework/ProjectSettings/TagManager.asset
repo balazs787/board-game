@@ -8,6 +8,7 @@ TagManager:
   - Crossroads
   - Settlement
   - CatanHex
+  - Square
   layers:
   - Default
   - TransparentFX
