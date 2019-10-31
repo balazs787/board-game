@@ -7,10 +7,10 @@ public class VictoryWindow : MonoBehaviour
 {
     public TextMeshProUGUI victoryText;
 
-    public void Open(CatanPlayer player)
+    public void Open(Player player)
     {
         gameObject.SetActive(true);
-        victoryText.text = $"Congratulations!\n{player.name} won";
+        victoryText.text = $"Congratulations!\n{player.playerName} won";
         victoryText.color = player.color;
     }
 }

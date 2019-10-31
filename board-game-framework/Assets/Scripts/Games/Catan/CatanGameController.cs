@@ -10,7 +10,7 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
     public bool initialRoundOrder;
     public CatanPlayer[] players;
     public Hexmap hexmap;
-    public int activePlayerId;
+    private int _activePlayerId;
     public CatanInterfacePanel interfacePanel;
     public Build build;
     public Robber robber;
@@ -77,7 +77,7 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
             interfacePanel.resourcePanel.UpdateResources(GetPlayer().Resources);
         };
 
-        activePlayerId = 0;
+        _activePlayerId = 0;
         Turn(GetPlayer());
     }
 
@@ -133,12 +133,12 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
 
     public string GetPlayerName()
     {
-        return players[activePlayerId].playerName;
+        return players[_activePlayerId].playerName;
     }
 
     public CatanPlayer GetPlayer()
     {
-        return players[activePlayerId];
+        return players[_activePlayerId];
     }
 
     public void NextPlayer()
@@ -150,37 +150,37 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
         {
             if (!initialRoundOrder)
             {
-                if (activePlayerId + 1 == players.Length)
+                if (_activePlayerId + 1 == players.Length)
                 {
                     initialRoundOrder = true;
                 }
                 else
                 {
-                    activePlayerId++;
+                    _activePlayerId++;
                 }
             }
             else
             {
-                if (activePlayerId == 0)
+                if (_activePlayerId == 0)
                 {
                     freeBuildPhase = false;
                 }
                 else
                 {
-                    activePlayerId--;
+                    _activePlayerId--;
                 }
             }
         }
         else
         {
             ((CatanPlayer)GetPlayer()).MakeCardsPlayable();
-            if (activePlayerId + 1 == players.Length)
+            if (_activePlayerId + 1 == players.Length)
             {
-                activePlayerId = 0;
+                _activePlayerId = 0;
             }
             else
             {
-                activePlayerId++;
+                _activePlayerId++;
             }
         }
 
@@ -192,7 +192,7 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
 
 
 
-    public void Turn(CatanPlayer player)
+    public void Turn(Player player)
     {
         if (freeBuildPhase)
         {
