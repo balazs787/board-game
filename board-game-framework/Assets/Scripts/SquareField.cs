@@ -25,10 +25,9 @@ public class SquareField : Field
     public Edges edges;
     public Vertexes vertexes;
 
-    public int number;
 
     override
-    public void activate()
+    public void Activate()
     {
 
     }

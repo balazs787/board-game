@@ -32,7 +32,7 @@ public class HexagonField : Field
     public Vertexes vertexes;
 
     override
-    public void activate()
+    public void Activate()
     {
 
     }

@@ -1,24 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+public abstract class Player : MonoBehaviour
 {
+    public Color color;
+    public string playerName;
+    public int id;
 
-
-    [System.Serializable]
-    public class Resources
+    public int GetId()
     {
-        public int brick;
-        public int wool;
-        public int ore;
-        public int grain;
-        public int lumber;
-        
-    }
-
-    public void givePlayerResources(Resource resource, int amount)
-    {
-        
+        return id;
     }
 }

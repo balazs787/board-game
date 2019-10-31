@@ -45,12 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossroads: {fileID: 3530318432579220097}
+  settlementPrefab: {fileID: 1324238466665239128, guid: de9be6fef57ede44abe6995dce7a5cbf,
+    type: 3}
+  townPrefab: {fileID: 1007043559498978148, guid: 8b3af5325ad0f1d49990705bab2d3f2d,
+    type: 3}
   road1: {fileID: 0}
   road2: {fileID: 0}
   road3: {fileID: 0}
   hex1: {fileID: 0}
   hex2: {fileID: 0}
   hex3: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &1502853422435267942
 PrefabInstance:
   m_ObjectHideFlags: 0
