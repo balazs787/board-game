@@ -115,10 +115,8 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
 
         interfacePanel.endTurn.Hide(true);
         int amount = players[playerIndex].SevenRoll();
-        if (amount > 0)
-        {
-            interfacePanel.resourceDropWindow.Activate(players[playerIndex], playerIndex, amount);
-        }
+
+        interfacePanel.resourceDropWindow.Activate(players[playerIndex], playerIndex, amount);
     }
 
 

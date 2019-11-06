@@ -33,6 +33,12 @@ public class ResourceDropWindow : MonoBehaviour
 
     public void Activate(CatanPlayer player, int playerIndex, int amount)
     {
+        if (amount == 0)
+        {
+            NextPlayerResourceDropAction?.Invoke(++playerIndex);
+            return;
+        }
+
         _player = player;
         _playerIndex = playerIndex;
         _amount = amount;
