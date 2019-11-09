@@ -105,9 +105,10 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
 
     public void DropResources(int playerIndex = 0)
     {
+        interfacePanel.Hide(true);
         if (playerIndex >= players.Length)
         {
-            interfacePanel.endTurn.Hide(false);
+            interfacePanel.Hide(false);
             interfacePanel.Refresh((CatanPlayer)GetPlayer());
             PlaceRobberAction?.Invoke();
             return;
@@ -194,6 +195,11 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
     {
         if (freeBuildPhase)
         {
+            //if (GetPlayer().ai)
+            //{
+            //    interfacePanel.
+            //}
+
             interfacePanel.notificationWindow.FreeBuild((CatanPlayer)GetPlayer());
             interfacePanel.Hide(true);
             build.BuildThis("Settlement");

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public partial class CatanPlayer : Player
 {
+    public bool ai;
     public int victoryPoints;
     public int freeBuilds = 4;
     public int roads = 0;
