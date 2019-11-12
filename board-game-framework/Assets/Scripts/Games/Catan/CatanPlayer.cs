@@ -4,9 +4,11 @@ using UnityEngine;
 
 public partial class CatanPlayer : Player
 {
-    public bool ai;
+    public bool Ai;
+
     public int victoryPoints;
     public int freeBuilds = 4;
+    public int freeRoads = 0;
     public int roads = 0;
     public int settlements = 0;
     public int towns = 0;
@@ -68,12 +70,7 @@ public partial class CatanPlayer : Player
 
     public int SevenRoll()
     {
-        var currentResources = Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore];
-        if (currentResources > 7)
-        {
-            return currentResources / 2;
-        }
-        return 0;
+        return GetResourcesSum() > 7 ? GetResourcesSum() / 2 : 0;
     }
 
 
@@ -117,23 +114,33 @@ public partial class CatanPlayer : Player
         if (CanAfford(resource, 1))
         {
             GivePlayerResources(resource, -1);
+            Debug.Log("Dropped 1" + resource);
             return true;
         }
 
         return false;
     }
 
+    internal void Drop()
+    {
+        Resources[Resource.lumber] = 0;
+        Resources[Resource.brick] = 0;
+        Resources[Resource.grain] = 0;
+        Resources[Resource.wool] = 0;
+        Resources[Resource.ore] = 0;
+    }
+
     public void GivePlayerRandomResource(CatanPlayer player)
     {
-        if (Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore] == 0)
+        if (GetResourcesSum() == 0)
         {
             return;
         }
 
-        int randomInt = UnityEngine.Random.Range(0, 5);
+        int randomInt = UnityEngine.Random.Range(1, 6);
         while (!CanAfford((Resource)randomInt, 1))
         {
-            randomInt = UnityEngine.Random.Range(0, 5);
+            randomInt = UnityEngine.Random.Range(1, 6);
         }
 
         DeductOneResource((Resource)randomInt);
@@ -160,6 +167,11 @@ public partial class CatanPlayer : Player
         _needRefresh = true;
     }
 
+    public int GetResourcesSum()
+    {
+        return Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore];
+    }
+
     public int GetVictoryPoints()
     {
         return victoryPoints;
@@ -181,6 +193,11 @@ public partial class CatanPlayer : Player
     public bool CanFreeBuild()
     {
         return freeBuilds > 0;
+    }
+
+    public bool HasFreeRoads()
+    {
+        return freeRoads > 0;
     }
 
     public void SetLargestArmy(bool value)

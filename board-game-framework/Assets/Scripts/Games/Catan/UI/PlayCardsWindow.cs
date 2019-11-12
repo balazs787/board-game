@@ -14,6 +14,7 @@ public class PlayCardsWindow : MonoBehaviour
 
     public void Refresh(CatanPlayer player)
     {
+        //Debug.Log("PlayCardsWindow.Refresh");
         currentCards = player.cards;
         UpdateCardNumberText();
     }
@@ -55,6 +56,7 @@ public class PlayCardsWindow : MonoBehaviour
 
     public void UpdateCardNumberText()
     {
+        //Debug.Log("PlayCardsWindow.UpdateCardNumberText");
         if (currentCards.Count == 0)
             return;
 

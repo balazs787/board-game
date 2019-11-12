@@ -9,13 +9,15 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
     public bool freeBuildPhase = true;
     public bool initialRoundOrder;
     public CatanPlayer[] players;
+    public CatanAi catanAi;
     public Hexmap hexmap;
     private int _activePlayerId;
     public CatanInterfacePanel interfacePanel;
     public Build build;
     public Robber robber;
     public Deck deck;
-    public int freeRoads;
+    public bool endTurn;
+    public int turn = 0;
 
     public Action RoadBuiltAction;
     public Action SettlementBuiltAction;
@@ -34,8 +36,25 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
             DropResourcesAction?.Invoke(playerIndex);
         };
         RoadBuiltAction += AwardLongestRoad;
-        RoadBuiltAction += RoadBuilt;
-        SettlementBuiltAction += SettlementBuilt;
+        RoadBuiltAction += () => 
+        {
+            if (GetPlayer().HasFreeRoads())
+            {
+                build.BuildThis("Road");
+            }
+
+            if (freeBuildPhase)
+            {
+                NextPlayer();
+            }
+        };
+        SettlementBuiltAction += () =>
+        {
+            if (freeBuildPhase)
+            {
+                build.BuildThis("Road");
+            }
+        };
         KnightPlayedAction += AwardLargestArmy;
         KnightPlayedAction += () =>
         {
@@ -44,14 +63,20 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
         PlaceRobberAction += () =>
         {
             robber.PlaceRobber();
-            interfacePanel.notificationWindow.Rob((CatanPlayer)GetPlayer());
+            if (!GetPlayer().Ai) 
+            { 
+                interfacePanel.notificationWindow.Rob((CatanPlayer)GetPlayer());
+            }
         };
         StealResourcesAction += () =>
         {
             if (robber.GetCanSteal())
             {
                 robber.Steal();
-                interfacePanel.notificationWindow.Steal((CatanPlayer)GetPlayer());
+                if (!GetPlayer().Ai)
+                {
+                    interfacePanel.notificationWindow.Steal((CatanPlayer)GetPlayer());
+                }
             }
             else
             {
@@ -77,34 +102,12 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
             interfacePanel.resourcePanel.UpdateResources(GetPlayer().Resources);
         };
 
-        _activePlayerId = 0;
-        Turn(GetPlayer());
-    }
-
-    private void RoadBuilt()
-    {
-        if (freeRoads > 0)
-        {
-            freeRoads--;
-            build.BuildThis("Road");
-        }
-
-        if (freeBuildPhase)
-        {
-            NextPlayer();
-        }
-    }
-
-    private void SettlementBuilt()
-    {
-        if (freeBuildPhase)
-        {
-            build.BuildThis("Road");
-        }
+        GameStart();
     }
 
     public void DropResources(int playerIndex = 0)
     {
+        Debug.Log("playerIndex: "+playerIndex);
         interfacePanel.Hide(true);
         if (playerIndex >= players.Length)
         {
@@ -117,15 +120,31 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
         interfacePanel.endTurn.Hide(true);
         int amount = players[playerIndex].SevenRoll();
 
+        if (players[playerIndex].Ai)
+        {
+            catanAi.DropResources(players[playerIndex], amount);
+            amount = 0;
+        }
+
         interfacePanel.resourceDropWindow.Activate(players[playerIndex], playerIndex, amount);
     }
 
 
     void Update()
     {
+        if (gameEnded)
+        {
+            return;
+        }
+
         if (((CatanPlayer)GetPlayer()).NeedRefresh())
         {
             interfacePanel.Refresh((CatanPlayer)GetPlayer());
+        }
+
+        if (endTurn)
+        {
+            Turn(GetPlayer());
         }
     }
 
@@ -184,7 +203,7 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
         }
 
         interfacePanel.Refresh((CatanPlayer)GetPlayer());
-        Turn(GetPlayer());
+        endTurn = true;
     }
 
 
@@ -193,16 +212,18 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
 
     public void Turn(Player player)
     {
+        turn++;
+        Debug.Log("turn: " + turn);
+        endTurn = false;
         if (freeBuildPhase)
         {
-            //if (GetPlayer().ai)
-            //{
-            //    interfacePanel.
-            //}
-
             interfacePanel.notificationWindow.FreeBuild((CatanPlayer)GetPlayer());
             interfacePanel.Hide(true);
             build.BuildThis("Settlement");
+        }
+        else if (GetPlayer().Ai)
+        {
+            catanAi.AiTurn(GetPlayer());
         }
         else
         {
@@ -228,6 +249,12 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
 
     public void PickCard()
     {
+        Debug.Log("PickCard");
+        if (interfacePanel.buyDevelopmentButton.outOfCards)
+        {
+            return;
+        }
+
         ((CatanPlayer)GetPlayer()).BuyCard(deck);
         if (deck.cards.Count == 0)
             interfacePanel.OutOfCards();
@@ -241,12 +268,13 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
 
     public void GameStart()
     {
-
+        _activePlayerId = 0;
+        endTurn = true;
     }
 
     public void CheckVictory()
     {
-        if (((CatanPlayer)GetPlayer()).GetVictoryPoints() == 10)
+        if (((CatanPlayer)GetPlayer()).GetVictoryPoints() >= 10)
             GameEnd();
     }
 
@@ -279,6 +307,10 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
     public void AwardLongestRoad()
     {
         CatanPlayer currentPlayer = (CatanPlayer)GetPlayer();
+        if (currentPlayer.roads < 3)
+        {
+            return;
+        }
         CatanPlayer currentAwardHolder = null;
         currentPlayer.longestRoadCount = hexmap.CheckRoadCount((CatanPlayer)GetPlayer());
         if (currentPlayer.GetLongestRoadCount() >= 3)

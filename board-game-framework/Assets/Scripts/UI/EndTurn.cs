@@ -16,6 +16,7 @@ public class EndTurn : MonoBehaviour
 
     public void EndTurnButton()
     {
+        //Debug.Log("EndTurnButton");
         gameController.CheckVictory();
         gameController.NextPlayer();
         playerTurnText.text = gameController.GetPlayerName()+"'s Turn";

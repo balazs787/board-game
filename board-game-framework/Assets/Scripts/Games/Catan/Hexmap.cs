@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,6 +45,21 @@ public class Hexmap : MonoBehaviour
         return maxCount;
     }
 
+    internal GameObject PickRandomHex()
+    {
+        return hexagons[UnityEngine.Random.Range(0, hexagons.Count)].gameObject;
+    }
+
+    public GameObject PickRandomCrossroad()
+    {
+        return crossroads[UnityEngine.Random.Range(0, crossroads.Count)].gameObject;
+    }
+
+    public GameObject PickRandomRoad()
+    {
+        return roads[UnityEngine.Random.Range(0, roads.Count)].gameObject;
+    }
+
     public int RoadCount(CatanPlayer player, List<Road> longestRoad, int count, int maxCount, Crossroads lastCrossroads)
     {
         int currentCount = count;
@@ -78,4 +94,6 @@ public class Hexmap : MonoBehaviour
 
         return maxCount;
     }
+
+    
 }

@@ -991,6 +991,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93759517}
   m_CullTransparentMesh: 0
+--- !u!1 &98467507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98467509}
+  - component: {fileID: 98467508}
+  m_Layer: 0
+  m_Name: CatanAI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &98467508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98467507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98855dc06df56e41b6264d0f7f6d390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 1313385305}
+  playCardsWindow: {fileID: 651371640}
+  endTurn: {fileID: 742108452}
+--- !u!4 &98467509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98467507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &118468919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,8 +2412,10 @@ MonoBehaviour:
   color: {r: 1, g: 0, b: 0, a: 1}
   playerName: Player2
   id: 1
+  Ai: 1
   victoryPoints: 0
   freeBuilds: 4
+  freeRoads: 0
   roads: 0
   settlements: 0
   towns: 0
@@ -2387,7 +2435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255510433
 GameObject:
@@ -5321,6 +5369,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525811511}
   m_CullTransparentMesh: 0
+--- !u!114 &545234032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1859550764028796796, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1859550764736671690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &557651602
 GameObject:
   m_ObjectHideFlags: 0
@@ -5930,6 +5990,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621176229}
   m_CullTransparentMesh: 0
+--- !u!114 &626397714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1859550763186684944, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1859550764736671690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &631957592
 GameObject:
   m_ObjectHideFlags: 0
@@ -10650,6 +10722,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156634259}
   m_CullTransparentMesh: 0
+--- !u!114 &1210582385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1859550764099967241, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1859550764736671690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013610d4b65700b4fbbb4c43ba37d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1216239436
 GameObject:
   m_ObjectHideFlags: 0
@@ -11632,12 +11716,14 @@ MonoBehaviour:
   players:
   - {fileID: 1489108923}
   - {fileID: 242689894}
+  catanAi: {fileID: 98467508}
   hexmap: {fileID: 1649707572}
   interfacePanel: {fileID: 1589944212}
   build: {fileID: 1313385307}
   robber: {fileID: 1634361549}
   deck: {fileID: 1650029305}
-  freeRoads: 0
+  endTurn: 0
+  turn: 0
 --- !u!4 &1313385306
 Transform:
   m_ObjectHideFlags: 0
@@ -14185,8 +14271,10 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 1}
   playerName: Player1
   id: 0
+  Ai: 1
   victoryPoints: 0
   freeBuilds: 4
+  freeRoads: 0
   roads: 0
   settlements: 0
   towns: 0
@@ -14206,7 +14294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497647637
 GameObject:
@@ -15792,7 +15880,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1654959243
 GameObject:
@@ -18320,7 +18408,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2047386174
 GameObject:
@@ -19862,6 +19950,291 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1859550762896645493, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550762898441757, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550762970728274, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763076173994, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763106070469, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763111330220, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763166901656, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763227959609, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763237329223, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763258057630, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763275541084, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763281131957, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763283606422, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763310459125, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763370948659, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763419500711, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763433149330, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763456785084, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763578688603, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763581927891, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763624044814, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763624774052, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763732012411, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763757294592, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763774915309, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763785601622, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763945329768, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763945523149, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763961555504, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763977794439, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550763983291247, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764034814284, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764060848520, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764072024442, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764076531470, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764089526696, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764224745313, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764247518815, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764247783730, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764283776319, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764355822000, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764363387709, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764429808410, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764529022836, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764580818940, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764591021981, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764608089603, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764616753811, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764634699156, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764638978323, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764659605951, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764741987194, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764778382310, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764890251374, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859550764283776316, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 545234032}
+    - target: {fileID: 1859550764072024443, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: road2
+      value: 
+      objectReference: {fileID: 1210582385}
+    - target: {fileID: 1859550764072024443, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: road3
+      value: 
+      objectReference: {fileID: 626397714}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89, type: 3}
 --- !u!1001 &3284205612441155603

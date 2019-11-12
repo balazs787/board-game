@@ -12,14 +12,16 @@ public class Build : MonoBehaviour
     public GameObject cancelBuildingButton;
     private bool _building = false;
     string buildTag;
-    // Start is called before the first frame update
+    public Action<GameObject> AiBuilding;
+    
     void Start()
     {
         clickedItem.SendClickedItem += gameObj => TryBuild(gameObj);
+        AiBuilding += gameObj => TryBuild(gameObj);
     }
 
 
-    public void TryBuild(GameObject gameObj)
+    public void TryBuild(GameObject clickedGameObject)
     {
         if (!_building)
         {
@@ -28,30 +30,28 @@ public class Build : MonoBehaviour
 
         CatanPlayer currentPlayer = (CatanPlayer)gameController.GetPlayer();
 
-        if (buildTag == "Settlement" && gameObj.tag == "Crossroads")
+        if (buildTag == "Settlement" && clickedGameObject.tag == "Crossroads")
         {
-            _building = !gameObj.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
-            if (!_building)
+            _building = !clickedGameObject.GetComponentInParent<Crossroads>().BuildSettlement(currentPlayer);
+            if (!_building && !gameController.GetPlayer().Ai)
             {
                 gameController.SettlementBuiltAction?.Invoke();
             }
         }
-        else
 
-        if (buildTag == "Town" && (gameObj.tag == "Crossroads" || gameObj.tag == "Settlement"))
+        if (buildTag == "Town" && (clickedGameObject.tag== "Crossroads" || clickedGameObject.tag== "Settlement"))
         {
-            _building = !gameObj.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
-            if (!_building)
+            _building = !clickedGameObject.GetComponentInParent<Crossroads>().UpgradeSettlement(currentPlayer);
+            if (!_building && !gameController.GetPlayer().Ai)
             {
                 gameController.TownBuiltAction?.Invoke();
             }
         }
-        else
 
-        if (buildTag == "Road" && gameObj.tag == "Road")
+        if (buildTag == "Road" && clickedGameObject.tag=="Road")
         {
-            _building = !gameObj.GetComponentInParent<Road>().BuildRoad(currentPlayer);
-            if (!_building)
+            _building = !clickedGameObject.GetComponentInParent<Road>().BuildRoad(currentPlayer);
+            if (!_building && !gameController.GetPlayer().Ai)
             {
                 gameController.RoadBuiltAction?.Invoke();
             }
@@ -69,8 +69,72 @@ public class Build : MonoBehaviour
         _building = true;
         buildTag = tag;
 
+        if (gameController.GetPlayer().Ai)
+        {
+            AiTryBuild();
+            return;
+        }
+
         if (!gameController.freeBuildPhase)
             cancelBuildingButton.SetActive(true);
+    }
+
+    public void AiTryBuild()
+    {
+        if (buildTag == "Road")
+        {
+            List<Road> roads = new List<Road>(gameController.hexmap.roads);
+
+            while(_building && roads.Count > 0)
+            {
+                int random = UnityEngine.Random.Range(0, roads.Count);
+                TryBuild(roads[random].gameObject);
+                roads.RemoveAt(random);
+            }
+            var b = _building;
+            _building = false;
+            cancelBuildingButton.SetActive(false);
+            if (!b)
+            { 
+                gameController.RoadBuiltAction?.Invoke();
+            }
+            return;
+        }
+
+        if (buildTag == "Settlement" || buildTag == "Town")
+        {
+            List<Crossroads> crossroads = new List<Crossroads>(gameController.hexmap.crossroads);
+
+            while (_building && crossroads.Count > 0)
+            {
+                int random = UnityEngine.Random.Range(0, crossroads.Count);
+                if (gameController.freeBuildPhase)
+                {
+                    crossroads[random].hex1.TryGetComponent(out CatanHexagon h1);
+                    crossroads[random].hex2.TryGetComponent(out CatanHexagon h2);
+                    crossroads[random].hex3.TryGetComponent(out CatanHexagon h3);
+
+                    if ((h1 != null && h2 != null && h3 != null) &&
+                        (h1.resource != Resource.none && h2.resource != Resource.none && h3.resource != Resource.none))
+                    {
+                        TryBuild(crossroads[random].gameObject);
+                    }
+                }
+                else
+                {
+                    TryBuild(crossroads[random].gameObject);
+                }
+                crossroads.RemoveAt(random);
+            }
+            var b = _building;
+            _building = false;
+            cancelBuildingButton.SetActive(false);
+            if (!b)
+            {
+                gameController.SettlementBuiltAction?.Invoke();
+            }
+            return;
+        }
     }
 
     public bool GetBuilding()
