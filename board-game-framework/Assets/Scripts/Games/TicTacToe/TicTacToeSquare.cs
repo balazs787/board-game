@@ -16,13 +16,17 @@ public class TicTacToeSquare :  SquareField
 
     public bool CheckNeighbours(Player player)
     {
-        return (
+        if (
                     this.player == player &&
-                    (edges.top != null && edges.bottom != null && edges.top.GetComponent<TicTacToeSquare>().player==player && edges.bottom.GetComponent<TicTacToeSquare>().player == player) ||
+                    ((edges.top != null && edges.bottom != null && edges.top.GetComponent<TicTacToeSquare>().player==player && edges.bottom.GetComponent<TicTacToeSquare>().player == player) ||
                     (edges.left != null && edges.right != null && edges.left.GetComponent<TicTacToeSquare>().player==player && edges.right.GetComponent<TicTacToeSquare>().player == player) ||
                     (vertexes.topLeft != null && vertexes.bottomRight != null && vertexes.topLeft.GetComponent<TicTacToeSquare>().player==player && vertexes.bottomRight.GetComponent<TicTacToeSquare>().player == player) ||
-                    (vertexes.topRight != null && vertexes.bottomLeft != null && vertexes.topRight.GetComponent<TicTacToeSquare>().player==player && vertexes.bottomLeft.GetComponent<TicTacToeSquare>().player == player)
-               );
+                    (vertexes.topRight != null && vertexes.bottomLeft != null && vertexes.topRight.GetComponent<TicTacToeSquare>().player==player && vertexes.bottomLeft.GetComponent<TicTacToeSquare>().player == player))
+               )
+        {
+            return true;
+        }
+        return false;
     }
 
     public bool GetOccupied()
