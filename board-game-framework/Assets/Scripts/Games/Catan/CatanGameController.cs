@@ -111,7 +111,11 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
         interfacePanel.Hide(true);
         if (playerIndex >= players.Length)
         {
-            interfacePanel.Hide(false);
+            if (!GetPlayer().Ai)
+            {
+                interfacePanel.Hide(false);
+            }
+            interfacePanel.endTurn.Hide(false);
             interfacePanel.Refresh((CatanPlayer)GetPlayer());
             PlaceRobberAction?.Invoke();
             return;

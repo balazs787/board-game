@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -83,6 +84,12 @@ public class CatanHexagon : HexagonField
         robber.gameObject.transform.position = gameObject.transform.position;
         robber.CanSteal(EnemyTowns(player));
         return true;
+    }
+
+    public bool HasPlayerSettlement(CatanPlayer player)
+    {
+        return (vertexes.top.GetPlayer() == player || vertexes.topRight.GetPlayer() == player || vertexes.bottomRight.GetPlayer() == player ||
+                vertexes.bottom.GetPlayer() == player || vertexes.bottomLeft.GetPlayer() == player || vertexes.topLeft.GetPlayer() == player);
     }
 
     public bool EnemyTowns(CatanPlayer player)

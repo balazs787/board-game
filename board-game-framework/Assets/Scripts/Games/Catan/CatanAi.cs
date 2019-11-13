@@ -25,7 +25,6 @@ public class CatanAi : MonoBehaviour
             playCardsWindow.PlayButton();
         }
 
-
         gameController.DiceRoll();
 
         TryBuildSettlement(player, false);

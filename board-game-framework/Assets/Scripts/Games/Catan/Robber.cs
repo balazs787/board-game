@@ -28,6 +28,10 @@ public class Robber : MonoBehaviour
         if (gameController.GetPlayer().Ai)
         {
             clickedGameObject = gameController.hexmap.PickRandomHex();
+            if (clickedGameObject.GetComponentInParent<CatanHexagon>().HasPlayerSettlement(gameController.GetPlayer()))
+            {
+                return;
+            }
         }
 
         if ((clickedGameObject.tag == "CatanHex") && !clickedGameObject.GetComponentInParent<CatanHexagon>().beingRobbed)
