@@ -9,12 +9,11 @@ public class PlayCardsWindow : MonoBehaviour
     public CatanGameController gameController;
     public TextMeshProUGUI cardNumberText;
     public GameObject playButton;
-    public List<ICard> currentCards = new List<ICard>();
+    public List<ICard> currentCards;
     public int currentIndex=0;
 
     public void Refresh(CatanPlayer player)
     {
-        //Debug.Log("PlayCardsWindow.Refresh");
         currentCards = player.cards;
         UpdateCardNumberText();
     }
@@ -23,41 +22,44 @@ public class PlayCardsWindow : MonoBehaviour
     {
         currentIndex = 0;
         gameObject.SetActive(true);
-        currentCards[currentIndex].GetGameObject().SetActive(true);
+        currentCards[currentIndex]?.GetGameObject().SetActive(true);
         UpdateCardNumberText();
     }
 
     public void Close()
     {
+        if (currentCards?.Count > 0)
+        {
+            currentCards[currentIndex]?.GetGameObject().SetActive(false);
+        }
         gameObject.SetActive(false);
     }
 
     public void Next()
     {
-        if (currentIndex + 1 == currentCards.Count)
+        if (currentIndex + 1 >= currentCards.Count)
             return;
 
-        currentCards[currentIndex].GetGameObject().SetActive(false);
+        currentCards[currentIndex]?.GetGameObject().SetActive(false);
         currentIndex++;
-        currentCards[currentIndex].GetGameObject().SetActive(true);
+        currentCards[currentIndex]?.GetGameObject().SetActive(true);
         UpdateCardNumberText();
     }
 
     public void Previous()
     {
-        if (currentIndex == 0)
+        if (currentIndex <= 0)
             return;
 
-        currentCards[currentIndex].GetGameObject().SetActive(false);
+        currentCards[currentIndex]?.GetGameObject().SetActive(false);
         currentIndex--;
-        currentCards[currentIndex].GetGameObject().SetActive(true);
+        currentCards[currentIndex]?.GetGameObject().SetActive(true);
         UpdateCardNumberText();
     }
 
     public void UpdateCardNumberText()
     {
-        //Debug.Log("PlayCardsWindow.UpdateCardNumberText");
-        if (currentCards.Count == 0)
+        if (currentCards?.Count == 0)
             return;
 
         cardNumberText.text = $"{currentIndex + 1} / {currentCards.Count}";

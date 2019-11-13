@@ -2412,7 +2412,7 @@ MonoBehaviour:
   color: {r: 1, g: 0, b: 0, a: 1}
   playerName: Player2
   id: 1
-  Ai: 1
+  Ai: 0
   victoryPoints: 0
   freeBuilds: 4
   freeRoads: 0
@@ -14271,7 +14271,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 1}
   playerName: Player1
   id: 0
-  Ai: 1
+  Ai: 0
   victoryPoints: 0
   freeBuilds: 4
   freeRoads: 0
