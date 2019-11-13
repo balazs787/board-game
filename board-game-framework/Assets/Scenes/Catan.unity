@@ -20235,6 +20235,11 @@ PrefabInstance:
       propertyPath: road3
       value: 
       objectReference: {fileID: 626397714}
+    - target: {fileID: 1859550763292148447, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89,
+        type: 3}
+      propertyPath: beingRobbed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfb9d6c5fdcbffa43a2d0674ee1cce89, type: 3}
 --- !u!1001 &3284205612441155603

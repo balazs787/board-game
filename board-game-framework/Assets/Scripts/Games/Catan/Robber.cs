@@ -30,7 +30,7 @@ public class Robber : MonoBehaviour
             clickedGameObject = gameController.hexmap.PickRandomHex();
         }
 
-        if ((clickedGameObject.tag == "CatanHex"))
+        if ((clickedGameObject.tag == "CatanHex") && !clickedGameObject.GetComponentInParent<CatanHexagon>().beingRobbed)
         {
             _canSteal = true;
             currentHex.beingRobbed = false;
