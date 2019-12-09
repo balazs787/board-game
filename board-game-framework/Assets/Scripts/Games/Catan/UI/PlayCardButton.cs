@@ -3,16 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayCardButton : MonoBehaviour
+public class PlayCardButton : InteractableButton
 {
     public void Refresh(CatanPlayer player)
     {
         SetInteractable(player.cards.Count > 0);
-    }
-
-    public void SetInteractable(bool interactable)
-    {
-        gameObject.GetComponent<Image>().color = interactable ? Color.white : Color.gray;
-        gameObject.GetComponentInChildren<Button>().interactable = interactable ? true : false;
     }
 }

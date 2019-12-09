@@ -28,6 +28,8 @@ public class Build : MonoBehaviour
             return;
         }
 
+        gameController.interfacePanel.tradeWindow.CloseWindow();
+
         CatanPlayer currentPlayer = (CatanPlayer)gameController.GetPlayer();
 
         if (buildTag == "Settlement" && clickedGameObject.tag == "Crossroads")

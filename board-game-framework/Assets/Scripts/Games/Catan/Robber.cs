@@ -59,7 +59,7 @@ public class Robber : MonoBehaviour
             clickedGameObject = gameController.hexmap.PickRandomCrossroad();
         }
 
-        if (clickedGameObject.tag == "Crossroads" || clickedGameObject.tag == "Settlement")
+        if (clickedGameObject.tag == "Crossroads" || clickedGameObject.tag == "Settlement" || clickedGameObject.tag == "Town")
         {
             _stealing = !clickedGameObject.GetComponentInParent<Crossroads>().StealResource((CatanPlayer)gameController.GetPlayer());
             if (!_stealing && !gameController.GetPlayer().Ai)

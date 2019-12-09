@@ -11,15 +11,20 @@ public class PlayCardsWindow : MonoBehaviour
     public GameObject playButton;
     public List<ICard> currentCards;
     public int currentIndex=0;
+    private bool _open;
 
     public void Refresh(CatanPlayer player)
     {
         currentCards = player.cards;
-        UpdateCardNumberText();
+        if (_open)
+        {
+            UpdateCardNumberText();
+        }
     }
 
     public void Open()
     {
+        _open = true;
         currentIndex = 0;
         gameObject.SetActive(true);
         currentCards[currentIndex]?.GetGameObject().SetActive(true);
@@ -28,6 +33,7 @@ public class PlayCardsWindow : MonoBehaviour
 
     public void Close()
     {
+        _open = false;
         if (currentCards?.Count > 0)
         {
             currentCards[currentIndex]?.GetGameObject().SetActive(false);

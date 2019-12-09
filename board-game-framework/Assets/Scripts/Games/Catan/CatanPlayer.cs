@@ -5,6 +5,7 @@ using UnityEngine;
 public partial class CatanPlayer : Player
 {
     public bool Ai;
+    public bool advanced;
 
     public int victoryPoints;
     public int freeBuilds = 4;
@@ -20,7 +21,7 @@ public partial class CatanPlayer : Player
     public Dictionary<Resource, int> Resources;
     public Dictionary<Resource, bool> Tradeables;
 
-    private bool _needRefresh;
+    public Action NeedRefreshAction;
 
     private void Awake()
     {
@@ -48,7 +49,7 @@ public partial class CatanPlayer : Player
     public void GivePlayerResources(Resource resource, int amount)
     {
         Resources[resource] += amount;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public void Trade(string giveType, int giveAmount, string getType, int getAmount)
@@ -59,7 +60,7 @@ public partial class CatanPlayer : Player
         Enum.TryParse(getType, out Resource resourceGet);
         GivePlayerResources(resourceGet, getAmount);
 
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public void BuyCard(Deck deck)
@@ -106,7 +107,7 @@ public partial class CatanPlayer : Player
         Resources[Resource.wool] -= w;
         Resources[Resource.ore] -= o;
 
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public bool DeductOneResource(Resource resource)
@@ -114,7 +115,6 @@ public partial class CatanPlayer : Player
         if (CanAfford(resource, 1))
         {
             GivePlayerResources(resource, -1);
-            Debug.Log("Dropped 1" + resource);
             return true;
         }
 
@@ -164,7 +164,7 @@ public partial class CatanPlayer : Player
     public void AddVictoryPoint()
     {
         victoryPoints++;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public int GetResourcesSum()
@@ -175,19 +175,6 @@ public partial class CatanPlayer : Player
     public int GetVictoryPoints()
     {
         return victoryPoints;
-    }
-
-    public bool NeedRefresh()
-    {
-        if (_needRefresh)
-        {
-            _needRefresh = false;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
 
     public bool CanFreeBuild()
@@ -211,7 +198,7 @@ public partial class CatanPlayer : Player
             victoryPoints += 2;
         }
         largestArmy = value;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public bool GetLargestArmy()
@@ -245,6 +232,6 @@ public partial class CatanPlayer : Player
             victoryPoints += 2;
         }
         longestRoad = value;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 }

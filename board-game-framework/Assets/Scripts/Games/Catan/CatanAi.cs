@@ -9,7 +9,7 @@ public class CatanAi : MonoBehaviour
     public CatanGameController gameController;
     public PlayCardsWindow playCardsWindow;
     public EndTurn endTurn;
-    
+
     public void AiTurn(CatanPlayer player)
     {
         if (gameController.freeBuildPhase)
@@ -27,18 +27,41 @@ public class CatanAi : MonoBehaviour
 
         gameController.DiceRoll();
 
-        TryBuildSettlement(player, false);
-        TryBuildRoad(player, false);
-        TryBuildTown(player, false);
-
-        if (player.CanAfford(0, 0, 1, 1, 1) && random == 1)
+        if (player.advanced)
         {
-            gameController.PickCard();
+            TryBuildSettlement(player, false);
+            TryBuildRoad(player, false);
+            TryBuildTown(player, false);
+
+            if (player.CanAfford(0, 0, 1, 1, 1) && random == 1)
+            {
+                gameController.PickCard();
+            }
+
+            TryBuildSettlement(player, true);
+            TryBuildRoad(player, true);
+            TryBuildTown(player, true);
+        }
+        else
+        {
+            TryBuildSettlement(player, false);
+            TryBuildRoad(player, false);
+            TryBuildTown(player, false);
+
+            if (player.CanAfford(0, 0, 1, 1, 1))
+            {
+                gameController.PickCard();
+            }
+
+            if (random == 1)
+            {
+                TryBuildSettlement(player, true);
+                TryBuildRoad(player, true);
+                TryBuildTown(player, true);
+            }
         }
 
-        TryBuildSettlement(player, true);
-        TryBuildRoad(player, true);
-        TryBuildTown(player, true);
+        
 
         if (endTurn.gameObject.activeSelf)
         {
@@ -175,7 +198,6 @@ public class CatanAi : MonoBehaviour
         List<Resource> droppables = new List<Resource>();
         for (int i = 1; i <= 5; i++)
         {
-            Debug.Log((Resource)i+"="+player.Resources[(Resource)i]);
             for (int j = 0; j < player.Resources[(Resource)i]; j++)
             {
                 droppables.Add((Resource)i);

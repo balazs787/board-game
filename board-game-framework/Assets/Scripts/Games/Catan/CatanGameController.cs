@@ -9,6 +9,7 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
     public bool freeBuildPhase = true;
     public bool initialRoundOrder;
     public CatanPlayer[] players;
+    public GameObject player;
     public CatanAi catanAi;
     public Hexmap hexmap;
     private int _activePlayerId;
@@ -28,6 +29,20 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
     public Action StealResourcesAction;
     public Action ResourcesStolenAction;
 
+    private void Awake()
+    {
+        players = new CatanPlayer[Players.activePlayers];
+        for (int i = 0; i < Players.activePlayers; i++)
+        {
+            GameObject p = Instantiate(player, transform);
+            players[i] = p.GetComponent<CatanPlayer>();
+            players[i].id = i;
+            players[i].playerName = Players.names[i];
+            players[i].Ai = Players.ais[i];
+            players[i].advanced = Players.advancedais[i];
+            players[i].color = Players.colors[i];
+        }
+    }
     void Start()
     {
         DropResourcesAction += playerIndex => DropResources(playerIndex);
@@ -102,12 +117,16 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
             interfacePanel.resourcePanel.UpdateResources(GetPlayer().Resources);
         };
 
+        foreach (var p in players)
+        {
+            p.NeedRefreshAction += () => interfacePanel.Refresh((CatanPlayer)GetPlayer());
+        }
+
         GameStart();
     }
 
     public void DropResources(int playerIndex = 0)
     {
-        Debug.Log("playerIndex: "+playerIndex);
         interfacePanel.Hide(true);
         if (playerIndex >= players.Length)
         {
@@ -139,11 +158,6 @@ public class CatanGameController : MonoBehaviour, ITurnBasedGameController, IDic
         if (gameEnded)
         {
             return;
-        }
-
-        if (((CatanPlayer)GetPlayer()).NeedRefresh())
-        {
-            interfacePanel.Refresh((CatanPlayer)GetPlayer());
         }
 
         if (endTurn)
