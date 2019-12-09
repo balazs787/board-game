@@ -9,10 +9,14 @@ public class TicTacToeGameController : MonoBehaviour, ITurnBasedGameController
     public VictoryWindow victoryWindow;
     public TurnWindow turnWindow;
     private int _activePlayerId;
+    public int turnNumber=0;
 
 
     void Start()
     {
+        players[0].playerName = Players.names[0];
+        players[1].playerName = Players.names[1];
+
         clickedItem.SendClickedItem += (clickedGameObject) => PutMark(clickedGameObject);
         _activePlayerId = 0;
         Turn(GetPlayer());
@@ -55,12 +59,15 @@ public class TicTacToeGameController : MonoBehaviour, ITurnBasedGameController
         Turn(GetPlayer());
     }
 
-
-
-
-
     public void Turn(Player player)
     {
+        turnNumber++;
+        if (turnNumber == 10)
+        {
+            GameEnd();
+            victoryWindow.victoryText.text = "Draw";
+            victoryWindow.victoryText.color = Color.black;
+        }
         turnWindow.Refresh(GetPlayer());
     }
 

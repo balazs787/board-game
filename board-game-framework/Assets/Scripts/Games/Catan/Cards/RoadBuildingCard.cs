@@ -8,8 +8,8 @@ public class RoadBuildingCard : MonoBehaviour, ICard
 
     public void Play(CatanGameController gameController)
     {
-        gameController.freeRoads = 2;
-        gameController.RoadBuiltAction?.Invoke();
+        gameController.GetPlayer().freeRoads = 2;
+        gameController.build.BuildThis("Road");
     }
 
     public void Playable()

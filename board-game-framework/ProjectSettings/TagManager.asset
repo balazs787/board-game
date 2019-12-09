@@ -9,6 +9,7 @@ TagManager:
   - Settlement
   - CatanHex
   - Square
+  - Town
   layers:
   - Default
   - TransparentFX

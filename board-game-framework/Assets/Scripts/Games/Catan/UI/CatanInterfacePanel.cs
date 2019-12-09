@@ -51,6 +51,7 @@ public class CatanInterfacePanel : MonoBehaviour
     {
         int first = Random.Range(1, 7);
         int second = Random.Range(1, 7);
+        Debug.Log("Rolled: " + (first + second));
         rollButton.DiceRolled(first + second);
         endTurn.Hide(false);
         tradeWindow.SetInteractable(true);

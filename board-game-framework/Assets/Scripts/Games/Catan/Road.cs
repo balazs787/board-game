@@ -34,6 +34,10 @@ public class Road : MonoBehaviour
             GameObject r = Instantiate(roadPrefab, transform);
             r.GetComponent<SetupRoad>().Setup(player.GetId());
             player.roads++;
+            if (player.HasFreeRoads())
+            {
+                player.freeRoads--;
+            }
             return true;
         }
         return false;
@@ -42,7 +46,7 @@ public class Road : MonoBehaviour
     public bool CanBuild(CatanPlayer player)
     {
         return (!occupied &&
-                (player.CanFreeBuild() || player.CanAfford(1, 1, 0, 0, 0)) &&
+                (player.CanFreeBuild() || player.HasFreeRoads() || player.CanAfford(1, 1, 0, 0, 0)) &&
                 (crossRoad1.HaveConnectedRoad(player) || crossRoad2.HaveConnectedRoad(player) || crossRoad1.GetPlayer()==player || crossRoad2.GetPlayer()==player));
     }
 

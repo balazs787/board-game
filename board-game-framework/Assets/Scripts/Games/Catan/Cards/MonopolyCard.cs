@@ -8,6 +8,13 @@ public class MonopolyCard : MonoBehaviour, ICard
 
     public void Play(CatanGameController gameController)
     {
+        if (gameController.GetPlayer().Ai)
+        {
+            Resource r = gameController.catanAi.PickLowestResource();
+            gameController.interfacePanel.monopolyWindow.GetResourcesFromOthers?.Invoke(r);
+            return;
+        }
+
         gameController.interfacePanel.OpenMonopolyWindow(gameController);
     }
 

@@ -18,37 +18,51 @@ public class Robber : MonoBehaviour
         gameObject.transform.position = currentHex.transform.position;
     }
 
-    public void TryPlaceRobber(GameObject clickedGameObject)
+    public void TryPlaceRobber(GameObject clickedGameObject=null)
     {
         if (!_placingRobber)
         {
             return;
         }
 
-        if ((clickedGameObject.tag == "CatanHex"))
+        if (gameController.GetPlayer().Ai)
+        {
+            clickedGameObject = gameController.hexmap.PickRandomHex();
+            if (clickedGameObject.GetComponentInParent<CatanHexagon>().HasPlayerSettlement(gameController.GetPlayer()))
+            {
+                return;
+            }
+        }
+
+        if ((clickedGameObject.tag == "CatanHex") && !clickedGameObject.GetComponentInParent<CatanHexagon>().beingRobbed)
         {
             _canSteal = true;
             currentHex.beingRobbed = false;
             currentHex = clickedGameObject.GetComponentInParent<CatanHexagon>();
             _placingRobber = !currentHex.PlaceRobberHere((CatanPlayer)gameController.GetPlayer());
-            if (!_placingRobber)
+            if (!_placingRobber && !gameController.GetPlayer().Ai)
             {
                 gameController.StealResourcesAction?.Invoke();
             }
         }
     }
 
-    public void TrySteal(GameObject clickedGameObject)
+    public void TrySteal(GameObject clickedGameObject=null)
     {
         if (!_stealing)
         {
             return;
         }
 
-        if (clickedGameObject.tag == "Crossroads" || clickedGameObject.tag == "Settlement")
+        if (gameController.GetPlayer().Ai)
+        {
+            clickedGameObject = gameController.hexmap.PickRandomCrossroad();
+        }
+
+        if (clickedGameObject.tag == "Crossroads" || clickedGameObject.tag == "Settlement" || clickedGameObject.tag == "Town")
         {
             _stealing = !clickedGameObject.GetComponentInParent<Crossroads>().StealResource((CatanPlayer)gameController.GetPlayer());
-            if (!_stealing)
+            if (!_stealing && !gameController.GetPlayer().Ai)
             {
                 gameController.ResourcesStolenAction?.Invoke();
             }
@@ -58,11 +72,29 @@ public class Robber : MonoBehaviour
     public void PlaceRobber()
     {
         _placingRobber = true;
+
+        if (gameController.GetPlayer().Ai)
+        {
+            while (_placingRobber)
+            {
+                TryPlaceRobber();
+            }
+            gameController.StealResourcesAction?.Invoke();
+        }
     }
 
     public void Steal()
     {
         _stealing = _canSteal;
+
+        if (gameController.GetPlayer().Ai)
+        {
+            while (_stealing)
+            {
+                TrySteal();
+            }
+            gameController.ResourcesStolenAction?.Invoke();
+        }
     }
 
     public void CanSteal(bool canSteal)

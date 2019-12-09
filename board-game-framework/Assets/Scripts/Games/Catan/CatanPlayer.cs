@@ -4,8 +4,12 @@ using UnityEngine;
 
 public partial class CatanPlayer : Player
 {
+    public bool Ai;
+    public bool advanced;
+
     public int victoryPoints;
     public int freeBuilds = 4;
+    public int freeRoads = 0;
     public int roads = 0;
     public int settlements = 0;
     public int towns = 0;
@@ -17,7 +21,7 @@ public partial class CatanPlayer : Player
     public Dictionary<Resource, int> Resources;
     public Dictionary<Resource, bool> Tradeables;
 
-    private bool _needRefresh;
+    public Action NeedRefreshAction;
 
     private void Awake()
     {
@@ -45,7 +49,7 @@ public partial class CatanPlayer : Player
     public void GivePlayerResources(Resource resource, int amount)
     {
         Resources[resource] += amount;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public void Trade(string giveType, int giveAmount, string getType, int getAmount)
@@ -56,7 +60,7 @@ public partial class CatanPlayer : Player
         Enum.TryParse(getType, out Resource resourceGet);
         GivePlayerResources(resourceGet, getAmount);
 
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public void BuyCard(Deck deck)
@@ -67,12 +71,7 @@ public partial class CatanPlayer : Player
 
     public int SevenRoll()
     {
-        var currentResources = Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore];
-        if (currentResources > 7)
-        {
-            return currentResources / 2;
-        }
-        return 0;
+        return GetResourcesSum() > 7 ? GetResourcesSum() / 2 : 0;
     }
 
 
@@ -108,7 +107,7 @@ public partial class CatanPlayer : Player
         Resources[Resource.wool] -= w;
         Resources[Resource.ore] -= o;
 
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public bool DeductOneResource(Resource resource)
@@ -122,17 +121,26 @@ public partial class CatanPlayer : Player
         return false;
     }
 
+    internal void Drop()
+    {
+        Resources[Resource.lumber] = 0;
+        Resources[Resource.brick] = 0;
+        Resources[Resource.grain] = 0;
+        Resources[Resource.wool] = 0;
+        Resources[Resource.ore] = 0;
+    }
+
     public void GivePlayerRandomResource(CatanPlayer player)
     {
-        if (Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore] == 0)
+        if (GetResourcesSum() == 0)
         {
             return;
         }
 
-        int randomInt = UnityEngine.Random.Range(0, 5);
+        int randomInt = UnityEngine.Random.Range(1, 6);
         while (!CanAfford((Resource)randomInt, 1))
         {
-            randomInt = UnityEngine.Random.Range(0, 5);
+            randomInt = UnityEngine.Random.Range(1, 6);
         }
 
         DeductOneResource((Resource)randomInt);
@@ -156,7 +164,12 @@ public partial class CatanPlayer : Player
     public void AddVictoryPoint()
     {
         victoryPoints++;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
+    }
+
+    public int GetResourcesSum()
+    {
+        return Resources[Resource.lumber] + Resources[Resource.brick] + Resources[Resource.wool] + Resources[Resource.grain] + Resources[Resource.ore];
     }
 
     public int GetVictoryPoints()
@@ -164,22 +177,14 @@ public partial class CatanPlayer : Player
         return victoryPoints;
     }
 
-    public bool NeedRefresh()
-    {
-        if (_needRefresh)
-        {
-            _needRefresh = false;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
     public bool CanFreeBuild()
     {
         return freeBuilds > 0;
+    }
+
+    public bool HasFreeRoads()
+    {
+        return freeRoads > 0;
     }
 
     public void SetLargestArmy(bool value)
@@ -193,7 +198,7 @@ public partial class CatanPlayer : Player
             victoryPoints += 2;
         }
         largestArmy = value;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 
     public bool GetLargestArmy()
@@ -227,6 +232,6 @@ public partial class CatanPlayer : Player
             victoryPoints += 2;
         }
         longestRoad = value;
-        _needRefresh = true;
+        NeedRefreshAction?.Invoke();
     }
 }
